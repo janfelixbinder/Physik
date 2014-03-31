@@ -1,0 +1,15 @@
+git add file %fügt datei hinzu
+git commit   %macht die änderungen wirksam 
+
+git log
+git status
+
+
+git checkout master     %wechselt ins master
+git checkout testzweig  %wechselt in den testzweig
+
+
+git branch name  %erzeut einen neuen zweig
+
+git ls-tree -r master %zeigt Dateien an
+git branch %zeigt alle branches an

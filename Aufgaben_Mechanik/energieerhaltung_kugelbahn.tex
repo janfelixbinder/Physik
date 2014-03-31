@@ -1,0 +1,130 @@
+%Die letzte Aufgabe bedient sich eines historischen Experiments von Galileo Galilei. Für diese Aufgabe soll die Energieerhaltung
+%angewandt werden. Da die Berechnung das ursprüngliche Experiments für die SuS zu schwierig ist, habe ich die Aufgabe vereinfacht.
+%Die Schwierigkeit dieser Aufgabe lässt sich sehr gut variieren. Ausserdem könnte man das lösen der Aufgabe mit dem Ausführen eines
+%Experiments verknüpfen.
+
+\begin{aufgabe}
+	Galileo Galilei (*\,1564 in Pisa, $\dagger$\,1641 in Arcetri bei Florenz) untersuchte das Fallen von Körpern 
+	und fand dabei als erster das Fallgesetz.
+	Zu seiner Zeit gab es noch keine Uhren, die Bruchteile von Sekunden messen konnten, daher war er darauf angewiesen,
+	dass Fallen stark zu verlangsamen um den Zusammenhang von Weg und Zeit beim Fallen von Körpern trotzdem messen zu können.
+	Um dies zu erreichen, benutzte er eine schiefe Ebene um die Beschleunigung zu verringern.
+	Für die schiefe Ebene hängt die Beschleunigung vom Steigungswinkel ab. 
+	Bei kleinen Steigungen, ist die Beschleunigung klein,
+	im Grenzfall eines Winkels von \SI{90}{\degree} erhält man die Fallbeschleunigung.
+	Benutzten Sie die Energieerhaltung (dieses praktische Konzept kannte Galilei noch nicht),
+	um die Beschleunigung in Abhängigkeit vom Steigungswinkel zu bestimmen.
+	\begin{enumerate} [a)]
+		\item Machen Sie eine Skizze des Versuchsaufbaus.
+			\TAX{Zeichnerisch K1}
+		\item Finden Sie eine Formel für die potentielle Energie, die vom Steigungswinkel abhängt.
+			\TAX{Formale Herleitung K1}
+		\item Berechnen Sie für verschiedene Steigungswinkel (\SI{15}{\degree}, \SI{45}, {\degree}, \SI{75}{\degree} und \SI{90}{\degree}) 
+			die Endgeschwindigkeit eines Schlittens, der \SI{1.5}{m} auf einer schiefen Ebene gleitet.
+			\TAX{Berechnung mit numerischem Resultat K2}
+		\item Wie stark wurde der Schlitten für die oben genannten Winkel beschleunigt? Tragen Sie die Werte in ein Diagramm ein. 
+			Stellen Sie eine allgemeine	Formel für die Beschleunigung in Abhängigkeit vom Steigungswinkel auf.
+			\TAX{Berechnung mit numerischem Resultat K2}
+	\end{enumerate}
+	Galilei nutzt anstatt eines Schlittens eine Kugeln, die er die schiefe Ebene runter rollen liess. Er ignorierte dabei, dass die Kugel rollend
+	die schiefe Ebene herunterkommt. Dadurch kam er auf einen falschen Wert für die Fallbeschleunigung. Benutzt man eine Kugel, ist die kinetische Energie
+	$\RI{E}{kin}=\nicefrac{7}{10}\cdot m\cdot v^2$.
+	\begin{enumerate} [e)]
+		\item Auf welchen Wert für die Fallbeschleunigung ist Galilei mit einer Messingkugel gekommen?
+			\TAX{Berechnung mit numerischem Resultat K2}
+	\end{enumerate}
+	\begin{loesung}
+		\begin{enumerate} [a)]
+			\item Eine Skizze könnte so aussehen:
+				\begin{center}
+					
+				\begin{tikzpicture}
+
+\draw (-1,0)--(10,0);
+\draw (0,0) --(30:10) node [midway, above] {$l$};
+
+\draw [->] (2,0) arc(0:30:2);
+\draw (1.5,0.4) node {$\alpha$};
+
+\draw [<->] (8,0) --(8,4.619) node [midway,right] {$h=l\cdot\sin\alpha$};
+
+\draw [fill] (8,4.7) -- (8,4.9) -- ++(30:0.5)--++(0,-0.2) node [right] {Schlitten};
+
+\end{tikzpicture}
+				\end{center}
+			\item Für die potentielle Energie gilt:
+				\begin{eqnarray*}
+					\RI{E}{pot}=m\cdot g\cdot h = m\cdot g\cdot l\cdot \sin \alpha\text{.}
+				\end{eqnarray*}
+			\item Es gilt die Energieerhaltung. Das heisst, die Gesamtenergie bleibt konstant, während der Schlitten die Ebene herunterrutscht.
+				Die potentielle Energie, die der Schlitten oben mehr hat, wandelt sich beim runterrutschen in kinetische Energie um. Oben war die
+				kinetische Energie Null, damit ist sie unten gleich der potentiellen Energie oben.
+				\begin{eqnarray*}
+					\begin{split}
+						\RI{E}{pot}&=\RI{E}{kin}\\	
+					m\cdot g\cdot l\cdot\sin\alpha&=\frac{1}{2}\cdot m\cdot v^2\to v=\sqrt{2\cdot g\cdot l\cdot\sin\alpha}\text{.}
+					\end{split}
+				\end{eqnarray*}
+				Damit erhält man für \SI{15}{\degree} eine Geschwindigkeit von \SI{2.76}{m/s}, für
+\SI{45}{\degree} eine Geschwindigkeit von \SI{4.56}{m/s}, für
+\SI{75}{\degree} eine Geschwindigkeit von \SI{5.33}{m/s} und für 
+\SI{90}{\degree} eine Geschwindigkeit von \SI{5.42}{m/s}.
+\item Für diesen Aufgabenteil kann eine Formel aus der Kinematik verwendet werden:
+	\begin{eqnarray*}
+		v^2=v_0^2+2\cdot a\cdot\Delta s\to a=\frac{v^2-v_0^2}{2\cdot\Delta s}\text{.}
+	\end{eqnarray*}
+	Damit bekommen wir Werte für die Beschleunigung. Bei einem Winkel von \SI{15}{\degree} ist die Beschleunigung \SI{2.54}{m/s^2},
+	bei einem Winkel von \SI{45}{\degree} ist die Beschleunigung \SI{6.94}{m/s^2},
+	bei einem Winkel von \SI{75}{\degree} ist die Beschleunigung \SI{9.48}{m/s^2} und
+	bei einem Winkel von \SI{90}{\degree} ist die Beschleunigung \SI{9.81}{m/s^2}.
+
+	\begin{tikzpicture}[xscale=0.1,yscale=0.5]
+		\Xachse{0}{90}{15}{Winkel $\alpha$}
+		\Yachse{0}{10}{2}{a (\SI{}{m/s^2})}
+		\SPoint{0,0}
+		\SPoint{15,2.54}
+		\SPoint{30,4.91}
+		\SPoint{45,6.94}
+		\SPoint{60,8.50}
+		\SPoint{75,9.48}
+		\SPoint{90,9.81}
+	\end{tikzpicture}
+
+	Setzt man die Formel für die Geschindigkeit (haben wir in Aufgabenteil c) erhalten) in die obige Formel ein, bekommen wir eine allgemeine
+	Formel für die Beschleunigung an der schiefen Ebene
+	\begin{eqnarray*}
+		a=\sin\alpha\cdot g\text{.}
+	\end{eqnarray*}
+
+	\item Wiederholt man die Rechnung, und setzt dabei die kinetische Energie einer Kugel ein, so erhält man 
+		die folgend winkelabhängige Beschleunigung
+		\begin{eqnarray*}
+			a=\frac{5}{7}\cdot g\cdot\sin\alpha\text{.}
+		\end{eqnarray*}
+		Galilei muss also etwa \SI{7}{m/s^2} für die Fallbeschleunigung erhalten haben.
+		\end{enumerate}
+	\end{loesung}
+
+\end{aufgabe}
+
+%	Galilei nutzte eine Art Kugelbahn, deren Steigung er verändern konnte. Bei kleiner Steigung,
+%	rollen die Kugeln langsamer die Bahn herunter, erhöht man die Steigung ist die Beschleunigung
+%	grösser. Um die Fallbeschleunigung zu erhalten, untersuchte er, wie die Beschleunigung vom
+%	Steigungswinkel abhängt. Dabei vernachlässigte er, dass beim Fallen (\SI{90}{\degree}) keine
+%	Rollbewegung mehr stattfindet. Dadurch ist die von ihm ermittelte Fallbeschleunigung kleiner als die
+%	richtige. Benutzen Sie die Energieerhaltung um Galileis Fallbeschleunigung zu ermitteln.
+%		\item Wie setzt sich die kinetische Energie in diesem Problem zusammen?
+%		\item Wie hängen Winkelgeschwindigkeit und Bahngeschwindigkeit bei einer Kugel zusammen?
+%		\item Stellen Sie eine Formel für die kinetische Energie auf.
+
+%\section{Formeln}
+%			Die Formel für den Rollwiderstand ist:
+%			\begin{eqnarray*}
+%				\RI{F}{Roll}=c\cdot m\cdot g
+%			\end{eqnarray*}
+%
+%			\begin{eqnarray*}
+%				\RI{F}{Luft}=\num{0.5}\cdot c_w \cdot A \cdot \rho\cdot v^2
+%			\end{eqnarray*}
+%
+

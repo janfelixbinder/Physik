@@ -1,0 +1,51 @@
+%\documentclass[11pt,a4paper,titlepage,twoside]{article}
+\documentclass[12pt,a4paper,twoside]{article}
+\usepackage{mystyle}
+\usepackage{gplot}
+\usepackage{foto_v001}
+\usepackage{mechanik_v001}
+
+\usepackage{url}
+
+\newcommand{\TAX}[1]{\textit{\small{#1}}}
+
+%\author{Felix Binder}
+\title{Aufgabensammlung Mechanik}
+\date{}
+
+\newcommand{\Einbinden}[1]{\par Sie finden diese Aufgabe: \url{#1}.\par\input{#1}}
+
+\begin{document}
+\maketitle
+
+\section{Reibung}
+\Einbinden{./reibung01.tex}
+\Einbinden{./reibung02.tex}
+\Einbinden{./reibung03.tex}
+\Einbinden{./reibung04.tex}
+
+
+\section{Lösen von Statikproblemen mit Hilfe des Drehmomentes}
+\Einbinden{./statik_drehmomente_bruecke01.tex}
+\newpage
+\Einbinden{./statik_drehmomente_bruecke02.tex}
+
+
+
+
+
+
+\newpage
+\section{Kreisbewegungen}
+\Einbinden{./kreisbewegung01.tex}
+\newpage
+\Einbinden{./hammerwurf.tex}
+\newpage
+
+\section{Energieerhaltung}
+\Einbinden{./energieerhaltung_kugelbahn.tex}
+
+
+\newpage
+\includesolutions
+\end{document}
