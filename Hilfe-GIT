@@ -13,3 +13,12 @@ git branch name  %erzeut einen neuen zweig
 
 git ls-tree -r master %zeigt Dateien an
 git branch %zeigt alle branches an
+
+
+übertragen der lokalen veränderungen zum server
+git push origin master
+
+abholen von daten vom server, die von anderen geändert wurden
+git pull origin master
+
+
