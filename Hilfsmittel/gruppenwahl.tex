@@ -1,0 +1,28 @@
+%\documentclass[11pt,a4paper,twoside]{article}
+\documentclass[11pt,a4paper]{article}
+\usepackage{tikz}
+\usepackage[tmargin=3.0cm, lmargin=1cm, rmargin=1cm]{geometry}
+\usepackage{mystyle}
+
+
+\begin{document}
+
+\begin{tikzpicture}[scale=4]
+\draw[step=1cm,black] (0,0) grid (4,5);
+
+
+
+\foreach \x in {1,2,3,4,5}{
+\draw [xshift=0.5cm,yshift=-0.5cm] (0,\x) node {1};
+
+
+\draw [xshift=1.5cm,yshift=-0.5cm] (0,\x) node {2};
+\draw [xshift=2.5cm,yshift=-0.5cm] (0,\x) node {3};
+\draw [xshift=3.5cm,yshift=-0.5cm] (0,\x) node {4};
+}
+
+
+\end{tikzpicture}
+
+
+\end{document}
