@@ -1,0 +1,90 @@
+\ProvidesPackage{aufgaben}
+
+%zum finden der Datei in der die Aufgabe gespeichert ist
+\usepackage{url}
+\def\dir{./}
+\newcommand{\Einbinden}[1]{\par Sie finden diese Aufgabe: \url{#1}.\par\input{#1}}
+
+
+
+%Bitte mit diesem Befehl die Taxometiestufe angeben
+\newcommand{\TAX}[1]{\textit{\small{#1}}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%AUFGABEN%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%AUFGABEN UMGEBUNG
+% neuen Zähler deklarieren:
+\newcounter{aufgabe}%[section]
+% Darstellung des Zählers als Abschnitt.Nummer:
+\renewcommand*\theaufgabe{\arabic{aufgabe}}
+
+% Label der Umgebung: Lemma x.y
+\newcommand*\aufgabelabel{\textsc{Aufgabe~\theaufgabe:~}}
+\newcommand*\loesunglabel{\textsc{Lösung~\theaufgabe:~}}
+ 
+% angepasste Umgebung, die Zähler erhöht und darstellt:
+\newenvironment{aufgabe}{\par\vspace*{0.5cm}\begingroup%
+\refstepcounter{aufgabe}%
+{\aufgabelabel}}{\hfill\par\endgroup}
+
+% angepasste Umgebung, die Zähler erhöht und darstellt:
+\newenvironment{loesung}{\par\vspace*{0.5cm}\begingroup%
+%{\loesunglabel}}{\hfill\par\endgroup}
+{\loesunglabel}}{\hfill\par\newpage\endgroup}
+
+
+%\makeatletter
+%
+%
+%% Datei zum Schreiben oeffnen:
+%\newwrite\ex@file
+%\immediate\openout\ex@file=\jobname.sol
+%
+%% Wird bei \begin{loesung} ausgefuehrt:
+%\newcommand*{\loesung}{\@bsphack
+%\let\do\@makeother\dospecials
+%\catcode`\^^M\active
+%\def\verbatim@processline{%
+%\immediate\write\ex@file{\the\verbatim@line}}%
+%\immediate\write\ex@file{%
+%\string\begin{ex@loesung}{\theaufgabe}}%
+%\verbatim@start}
+%
+%% Wird bei \end{loesung} ausgefuehrt:
+%\def\endloesung{%
+%\immediate\write\ex@file{%
+%\hrule
+%\string\end{ex@loesung}}\@esphack}
+%
+%\newenvironment{ex@loesung}[1]{\par\vspace*{0.5cm}\textsc{Lösung~#1:~}}{}
+%%\newenvironment{ex@loesung}[1]{\paragraph{#1}}{}
+%
+%\newcommand*{\includesolutions}{%
+%\immediate\closeout\ex@file
+%\section*{Musterlösungen}
+%\InputIfFileExists{\jobname.sol}{}{}}
+%
+%
+%\makeatother
+%
+
+%\newcommand{\kloesung}[1]{\tiny{Lösung~#1}}
+\newcommand{\kloesung}[1]{KLösung~#1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%ENDE AUFGABEN%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Lueckentext
+%Zeilenabstand aendern
+\newcommand{\StartLueckentext}{\renewcommand{\baselinestretch}{1.5}\normalsize}
+\newcommand{\StoppLueckentext}{\renewcommand{\baselinestretch}{1.0}\normalsize}
+
+%grosse Luecke
+%\newcommand{\gl}{~\ldots\ldots\ldots\ldots\ldots\ldots\xspace}
+%gibt loesung mit aus
+%\newcommand{\gl}[1]{\tikz\node (l) {\large{#1}} [draw] [dotted] (l.south west)--(l.south east);}
+\newcommand{\gl}[1]{\tikz\node (l) {\phantom{\large{#1}}} [draw] [dotted] (l.south west)--(l.south east);}
+%kleine Luecke
+\newcommand{\kl}{~\ldots\ldots\ldots\xspace}
+
