@@ -1,0 +1,24 @@
+%\documentclass[11pt,a4paper,titlepage,twoside]{article}
+\documentclass[12pt,a4paper,twoside]{article}
+\usepackage{mystyle}
+\usepackage{gplot}
+\usepackage{foto_v001}
+\usepackage{mechanik_v001}
+
+\def\dir{../Aufgaben_Waerme/}
+\newcommand{\Einbinden}[1]{\input{\dir#1}}
+
+%\author{Felix Binder}
+\title{Statik}
+\date{}
+
+\newcommand{\metac}[1]{}
+\newcommand{\TAX}[1]{}
+
+\begin{document}
+
+\Einbinden{./wasser.tex}
+\Einbinden{./ausdehnung.tex}
+
+
+\end{document}

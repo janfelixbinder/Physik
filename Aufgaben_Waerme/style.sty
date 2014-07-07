@@ -1,0 +1,74 @@
+\ProvidesPackage{style}
+
+\usepackage[german]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{amssymb} 
+\usepackage{nicefrac}
+
+\usepackage{pdflscape}%damit laesst sich eine Seite im Querformat setzen
+\usepackage{booktabs}%linien in tabellen
+
+%Fonts
+\usepackage{fourier}
+%\usepackage{libertine}
+%\usepackage{lmodern}
+%\usepackage[libertine,slantedGreek]{newtxmath}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,intersections,through,backgrounds,decorations.pathmorphing}
+\tikzset{info text/.style={rounded corners, fill=red!20, inner sep=1ex}}
+\tikzset{force/.style={>=latex,line width=0.05cm}}
+
+\usepackage{tkz-base}
+
+\usepackage{gnuplot-lua-tikz}
+
+
+%http://www.tug.dk/FontCatalogue/
+%\usepackage[sc]{mathpazo}
+%\linespread{1.05}         % Palatino needs more leading (space between lines)
+%\usepackage[T1]{fontenc}
+
+%\usepackage[T1]{fontenc}
+%\usepackage{newtxtext,newtxmath}
+
+
+
+
+\usepackage{graphicx,xcolor}
+
+\usepackage[DIV13,BCOR1cm]{typearea} %setzt seitenränder hack31
+
+\usepackage[decimalsymbol=comma,expproduct=cdot,valuesep=med]{siunitx}
+\usepackage{verbatim} %wird für die loesungen gebrauch
+\usepackage{wrapfig}
+
+%vorschub beim absatz
+%\parindent0pt
+\setlength{\parindent}{0pt}	% Einrücken der ersten Zeile
+\setlength{\parskip}{4pt}		% Abstand zwischen den Absätzen
+
+
+\usepackage{enumerate}
+
+%\pagestyle{empty}
+%\newenvironment{name}{vor}{hinter}
+%\bgroup steht für {
+%\egroup steht für } beides wird hier benötigt
+\newenvironment{cbox}
+{\par\vspace*{0.5cm}\begin{tikzpicture}\draw node[text width=1.00\linewidth, rounded corners, thick,double, inner sep=1ex,draw]\bgroup}
+	{\egroup;\end{tikzpicture}\par\vspace*{0.5cm}}
+
+
+
+%RomanIndex schreibt den Index in Roman.
+\newcommand{\RI}[2]{\ensuremath{#1_{\textrm{#2}}}}
+
+
+\newcommand{\Beispiel}{\par\textsc{Beispiel:~}}
+
+%um im testing zweig darauf hinzuweisen, dass man etwas hinzufügen sollte
+\newcommand{\testing}[1]{{\large	\textcolor{red}{#1}}}

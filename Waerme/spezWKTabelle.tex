@@ -1,0 +1,42 @@
+\usetikzlibrary{positioning}
+\begin{center}
+\begin{tikzpicture}
+%	\node [rectangle, text width=20em](oben){Dichtetabelle\\Die Werte für Gase gelten bei \SI{0}{\celsius}};
+	
+	%\matrix (links) [below = of oben,Tabelle,text width=10em]
+	\matrix (links) [left,Tabelle,text width=10em]
+{
+Aluminium & 896 \\
+Blei      & 129\\
+Eisen     &  450\\
+Gold      & 129\\
+Kupfer    & 383 \\
+Messing   & 380\\
+Nickel    & 448 \\
+Platin    & 133\\
+Silber    & 235\\
+Zink      & 385 \\
+          &      \\
+Glas      & ca. 800\\
+};
+%\matrix (rechts) [below= of oben, Tabelle,text width=10em]
+\matrix (rechts) [right, Tabelle,text width=10em]
+{
+Alkohol   & 2430\\
+&  \\
+Eis (\SI{0}{\celsius}) & 2100 \\
+Wasser     & 4182\\
+    & \\
+	&  \\
+    & \\
+  &  \\
+  &  \\
+  &  \\
+  &  \\
+  &  \\
+	};
+
+\end{tikzpicture}
+
+Spezifische Wärmekapazität in \SI{}{J/kg K}.
+\end{center}
