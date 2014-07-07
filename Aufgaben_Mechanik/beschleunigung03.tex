@@ -1,0 +1,31 @@
+
+
+\begin{aufgabe}
+Ein Ball wird mit einer Geschwindigkeit von \SI{30}{m/s} nach oben geworfen, und fällt
+durch die Fallbeschleunigung wieder zu Boden.
+\begin{itemize}
+	\item[a)] Zeichnen Sie den Wurf in ein Beschleunigungs-Zeit-, ein Geschwindigkeits-Zeit- und ein Weg-Zeit-Diagramm.
+	\item[b)] Wie lange braucht der Ball bis zum höchsten Punkt?
+	\item[c)] Wie hoch steigt der Ball insgesamt?
+	\item[d)] Der Ball soll \SI{50}{m} hoch kommen. Mit welcher Geschwindigkeit $v_0$ muss er hochgeworfen werden?
+\end{itemize}
+\begin{loesung}
+\begin{itemize}
+	\item[b)] Am höchsten Punkt ist die Geschwindigkeit $v=0$. Wir können also schreiben $0 = v_0 + a\cdot t \to t=-\frac{v_0}{a}=\frac{\SI{30}{m/s}}{{10}{m/s^2}}=\SI{3}{s}$.
+
+	\item[c)] Dies kann auf drei unterschiedlichen Wegen bestimmt werden. 
+\begin{itemize}
+	\item Man bestimmt die Fläche im $v$-$t$-Diagramm.
+	\item $\bar{v}=\frac{1}{2}\cdot (v_0+v_1)$ $\to s=\bar{v}\cdot t=\SI{15}{m/s}\cdot\SI{3}{s}=\SI{45}{m}$
+	\item Oder $s=v_0\cdot t +\frac{1}{2}\cdot a \cdot t^2 = \SI{30}{m/s}\cdot\SI{3}{s}+0.5\cdot(\SI{-10}{m/s^2})\cdot(\SI{3}{s})^2=\SI{90}{m}-\SI{45}{m}=\SI{45}{m}$
+\end{itemize}
+	\item[d)]
+		\begin{align*}
+		v^2=v_0^2 + 2\cdot a \cdot \Delta s \to v_0 &= \sqrt{v^2 - 2\cdot a \cdot \Delta s}=\sqrt{\SI{0}{m/s} - 2\cdot (\SI{-10}{m/s^2})\cdot\SI{50}{m}}=\\
+			&=\sqrt{\SI{1000}{m^2/s^2}}=\SI{31.6}{m/s}
+		\end{align*}
+\end{itemize}
+
+
+\end{loesung}
+\end{aufgabe}
