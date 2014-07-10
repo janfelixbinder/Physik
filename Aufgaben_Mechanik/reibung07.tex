@@ -1,0 +1,36 @@
+
+
+\begin{aufgabe}
+Zwei Kinder werden mit dem Schlitten über eine schneebedeckte Wiese gezogen. Die Kinder wiegen zusammen \SI{35}{kg}.
+Der Schlitten wiegt \SI{5}{kg}. Am Schlitten ist ein Seil befestigt. Zwischen Boden und Seil ist ein Winkel von \SI{40}{\degree}.
+Bestimmen Sie die Reibungskraft, die vom Schnee auf den Schlitten wirkt
+wenn die Zugkraft im Seil \SI{100}{N} beträgt.
+
+
+
+\begin{loesung}
+Die Zugkraft $Z$ hat Komponenten in $x$- und $z$-Richtung.
+\begin{gather*}
+	\RI{Z}{z}=\sin(\SI{40}{\degree})\cdot Z =	\num{0.6428}\cdot\SI{100}{N}=\SI{64.28}{N}\\ 
+	\RI{Z}{x}=\cos(\SI{40}{\degree})\cdot Z =	\num{0.7660}\cdot\SI{100}{N}=\SI{76.60}{N} 
+\end{gather*}
+In $z$-Richtung bewegt sich der Schlitten nicht. Das heisst, die Summe der Kräfte in
+$z$-Richtung ist Null. Damit bekommen wir die Normalkraft.
+\begin{eqnarray*}
+	0=\RI{F}{N}+Z_z - F_G \to F_N= F_G-Z_z=m\cdot g-Z_z=\SI{40}{kg}\cdot\SI{9.81}{m/s^2}-\SI{64.28}{N}=\SI{328.12}{N}
+\end{eqnarray*}
+Die Reibungskraft ist proportional zur Normalkraft.
+Haftreibung: $\mu=0.027$ aus Tabelle.%~\ref{tab:reibung}
+\begin{eqnarray*}
+	\RI{F}{R}=\mu\cdot \RI{F}{N}= \num{0.027}\cdot\SI{328.12}{N}=\SI[dp=2]{8.8592}{N}
+\end{eqnarray*}
+Gleitreibung: $\mu=0.014$ aus Tabelle.%~\ref{tab:reibung}
+\begin{eqnarray*}
+	\RI{F}{R}=\mu\cdot \RI{F}{N}= \num{0.014}\cdot\SI{328.12}{N}=\SI[dp=2]{4.5937}{N}
+\end{eqnarray*}
+
+
+\end{loesung}
+\end{aufgabe}
+
+

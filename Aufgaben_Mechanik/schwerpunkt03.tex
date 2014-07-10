@@ -1,0 +1,60 @@
+
+\begin{aufgabe}
+	Zeigen die folgenden Abbildungen immer eine Gleichgewichtslage des Körpers? Wenn ja, ist das Gleichgewicht stabil, labil oder indifferent?
+	Wenn nicht, gibt es ein Drehmoment. Berechnen Sie dieses. Die Gewichtskraft der Dreiecke soll in jedem Fall \SI{10}{N} betragen.
+	\vspace*{2cm}
+
+	\begin{center}
+	\begin{tikzpicture}
+		\coordinate (P1) at (0,0);
+		\coordinate (P2) at (3,2);
+		\coordinate (P3) at (4,-2);
+
+		\fill [color=black!30] (P1)--(P2)--(P3)--(P1);
+		\SPDreieck{(P1)}{(P2)}{(P3)}{Drei}
+		\draw [fill] (Drei SP) circle (0.1cm) node [right] {SP};
+		\draw (Drei SP) ++(90:1) node [shape=coordinate] (Drei D){};
+		\draw [fill] (Drei D) circle (0.1cm) node [right] {D};
+
+		\coordinate (P1) at (6,-1);
+		\coordinate (P2) at (9,2);
+		\coordinate (P3) at (14,-2);
+
+		\fill [color=black!30] (P1)--(P2)--(P3)--(P1);
+		\SPDreieck{(P1)}{(P2)}{(P3)}{Drei}
+		\draw [fill] (Drei SP) circle (0.1cm) node [right] {SP};
+		\draw (Drei SP) ++(120:1.4) node [shape=coordinate] (Drei D){};
+		\draw [fill] (Drei D) circle (0.1cm) node [right] {D};
+
+	\end{tikzpicture}
+	\end{center}
+
+	\vspace*{2cm}
+
+	\begin{center}
+	\begin{tikzpicture}
+		\coordinate (P1) at (0,0);
+		\coordinate (P2) at (5,2);
+		\coordinate (P3) at (3,-5);
+
+		\fill [color=black!30] (P1)--(P2)--(P3)--(P1);
+		\SPDreieck{(P1)}{(P2)}{(P3)}{Drei}
+		\draw [fill] (Drei SP) circle (0.1cm) node [right] {SP};
+		\draw (Drei SP) ++(180:1.3) node [shape=coordinate] (Drei D){};
+		\draw [fill] (Drei D) circle (0.1cm) node [right] {D};
+
+		\coordinate (P1) at (8,2);
+		\coordinate (P2) at (15,0);
+		\coordinate (P3) at (11.5,-5);
+
+		\fill [color=black!30] (P1)--(P2)--(P3)--(P1);
+		\SPDreieck{(P1)}{(P2)}{(P3)}{Drei}
+		\draw [fill] (Drei SP) circle (0.1cm) node [right] {SP};
+		\draw (Drei SP) ++(270:2.2) node [shape=coordinate] (Drei D){};
+		\draw [fill] (Drei D) circle (0.1cm) node [right] {D};
+
+	\end{tikzpicture}
+	\end{center}
+
+\end{aufgabe}
+

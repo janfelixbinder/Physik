@@ -1,9 +1,15 @@
 \documentclass[12pt,a4paper,twoside]{article}
 \usepackage{mystyle}
+\usepackage{mechanik_v001}
+\usepackage{foto_v001}
+\usepackage{gplot}
 
 %\author{Felix Binder}
 \title{Mechanik}
 \date{}
+
+\newcommand{\metac}[1]{}
+\newcommand{\TAX}[1]{}
 
 
 \def\dir{../Aufgaben_Mechanik}
@@ -30,6 +36,36 @@
 \input{./freierFall.tex}
 \input{./bewegung_3D.tex}
 %
+\input{./gravitation.tex}
+\input{./federgesetz.tex}
+\input{./vektoren.tex}
+\input{./drehmoment.tex}
+\input{./schwerpunkt.tex}
+\input{./loesen_von_statikproblemen.tex}
+\input{./reibung.tex}
+\input{./schiefeEbene}
+
+\input{./NewtonscheAxiome.tex}
+\input{./kreisbewegungen.tex}
+\input{./wechselwirkungsgesetz.tex}
+\input{./impuls.tex}
+\input{./arbeit.tex}
+
+\begin{aufgabe}
+    Im Unterricht sehen Sie ein Experiment.
+    Beantworten Sie dazu die folgenden Fragen.
+\begin{enumerate} [a)]
+    \item Sie sehen ein mit Wasser gefülltes Gefäss aus dem durch zwei Ausflüsse Wasser ausläuft.
+    Machen Sie eine Zeichnung des Experiments. Was beobachten Sie?
+\item Wie können Sie sich das Beobachtete erklären?
+\item Im Unterricht behandeln wir gerade Energie und die Umwandlung verschiedener Energieformen.
+    Welche Energieform wird hier abgebaut? In welche andere Energieform wurde es umgewandelt?
+\end{enumerate}
+\end{aufgabe}
+
+
+\input{./leistung.tex}
+
 
 \newpage
 \includesolutions

@@ -1,0 +1,85 @@
+\section*{Die schiefe Ebene}
+In dieser Lektion werden wir uns mit der schiefen Ebene beschäftigen. In einem Versuch werden wir sehen, was mit einem
+Klotz passiert, der auf einer angewinkelten Ebene liegt. Machen Sie sich neben den Skizzen Notizen und
+zeichnen Sie alle auftretenden Kräfte ein (Gewichtskraft, Normalkraft, Reibungskraft).
+Dies ist ein Beispiel, in dem Gewichtskraft und Normalkraft nicht gleich gross sind.
+
+\subsection*{Keine Steigung der Ebene}
+
+\Spalten{0.5}{
+\begin{center}
+\begin{tikzpicture}
+
+\def\angle{0}%Winkel
+
+\coordinate (P0) at (6,0);
+
+\draw (0,0)--(7,0);
+\draw (P0)--++(180-\angle:6);
+
+
+%winkel
+%\draw [->] (5,0) arc(180:180-\angle:1cm);%winkelbogen
+%\draw  (P0) ++(180-0.5*\angle:0.75) node {$\alpha$};%alpha
+
+\def\hoehe{1}
+\def\breite{2}
+\draw (P0) ++(180-\angle:2.25cm)--++(90-\angle:\hoehe)--++(180-\angle:\breite)--++(270-\angle:\hoehe);
+
+%\draw [color=white] (0,-3)--(2,-3);%abstand nach unten
+	\end{tikzpicture}
+\end{center}
+\vspace*{1.5cm}
+}{0.5}{}
+
+\subsection*{Geringe Steigung der Ebene}
+\Spalten{0.5}{
+\begin{center}
+\begin{tikzpicture}
+
+\def\angle{15}%Winkel
+
+\coordinate (P0) at (6,0);
+
+\draw (0,0)--(7,0);
+\draw (P0)--++(180-\angle:6);
+
+
+%winkel
+\draw [->] (5,0) arc(180:180-\angle:1cm);%winkelbogen
+\draw  (P0) ++(180-0.5*\angle:0.75) node {$\alpha$};%alpha
+
+\def\hoehe{1}
+\def\breite{2}
+\draw (P0) ++(180-\angle:2.25cm)--++(90-\angle:\hoehe)--++(180-\angle:\breite)--++(270-\angle:\hoehe);
+	\end{tikzpicture}
+\end{center}
+\vspace*{1.5cm}
+}{0.5}{}
+
+\subsection*{Grosse Steigung der Ebene}
+\Spalten{0.5}{
+\begin{center}
+\begin{tikzpicture}
+
+\def\angle{65}%Winkel
+
+\coordinate (P0) at (6,0);
+
+\draw (0,0)--(7,0);
+\draw (P0)--++(180-\angle:6);
+
+
+%winkel
+\draw [->] (5,0) arc(180:180-\angle:1cm);%winkelbogen
+\draw  (P0) ++(180-0.5*\angle:0.75) node {$\alpha$};%alpha
+
+\def\hoehe{1}
+\def\breite{2}
+\draw (P0) ++(180-\angle:2.25cm)--++(90-\angle:\hoehe)--++(180-\angle:\breite)--++(270-\angle:\hoehe);
+	\end{tikzpicture}
+\end{center}
+\vspace*{1.5cm}
+}{0.5}{}
+
+\Einbinden{\dir/schiefeEbene01.tex}

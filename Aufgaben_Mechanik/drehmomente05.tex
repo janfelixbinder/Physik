@@ -1,0 +1,39 @@
+\begin{aufgabe}
+	Bestimmen Sie die unbekannten Kräfte an diesem Mobile.
+\end{aufgabe}
+
+\begin{center}
+	\begin{tikzpicture}
+		
+	\draw (-5:0)--(5,0);
+\draw (0,0) --++(90:2);
+\Balken{(0,0)}{6}{2}{B1}
+\draw (B1 W) --++(-90:2) node [shape=coordinate] (B1E){};
+\Balken{(B1E)}{4}{2}{B2}
+\draw (B2 O) --++(-90:2) node [shape=coordinate] (B2E){};
+\Balken{(B2E)}{4}{3}{B3}
+ 
+
+%linke untere Masse
+\draw (B3 W) --++(-90:1) node [shape=coordinate] (T1) {}; 
+\Masse{(T1)}{0.5}{M1};
+\draw (M1 O) node [right]{\SI{2}{N}};
+
+%rechte untere Masse
+\draw (B3 O) --++(-90:1) node [shape=coordinate] (T2) {}; 
+\Masse{(T2)}{0.5}{M1};
+\draw (M1 O) node [right]{$F_1$};
+
+%linke mittere Masse
+\draw (B2 W) --++(-90:1) node [shape=coordinate] (T2) {}; 
+\Masse{(T2)}{0.5}{M1};
+\draw (M1 O) node [right]{$F_2$};
+
+%linke mittere Masse
+\draw (B1 O) --++(-90:1) node [shape=coordinate] (T2) {}; 
+\Masse{(T2)}{0.5}{M1};
+\draw (M1 O) node [right]{$F_3$};
+	\end{tikzpicture}
+\end{center}
+
+

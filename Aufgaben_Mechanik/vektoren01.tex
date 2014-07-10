@@ -1,0 +1,34 @@
+
+\begin{center}
+\begin{tikzpicture}
+
+\draw (-8,0)--(8,0);%Boden
+
+\StativDrehscheibe{(5,0)}{6}{StR}
+\StativDrehscheibe{(-5,0)}{5}{StL}
+
+\coordinate (SP) at (1,4);%Schnittpunkt der drei angreifenden Kraefte
+\draw [fill] (SP) circle (0.05cm);
+\draw (SP)--++(-90:3cm) node [shape=coordinate] (EM){};
+\Masse{(EM)}{0.3}{MM}
+\draw (MM O) node [right] {$m_2$};
+
+%rechte und linke masse
+\draw (StR O)--++(-90:2cm) node [shape=coordinate] (EO){} (StR NW)--(SP);
+\draw (StL W)--++(-90:2cm) node [shape=coordinate] (EW){} (StL N) --(SP);
+\Masse{(EO)}{0.3}{MO}
+\Masse{(EW)}{0.3}{MW}
+\draw (MW W) node [left] {$m_1$};
+\draw (MO O) node [right] {$m_3$};
+
+\end{tikzpicture}
+\end{center}
+
+\begin{aufgabe}
+	\begin{enumerate} [a)]
+		\item Zeichnen Sie die Gewichtskräfte $F_1'$, $F_2'$ und $F_3'$ der Massen $m_1$, $m_2$ und $m_3$ ein.
+		\item Zeichnen Sie die Fadenkräfte $F_1$, $F_2$ und $F_3$ ein, die am Knotenpunkt angreifen.
+		\item Konstruieren Sie ein Kräfteparallelogramm der Kräfte $F_1$ und $F_3$, so dass die resultierende Kraft senkrecht nach oben zeigt.
+		\item Die Kraft $F_1$ sei \SI{4.5}{N}. Bestimmen Sie die Beträge der Kräfte $F_2$ und $F_3$.
+	\end{enumerate}
+\end{aufgabe}

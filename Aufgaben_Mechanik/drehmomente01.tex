@@ -1,0 +1,77 @@
+
+\begin{aufgabe}
+	Was beobachten Sie an diesen Wippen?
+\end{aufgabe}
+
+\begin{center}
+\begin{tikzpicture}
+	\begin{scope} [xshift=-5cm]
+	\Wippe{0}{0}{0}
+	\end{scope}
+	\begin{scope}[xshift=5cm]
+	\Wippe{39}{0}{0}
+	\end{scope}
+\end{tikzpicture}
+\end{center}
+
+\begin{aufgabe}
+	Warum verändert sich die Stellung der Wippe?
+\end{aufgabe}
+\begin{center}
+	\begin{tikzpicture}
+		\Wippe{-29}{2}{0}
+		\draw (Pr) --+(-90:1cm) node [shape=coordinate] (E) {};
+		\Masse{(E)}{0.5}{M1}
+		\draw (M1 O) node [right] {$m_1$};
+	\end{tikzpicture}
+\end{center}
+\newpage
+\begin{aufgabe}
+Was sieht man hier?	
+\end{aufgabe}
+\begin{center}
+	\begin{tikzpicture}
+		\Wippe{0}{2.5}{-2.5}
+		\draw (Pr) --+(-90:1cm) node [shape=coordinate] (Er) {};
+		\draw (Pl) --+(-90:1cm) node [shape=coordinate] (El) {};
+		\Masse{(Er)}{0.5}{Mr}
+		\Masse{(El)}{0.5}{Ml}
+		\draw (Mr O) node [right] {$m_1$};
+		\draw (Ml W) node [left] {$m_1$};
+	\end{tikzpicture}
+\end{center}
+
+\begin{aufgabe}
+Was hat sich hier verändert?	
+\end{aufgabe}
+\begin{center}
+	\begin{tikzpicture}
+		\Wippe{20}{2.5}{-4.0}
+		\draw (Pr) --+(-90:1cm) node [shape=coordinate] (Er) {};
+		\draw (Pl) --+(-90:1cm) node [shape=coordinate] (El) {};
+		\Masse{(Er)}{0.5}{Mr}
+		\Masse{(El)}{0.5}{Ml}
+		\draw (Mr O) node [right] {$m_1$};
+		\draw (Ml W) node [left] {$m_1$};
+	\end{tikzpicture}
+\end{center}
+
+\begin{aufgabe}
+Was hat sich hier verändert?	
+\end{aufgabe}
+\begin{center}
+	\begin{tikzpicture}
+		\Wippe{0}{2.5}{-4.0}
+		\draw (Pr) --+(-90:1cm) node [shape=coordinate] (Er) {};
+		\draw (Pl) --+(-90:1cm) node [shape=coordinate] (El) {};
+		\Masse{(Er)}{0.5}{Mr}
+		\Masse{(El)}{0.5}{Ml}
+		\draw (Mr O) node [right] {$m_1$};
+		\draw (Ml W) node [left] {$m_2$};
+	\end{tikzpicture}
+\end{center}
+
+\begin{aufgabe}
+	Betrachen Sie die obige Abbildung. Wenn die Masse $m_1$ \SI{200}{g} hat, wie gross ist dann die Masse $m_2$?
+\end{aufgabe}
+

@@ -1,0 +1,45 @@
+
+\begin{aufgabe}
+	Zwei Arbeiter tragen auf ihren Schultern einen \SI{12}{m} langen und \SI{0.6}{kN}
+	schweren Balken. Der eine trägt \SI{2}{m}, der andere \SI{1}{m} vom jeweiligen Ende des Balkens entfernt.
+	\begin{enumerate} [a)]
+		\item Machen Sie sich eine Skizze und zeichnen Sie alle Kräfte ein.
+		\item Wählen Sie eine Drehachse und stellen sie die Gleichgewichtsbedingungen auf.
+		\item Lösen Sie das Gleichungssystem. Welche Last trägt welcher Arbeiter?
+	\end{enumerate}
+	\kloesung{c) \SI{0.2667}{kN} und \SI{0.333}{kN}.}
+
+	\begin{loesung}
+		\begin{enumerate} [a)]
+			\item Die Skizze könnte so aussehen:
+				\begin{center}
+					\begin{tikzpicture}
+						\draw [] (0,0) rectangle (12,0.3);
+\draw [fill] (6,0.15) circle(0.1);
+\draw [Kraft,->] (6,0.15)--+(-90:3cm) node [right]{\RI{F}{G}};
+
+\draw [Kraft,<-] (2,0)--++(-90:2cm) node [right] {$F_1$};
+\draw [Kraft,<-] (11,0)--++(-90:2cm) node [right] {$F_2$};
+					\end{tikzpicture}
+				\end{center}
+			\item Als Drehachse wähle ich den Schwerpunkt des Balken. Die zwei Gleichgewichtsbedingungen lauten:
+				\begin{eqnarray*}
+					F_1 + F_2 - \RI{F}{G} =0
+				\end{eqnarray*}
+				und
+				\begin{eqnarray*}
+					0\cdot\RI{F}{G} - \SI{4}{m}\cdot F_1 + \SI{5}{m}\cdot F_2 =0
+				\end{eqnarray*}
+			\item Aus der Bedingung für die Drehmomente lässt sich $F_1$ in Abhängigkeit von $F_2$ auflösen.
+				\begin{eqnarray*}
+					0\cdot\RI{F}{G} - \SI{4}{m}\cdot F_1 + \SI{5}{m}\cdot F_2 =0 \to F_1 =  \frac{5}{4}\cdot F_2
+				\end{eqnarray*}
+				Dies kann man dann in die Kraftbedingung einsetzen und auflösen.
+				\begin{eqnarray*}
+					F_1 + F_2 - \RI{F}{G} =0\to  \frac{5}{4}\cdot F_2 + F_2 - \RI{F}{G} =0\to  \frac{9}{4}\cdot F_2 =\RI{F}{G}\to F_2=\frac{4}{9}\cdot\RI{F}{G}=\frac{4}{9}\cdot\SI{0.6}{kN}=\SI{0.2667}{kN}
+				\end{eqnarray*}
+				$F_1$ ist dann \SI{0.333}{kN} gross.
+
+		\end{enumerate}
+	\end{loesung}
+\end{aufgabe}

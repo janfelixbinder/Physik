@@ -1,0 +1,60 @@
+
+\section*{Lösen von Statikproblemen mit dem Drehmoment}
+
+%In der letzten Lektion haben wir uns mit dem Hebelgesetz beschäftigt.
+%Eine bekannte Formulierung des Hebelgesetzes lautet:
+%\begin{center}
+%%	\begin{large}
+%Kraft mal Kraftarm gleich Last mal Lastarm.
+%%	\end{large}
+%\end{center}
+
+%Weiter sind wir auf das Drehmoment gestossen.
+Das Drehmoment ist allgemein als Kreuzprodukt zweier Vektoren definiert:
+
+\begin{cbox}
+\begin{gather*}
+	\text{Drehmoment} = \text{Kreuzprodukt von Hebelarm und Kraft} \quad\text{oder}\quad \vec{M} = \vec{r}\times\vec{F}\\
+	\text{Einheit}: [\vec{M}]=\text{Meter}\cdot\text{Kraft}=\si{m}\cdot\si{N}=\si{Nm}
+\end{gather*}
+\end{cbox}
+
+Das bedeutet, dass die Komponente der Kraft, die senkrecht auf dem Hebelarm steht mal dem Hebelarm gerechnet werden muss.
+
+\Spalten{0.5}{
+\Beispiel Ein realer Hebelarm hat immer auch ein Eigengewicht. Seine Gewichtskraft greift am Schwerpunkt an.
+Die Richtung der Gewichtskraft ist im allgemeinen nicht senkrecht zum Hebelarm. Deshalb muss man die Gewichtskraft
+zerlegen, in eine Komponente senkrecht zum Hebelarm und eine Komponente parallel zum Hebelarm.
+Rechnerisch ist dass hier $\sin\alpha\cdot\RI{F}{G}$. Damit ergibt sich für das Drehmoment
+\begin{eqnarray*}
+	M=r\cdot \RI{F}{G}\cdot \sin\alpha\text{.}
+\end{eqnarray*}
+}{0.5}{
+\begin{center}
+	\begin{tikzpicture}
+
+\coordinate (P0) at (30:2cm);
+\draw [fill] (0,0) circle (0.1); \draw (0,0) node [left] {Drehachse};
+\draw [fill] (P0) circle (0.1); \draw (P0) node [left] {Schwerpunkt};
+\draw (0,0) --(30:4cm) node [ above,sloped] {Hebelarm};
+\draw [Kraft,->] (P0)--++(-90:3cm) node [midway, left] {\RI{F}{G}}node [shape=coordinate] (EK){};
+
+\draw [Winkel,->] (30:1cm) arc (210:270:1cm); \draw (P0) ++(240:0.8cm) node  {$\alpha$};
+
+\draw [dotted] (P0)--++(-60:3cm)  node [midway,right] {$\sin\alpha\cdot\RI{F}{G}$};
+\draw [dotted] (EK)--++(30:2.5cm) node [shape=coordinate] (EK){};
+	\end{tikzpicture}
+\end{center}
+}
+
+Zum Lösen von Problemen aus der Statik kann man das Drehmoment auch benutzen. Im statischen Fall muss die Summe der
+Kräfte und die Summe der Drehmomente an jedem beliebigen Punkt Null sein.
+\begin{align*}
+	\vec{F_1} + \vec{F_2} + \vec{F_3} + \cdots + \vec{F_n} = 0\\
+	\vec{M_1} + \vec{M_2} + \vec{M_3} + \cdots + \vec{M_n} = 0
+\end{align*}
+
+
+\Einbinden{\dir/loesen01.tex}
+\Einbinden{\dir/loesen02.tex}
+

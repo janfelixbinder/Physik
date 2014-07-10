@@ -1,0 +1,47 @@
+
+\begin{aufgabe}
+	Ein \SI{50}{kg} schwerer Junge steht im Schwimmbad auf dem Sprungbrett \SI{20}{cm} vom Ende des Brettes entfernt.
+	Das Sprungbrett ist drei Meter lang und hat eine Masse von \SI{30}{Kilogramm}.
+	Das Sprungbrett liegt vorne und bei einem Meter auf.
+	\begin{enumerate} [a)]
+		\item Machen Sie sich eine Skizze und zeichnen Sie alle Kräfte ein.
+		\item Wählen Sie eine Drehachse und stellen sie die Gleichgewichtsbedingungen auf.
+		\item Lösen Sie das Gleichungssystem. Welche Kräfte treten an den Auflagestellen auf?
+	\end{enumerate}
+	\begin{loesung}
+		\begin{enumerate} [a)]
+			\item Eine Skizze des Sprungbretts mit allen wirkenden Kräften könnte so aussehen.
+		\begin{center}
+			\begin{tikzpicture}
+				\draw (0,0)--(6,0);
+\draw [<-,Kraft] (5.6,0)--++(90:2cm) node [right] {$F=\SI{500}{N}$};%gewichtskraft des jungen
+\draw [->,Kraft] (3,0)--++(-90:2cm) node [right] {$F=\SI{300}{N}$};%gewichtskraft brett
+\draw [<-,Kraft] (2,0)--++(-90:2cm) node [left] {$F_2$};%stuetze
+\draw [<-,Kraft] (0,0)--++(-90:2cm) node [left] {$F_1$};%stuetze
+			\end{tikzpicture}
+		\end{center}
+		\item Um die Kräfte $F_1$ und $F_2$ ermitteln zu können, stellen wir die Summe der Drehmomente auf.
+			Ich wähle als erste Drehachse den Punkt an den die Kraft $F_1$ angreift.
+			\begin{eqnarray*}
+				F_2\cdot\SI{1}{m} -\SI{300}{N}\cdot\SI{1.5}{m} - \SI{500}{N}\cdot\SI{2.8}{m}=0\to F_2=\SI{1850}{N}
+			\end{eqnarray*}
+			Um die Kraft $F_1$ zu bestimmen wähle ich als Drehachse den Punkt an den die Kraft $F_2$ angreift.
+			\begin{eqnarray*}
+				-F_1\cdot\SI{1}{m} - \SI{300}{N}\cdot\SI{0.5}{m} -\SI{500}{N}\cdot\SI{1.8}{m}=0\to F_1=-\SI{1050}{N}
+			\end{eqnarray*}
+			Die Kraft $F_1$ ist negativ. Das heisst, unsere Annahme $F_1$ zeigt nach oben ist falsch. $F_1$ zeigt also nach unten.
+			Abschliessend noch einmal die Kräfteverteilung am Sprungbrett:
+		\begin{center}
+			\begin{tikzpicture}
+				\draw (0,0)--(6,0);
+\draw [<-,Kraft] (5.6,0)--++(90:2cm) node [right] {$F=\SI{500}{N}$};%gewichtskraft des jungen
+\draw [->,Kraft] (3,0)--++(-90:2cm) node [right] {$F=\SI{300}{N}$};%gewichtskraft brett
+\draw [<-,Kraft] (2,0)--++(-90:2cm) node [left] {\SI{1850}{N}};%stuetze
+\draw [->,Kraft] (0,0)--++(-90:2cm) node [left] {\SI{1050}{N}};%stuetze
+			\end{tikzpicture}
+		\end{center}
+		\end{enumerate}
+	\end{loesung}
+	\kloesung{c) \SI{1050}{N} und \SI{1850}{N}.}
+\end{aufgabe}
+

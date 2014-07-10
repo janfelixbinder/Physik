@@ -1,0 +1,41 @@
+
+\begin{aufgabe}
+	\label{Hund}
+	Drei Hunde ziehen einen Hundeschlitten. Der erste Hund zieht mit \SI{37}{N}, 
+	der zweite Hund mit \SI{27}{N} unter einem Winkel von \SI{-17}{\degree}. 
+	Der dritte Hund zieht mit einer Kraft von \SI{32}{N} und einem Winkel von \SI{12}{\degree} (siehe Zeichnung).
+In welche Richtung und mit welcher Kraft wird der Schlitten gezogen. Lösen Sie graphisch.
+\begin{center}
+	
+\begin{tikzpicture}
+
+\draw [->, Kraft] (0,0) -- +(0:3.7cm) node [right] {$F_1$};
+\draw [->, Kraft] (0,0) -- +(-17:2.7cm) node [right] {$F_2$};
+\draw [->, Kraft] (0,0) -- +(12:3.2cm) node [right] {$F_3$};
+\AP{(0,0)}
+
+\end{tikzpicture}
+\end{center}
+
+
+\begin{loesung}
+Durch verschieben der Vektoren bekommen wir den resultierenden Vektor.
+Seine Länge und sein Winkel können gemessen werden.
+
+
+\begin{tikzpicture}
+
+\draw [->, Kraft,yshift=-2cm,color=black!30] (0,0) -- +(0:3.7cm) node [midway, above] {$F_1$};
+\draw [->, Kraft,yshift=-2cm,color=black!30] (0,0) ++(0:3.7cm) -- ++(-17:2.7cm) node [midway, above] {$F_2$};
+\draw [->, Kraft,yshift=-2cm,color=black!30] (0,0) ++(0:3.7cm)++(-17:2.7cm)--++(12:3.2cm) node [midway,above] {$F_3$} node (E) {};
+
+\draw [->,Kraft,yshift=-2cm] (0,0)--(E.center) node [midway, above] {$F_1+F_2+F_3$};
+
+\end{tikzpicture}
+
+
+\vspace*{1cm}
+
+\end{loesung}
+\end{aufgabe}
+

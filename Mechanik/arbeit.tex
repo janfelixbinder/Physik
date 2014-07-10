@@ -1,0 +1,281 @@
+\section*{Arbeit und Energie}
+In der Umgangssprache ist der Begriff \emph{Arbeit} nicht klar definiert.
+Viele Menschen arbeiten im Büro und schreiben, telefonieren und diskutieren.
+Andere arbeiten auf Baustellen und tragen Steine und schweres Gerät.
+
+In der Physik ist die \emph{Arbeit} klar definiert.
+\emph{Arbeit} ist das Skalarprodukt aus \emph{Kraft} und \emph{Weg}.
+Die Einheit der Arbeit ist das {\bf Joule}.
+
+\begin{cbox}
+\begin{gather*}
+    \text{Arbeit} = \text{Kraft}\cdot{\text{Weg}}\quad\text{oder}\quad W=F\cdot s\cdot \cos \alpha\\
+	\text{Einheit}: [W] = \text{Newton}\cdot\text{Meter}=\si{N}\cdot\si{m}=\frac{\si{kg}\cdot\si{m}}{\si{s^2}}\cdot \si{m}=\text{Joule}=\si{J}
+\end{gather*}
+\end{cbox}
+
+\Einbinden{\dir/arbeit_schrank.tex}
+\Einbinden{\dir/arbeit_schlitten.tex}
+
+
+\subsection*{Hubarbeit}
+Um einen Körper der Masse $m$ um eine Höhe $h$ anzuheben, ist eine \emph{Hubarbeit} erforderlich.
+\begin{equation*}
+	W_{\text{Hub}} = F \cdot h = F_{\text{G}}\cdot h = m\cdot g\cdot h
+\end{equation*}
+
+Im Vergleich zu seiner ursprünglichen Lage hat der Körper eine höhere potentielle Energie.
+
+\begin{cbox}
+\begin{equation*}
+	E_{\text{pot}} = m\cdot g\cdot h
+\end{equation*}
+\end{cbox}
+
+
+\Einbinden{\dir/arbeit_hub.tex}
+
+
+
+
+\subsection*{Beschleunigungsarbeit}
+Um einen Körper zu beschleunigen ist eine Kraft nötig. Es gilt $F=m\cdot a$ wie wir auf Seite ~\pageref{newton2} gesehen haben.
+Damit ist klar, dass es auch eine Beschleunigungsarbeit gibt.
+\begin{eqnarray*}
+	\RI{W}{Bew}=F\cdot s=m\cdot a\cdot s=\frac{1}{2}\cdot m\cdot\left(v^2-v_0^2\right)
+\end{eqnarray*}
+
+Dabei ist $m$ die Masse, $a$ die Beschleunigung, $s$ der Weg und $v$ die Geschwindigkeit.
+Im letzten Schritt haben wir für $a\cdot s$ einen Ausdruck eingesetzt, den wir durch umstellen aus der Formel
+$v^2=v_0^2+2\cdot a\cdot s$ bekommen haben.
+
+Hat der Körper die Geschwindigkeit $v$ erreicht, so besitzt er eine \emph{kinetische Energie}.
+
+\begin{cbox}
+\begin{equation*}
+	\RI{E}{kin} = \frac{1}{2}\cdot m\cdot v^2
+\end{equation*}
+\end{cbox}
+
+\Einbinden{\dir/arbeit_velo.tex}
+\Einbinden{\dir/Ekin_auto.tex}
+
+\newpage
+
+\subsection*{Verformungsarbeit}
+In diesem Abschnitt werden wir lernen, wie man die Arbeit für eine nicht konstante Kraft bestimmen kann.
+Arbeit ist Kraft mal Weg. Ändert sich die Kraft über den Weg, muss man dies berücksichtigen.
+
+\begin{figure}[h!]
+\begin{center}
+\input{./arbeitsdiagramm.tex}
+\end{center}
+\caption{\label{fig:arbeitsdiagramm} Arbeitsdiagramm für eine ideale Feder und für eine reale Feder.
+}
+\end{figure}
+
+In Abbildung~\ref{fig:arbeitsdiagramm} sehen wir zwei verschiedene Arbeitsdiagramme. 
+Das erste Arbeitsdiagramm zeigt die Arbeit zum spannen einer idealen Feder.
+Die Federkraft ist ein Beispiel für eine nicht konstante Kraft. 
+%Wie wir schon auf Seite \pageref{hook} gesehen haben, 
+Wie wir schon früher einmal gesehen haben,
+gilt für die Federkraft $\RI{F}{F} = -D\cdot l$. Dabei ist $D$ die Federkonstante
+und $l$ ist die Auslenkung aus der Ruhelage der Feder.
+Die Federkraft nimmt linear mit der Auslenkung der Feder zu. Das heisst, am Anfang ist relativ wenig
+Arbeit nötig um die Feder auszulenken. Die Arbeit, die nötig ist, um die Feder auszulenken ist
+die Fläche unter dem Arbeitsdiagramm. Im Fall der idealen Feder, können wir eine Formel dafür angeben.
+
+
+\begin{eqnarray*}
+	\RI{W}{Feder}= \frac{1}{2}\cdot\RI{F}{F}\cdot l=\frac{1}{2}\cdot D\cdot l^2
+\end{eqnarray*}
+
+Um die Arbeit für das zweite Diagramm zu bestimmen gibt es keine Formel. Es gilt aber immer, dass die Fläche
+im Arbeitsdiagramm die verrichtete Arbeit repräsentiert. Die Fläche im zweiten Diagramm lässt sich näherungsweise
+durch auszählen der Kästchen bestimmen.
+
+Die Energie, die in einer gespannten Feder gespeichert ist kann wie folgt berechnet werden:
+
+\begin{cbox}
+\begin{eqnarray*}
+	\RI{E}{Feder}=\frac{1}{2}\cdot D\cdot l^2
+\end{eqnarray*}
+\end{cbox}
+
+\newpage
+
+\Einbinden{\dir/arbeit_feder01.tex}
+\Einbinden{\dir/arbeit_feder02.tex}
+\Einbinden{\dir/arbeit_feder03.tex}
+
+
+
+
+
+\newpage
+
+\section*{Energieerhaltung}
+Die Energie ist in der Physik eine der wichtigsten Grössen. Die Energie ist eine \emph{Erhaltungsgrösse}.
+Das heisst Energie lässt sich weder erzeugen noch vernichten.
+Wenn man das mit den eigenen Erfahrungen vergleicht, klingt das auf den ersten Blick falsch.
+Man liest oft über Energieerzeugung durch z. B. Kohlekraftwerke. Aber diese Energie wird nicht erzeugt,
+sondern nur umgewandelt. Wenn Kohle verbrannt wird, brechen chemische Bindungen, in denen Energie gespeichert
+war. Kohle entsteht, wenn Pflanzen unter Druck kompostieren. Diese Pflanzen sind dank der Sonnenenergie gewachsen.
+Auf der Sonne verschmelzen zwei Wasserstoffatome in ein Heliumatom, dadurch wird Energie freigesetzt.
+
+
+Reale Systeme ``verlieren'' immer Energie durch Reibung. Auch in diesem Fall gilt die Energieerhaltung.
+Kinetische Energie wird in \emph{innere Energie} $U$ umgewandelt. Das heisst praktisch, dass Energie
+durch Reibung zu Wärme wird. Innere Energie lässt sich nicht mehr
+wirkungsvoll in andere Energieformen umwandeln.
+
+\begin{cbox}
+\begin{equation*}
+	E = \RI{E}{pot} +\RI{E}{kin} + \RI{E}{Feder} + U = \text{konstant}
+\end{equation*}
+\end{cbox}
+
+\begin{aufgabe}
+	Ein Stein (\SI{1.5}{kg}) fällt von einer \SI{40}{m} hohen Brücke.
+	\begin{itemize}
+		\item [a)] Wie hoch ist die potentielle Energie des Steins auf der Brücke?
+		\item [b)] Wie hoch ist die kinetische Energie des Steins auf der Brücke?
+		\item [c)] Wie gross ist seine Gesamtenergie?
+		\item [d)] Mit welcher Geschwindigkeit kommt der Stein unten auf?
+	\end{itemize}
+	\begin{loesung}
+		\begin{itemize}
+			\item[a)]
+				\begin{eqnarray*}
+					\RI{E}{pot}=m\cdot g\cdot h=\SI{1.5}{kg}\cdot\SI{9.81}{m/s^2}\cdot\SI{40}{m}=\SI{588.6}{J}
+				\end{eqnarray*}
+			\item[b)]
+				\begin{eqnarray*}
+					\RI{E}{kin}=\frac{1}{2}\cdot m\cdot v^2=\SI{0.5}\cdot\SI{1.5}{kg}\cdot{0}{m/s}=\SI{0}{J}
+				\end{eqnarray*}
+			\item[c)] Die Gesamtenergie ist konstant.
+				\begin{eqnarray*}
+					\RI{E}{tot}=\RI{E}{pot} + \RI{E}{kin}=\SI{588.6}{J} + \SI{0}{J}=\SI{588.6}{J}
+				\end{eqnarray*}
+			\item[d)] Am Boden ist die Gesamtenergie genauso gross wie auf der Brücke (Energieerhaltung).
+				\begin{gather*}
+					\RI{E}{pot}=m\cdot g\cdot h=\SI{1.5}{kg}\cdot\SI{9.81}{m/s^2}\cdot\SI{0}{m}=\SI{0}{J}\\
+					\RI{E}{tot}=\RI{E}{pot} + \RI{E}{kin} \to \RI{E}{kin}=\RI{E}{tot}-\RI{E}{pot}=\SI{588.6}{J}-\SI{0}{J}=\SI{588.6}{J}\\
+					\RI{E}{kin}=\frac{1}{2}\cdot m\cdot v^2 \to v=\sqrt{\frac{2\cdot \RI{E}{kin}}{m}} =\SI{28.0}{m/s}
+				\end{gather*}
+		\end{itemize}
+	\end{loesung}
+\end{aufgabe}
+
+\begin{aufgabe}
+	Eine Feder mit einer Federkonstanten von \SI{200}{N/m} wird gestaucht.
+	\begin{itemize}
+		\item [a)] Wie viel Arbeit ist nötig um die Feder um \SI{15}{cm} zu stauchen?
+		\item [b)] Wie viel Energie ist nun in der Feder gespeichert?
+		\item [c)] Nun wird ein Schlitten ($m=\SI{1.7}{kg}$) vor die gespannte Feder gesetzt, und die Feder entspannt.
+			Auf welche Geschwindigkeit wird der Schlitten beschleunigt, wenn Reibung vernachlässigt wird?
+		\item [d)] Der Schlitten hat Stahlkufen und gleitet auf einer Stahloberfläche. Wie weit kommt der Schlitten, wenn
+			die Reibung nach entspannen der Feder einsetzt?
+	\end{itemize}
+	\begin{loesung}
+		\begin{itemize}
+			\item [a)] Die Federkraft ist nicht konstant, sondern steigt linear mit der Auslenkung.
+				Die Fläche unter dem Arbeitsdiagramm ist 
+				\begin{eqnarray*}
+				W=\frac{1}{2}\cdot\RI{F}{F}\cdot(\Delta x)=\frac{1}{2}\cdot D\cdot (\Delta x)^2=\num{0.5}\cdot\SI{200}{N/m}\cdot(\SI{0.15}{m})^2=\SI{2.25}{J}
+				\end{eqnarray*}
+			\item[b)] Das spannen der Feder hat \SI{2.25}{J} gekostet, damit ist die Federenergie $\RI{E}{Feder}=\SI{2.25}{J}$.
+			\item[c)] Es gilt Energieerhaltung. Die Federenergie wird vollständig in kinetische Energie umgewandelt.
+				\begin{eqnarray*}
+					\RI{E}{kin}=\frac{1}{2}\cdot m\cdot v^2 \to v=\sqrt{\frac{2\cdot \RI{E}{kin}}{m}} =\sqrt{\frac{2\cdot\SI{2.25}{J}}{\SI{1.7}{kg}}}=\SI[dp=2]{1.6270}{m/s}
+				\end{eqnarray*}
+			\item[d)] Wir rechnen zuerst die Reibungskraft aus. Aus der Tabelle finden wir die Reibungszahl $\mu$ für Gleitreibung Stahl auf Stahl.
+				Es wirkt nur die Gewichtskraft und die Normalkraft in vertikaler Richtung auf den Schlitten, 
+				daraus folgt, dass die Normalkraft gleich
+				der Gewichtskraft ist.
+				\begin{eqnarray*}
+					\RI{F}{R}=\mu\cdot\RI{F}{N}=\mu\cdot m\cdot g=\num{0.1}\cdot\SI{1.7}{kg}\cdot\SI{9.81}{m/s^2}=\SI{1.67}{N}
+				\end{eqnarray*}
+	Es gibt nun zwei Möglichkeiten um zu berechnen, wie weit der Schlitten noch kommt.
+	\begin{itemize}
+		\item [(1)] Im ersten Fall berechnen wir die Arbeit, die die Oberfläche gegen den Schlitten verrichtet.
+			Wenn die kinetische Energie des Wagens vollständig in innere Energie $U$ umgewandelt wurde, kommt dieser zum Stehen.
+			\begin{eqnarray*}
+				W=F\cdot s =\RI{F}{R}\cdot s \to s =\frac{W}{\RI{F}{R}}=\frac{\SI{2.25}{J}}{\SI{1.67}{N}}=\SI[dp=2]{1.3473}{m}
+			\end{eqnarray*}
+		\item[(2)]			
+				Mit $F=m\cdot a$ kann man nun die Beschleunigung ausrechnen. \RI{F}{R} wirkt entgegen der Bewegungsrichtung, also $-\RI{F}{R}$.
+\begin{gather*}
+	a=\frac{F}{m} =\frac{\RI{F}{R}}{m}=\frac{\SI{-1.67}{N}}{\SI{1.7}{kg}}=\SI{-0.981}{m/s^2}\\
+	v^2=v_0^2+2\cdot a\cdot s \to s=\frac{v^2-v_0^2}{2\cdot a}=\frac{(\SI{0}{m/s})^2-(\SI[dp=2]{1.6270}{m/s})^2}{2\cdot(\SI{-0.981}{m/s^2})}=\SI[dp=2]{1.3492}{m}
+\end{gather*}
+
+	\end{itemize}
+		\end{itemize}
+	\end{loesung}
+
+\end{aufgabe}
+
+
+
+\begin{aufgabe}
+	Ein Wagen (\SI{3}{kg}) rollt eine schiefe Ebene herunter. Die Ebene ist mit einem Winkel von \SI{25}{\degree}
+	gegen die Horizontale geneigt. 
+	\begin{itemize}
+		\item [a)] Wie schnell ist der Wagen nach \SI{7.5}{m}?
+		\item [b)] Nach \SI{15}{m} fährt der Wagen auf eine Feder mit einer Federkonstante von \SI{100}{N/m}
+			wie stark wird die Feder gestaucht?
+		\item [c)] Der Wagen wird auf eine horizontale Ebene mit Reibung ($\mu=0.1$) umgelenkt.
+			Wie weit kommt der Wagen?
+	\end{itemize}
+	\begin{loesung}
+		\begin{itemize}
+			\item [a)] Der Wagen wandelt potentielle Energie in kinetische Energie.
+				\begin{eqnarray*}
+					\RI{E}{pot}= m\cdot g\cdot h=m\cdot g\cdot\sin(\alpha)\cdot \Delta s =\SI{3}{kg}\cdot\SI{9.81}{m/s^2}\cdot\num[dp=2]{0.42262}\cdot\SI{7.5}{m}=\SI{93.282}{J}
+				\end{eqnarray*}
+Diese potentielle Energie hat der Wagen verloren. Gleichzeitig hat er denselben Betrag an kinetischer Energie gewonnen (Energieerhaltung).
+Durch umstellen der kinetischen Energie nach $v$ erhalten wir
+\begin{eqnarray*}
+	\RI{E}{kin}=\frac{1}{2}\cdot m\cdot v^2 \to v=\sqrt{\frac{2\cdot \RI{E}{kin}}{m}}=\sqrt{\frac{2\cdot\SI{93.28}{J}}{\SI{3}{kg}}}=\SI[dp=2]{7.8860}{m/s}
+\end{eqnarray*}
+
+\item[b)] Nun wird die kinetische Energie in Federenergie umgewandelt.
+Da die kinetische Energie am Startpunkt Null war, ist die kinetische Energie unten, gleich der potentiellen Energie am Startpunkt. 
+	\begin{eqnarray*}
+		\RI{E}{tot}=\RI{E}{pot}=m\cdot g\cdot h=m\cdot g\cdot\sin(\SI{25}{\degree})\cdot\SI{15}{m}=\SI{3}{kg}\cdot\SI{9.81}{m/s^2}\cdot\num[dp=2]{0.42262}\cdot\SI{15}{m}=\SI{186.56}{J}
+	\end{eqnarray*}
+Aus der Federenergie kann die Auslenkung $\Delta x$ bestimmt werden
+\begin{eqnarray*}
+	\RI{E}{Feder}=\frac{1}{2}\cdot D\cdot(\Delta x)^2 \to \Delta x = \sqrt{\frac{2\cdot\RI{E}{Feder}}{D}}=\sqrt{\frac{2\cdot\SI{186.56}{J}}{\SI{100}{N/m}}}=\sqrt{\SI[dp=2]{3.7313}{m^2}}=\SI[dp=2]{1.9317}{m}
+\end{eqnarray*}
+
+\item [c)] Zuerst berechnen wir die Reibungskraft. Die Gewichtskraft und die Normalkraft sind die einzigen Kräfte in vertikale Richtung.
+	Daher müssen beide gleich gross sein.
+	\begin{eqnarray*}
+		\RI{F}{R} = \mu\cdot\RI{R}{N} = \mu\cdot m\cdot g =\num{0.1}\cdot\SI{3}{m}\cdot\SI{9.81}{m/s^2}=\SI[dp=2]{2.9430}{N}
+	\end{eqnarray*}
+	Nun gibt es zwei Möglichkeiten auszurechen, wie weit der Schlitten noch fährt.
+	\begin{itemize}
+		\item [(1)] Wir wandeln die kinetische Energie in innere Energie $U$ um.
+			\begin{eqnarray*}
+				U = \RI{F}{R}\cdot s \to s=\frac{U}{\RI{F}{R}}=\frac{\SI{186.56}{J}}{\SI[dp=2]{2.9430}{N}} =\SI[dp=2]{63.393}{m}
+			\end{eqnarray*}
+		\item [(2)] Wir berechnen aus der Reibungskraft die Beschleunigung und dann damit den Bremsweg.
+			\begin{eqnarray*}
+				F=m\cdot a \to a=\frac{F}{m}=\frac{\SI[dp=2]{2.9430}{N}}{\SI{3}{kg}}=\SI[dp=2]{0.98100}{m/s^2}
+			\end{eqnarray*}
+Aus der Gesamtenergie bestimmen wir die Geschwindikeit
+\begin{eqnarray*}
+	\RI{E}{kin}=\frac{1}{2}\cdot m\cdot v^2 \to v=\sqrt{\frac{2\cdot \RI{E}{kin}}{m}}=\sqrt{\frac{2\cdot\SI{186.56}{J}}{\SI{3}{kg}}}=\SI[dp=2]{11.152}{m/s}
+\end{eqnarray*}
+Damit bekommen wir
+\begin{eqnarray*}
+	v^2 = v_0^2 +2\cdot a\cdot s \to s=\frac{v^2 -v_0^2}{2\cdot a}=\frac{(\SI{0}{m/s})^2-(\SI[dp=2]{11.152}{m/s})^2}{2\cdot(\SI[dp=2]{-0.98100}{m/s^2})}=\frac{\SI[dp=2]{124.38}{m^2/s^2}}{\SI[dp=2]{1.9620}{m/s^2}}=\SI[dp=2]{63.393}{m}
+\end{eqnarray*}
+	\end{itemize}
+		\end{itemize}
+	\end{loesung}
+
+\end{aufgabe}
+
