@@ -1,0 +1,43 @@
+\documentclass[12pt,a4paper,twoside,DIV13,BCOR1cm,landscape]{scrartcl}
+
+
+\usepackage{style}
+
+
+\newcommand{\QRcode}[2]{\tikz \node (Bild) at (0,0) {\includegraphics[width=0.3\textwidth] {#1}}; \tikz \node [below] (Code) at (Bild) {#2};}
+%\node (Bild) at (0,0) {Bild};
+%\node [below] (Code) at (Bild) {Code};
+
+
+
+
+%Kopfzeile
+%gerade   linke  seiten mit \lehead, \cehead und \rehead
+%ungerade rechte seiten mit \lohead, \cohead und \rohead
+
+%Fusszeile wie bei der Kopfzeile nur statt head foot
+%\lefoot 
+\usepackage{scrlayer-scrpage}
+\lohead{Felix Binder}
+\rohead{Mechanik}
+\lofoot{Verlag Naseblau, Irgendwo}
+
+\pagestyle{scrheadings}
+
+
+
+
+\begin{document}
+
+\begin{aufgabe}
+Überlegen Sie sich, von welchen Grössen die Periodendauer eines Fadenpendels abhängen könnte.
+Rufen Sie dann mit Ihrem Handy den Fragebogen auf und beantworten Sie die Fragen.
+\QRcode{/home/felix/Schule1415/qr-code_fadenpendel.png}{http://goo.gl/mE3Uh6}
+
+\end{aufgabe}
+
+\newpage
+\includesolutions
+
+\end{document}
+

@@ -1,0 +1,27 @@
+set terminal postscript
+set output "./sprung.ps"
+
+
+set xlabel "Höhe (m)"
+set ylabel "Energie (J)"
+
+
+m = 60
+g = 9.81
+
+h1=55
+h2=17
+
+D = (2 * m * g * h1)/h2**2
+
+
+#Epot
+f(x) = m * g * x
+
+#Feder
+g(x) = (x<h2) ? 0.5 * D * (h2 - x)**2 : 0
+
+#Ekin
+h(x) = -m * g * (x-h1) - g(x)
+
+plot [0:h1] f(x) t "Epot" w l lt 1, g(x) t "EFeder" w l lt 2, h(x) t "Ekin" w l lt 3

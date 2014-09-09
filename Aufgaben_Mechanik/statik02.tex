@@ -1,0 +1,27 @@
+
+\begin{aufgabe}
+In einer Strasse hängt die Beleuchtung über der Strasse. Die Lampen sind über Drahtseile mit Pfosten verbunden
+(siehe Skizze).
+Die Gewichtskraft einer Lampe beträgt \SI{1000}{N}. Bestimmen Sie die Kräfte in den Drähten.
+\begin{center}
+	\begin{tikzpicture}
+	\draw (-5,0)--(5,0) node[midway, below] {Strasse};
+
+\draw (-4,0)--(-4,7) node [midway, sloped, above] {\SI{7}{m}};
+\draw (4,0)--(4,7) node [midway, sloped, above] {\SI{7}{m}};
+\draw [<->] (-4,7.5)--(4,7.5) node [midway, above] {\SI{8}{m}};
+
+
+\draw (-4,7) --(0,6)--(4,7);
+\draw (0,6) arc(90:180:0.5);
+\draw (0,6) arc(90:0:0.5); 
+\draw (0,5) node {Lampe};	
+
+\draw [dotted] (-4,7)--(4,7);
+\draw [<->] (0,7)--(0,6) node [midway, right] {\SI{1}{m}};
+
+\end{tikzpicture}
+\end{center}
+
+\end{aufgabe}
+

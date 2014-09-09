@@ -1,8 +1,45 @@
-\documentclass[12pt,a4paper,twoside]{article}
-\usepackage{mystyle}
+%\documentclass[12pt,a4paper,twoside,DIV13,BCOR1cm]{scrartcl}
+%\documentclass[12pt,a4paper,twoside,DIV=calc,BCOR1cm]{scrartcl}
+\documentclass[paper=landscape]{scrartcl}
+%\KOMAoptions{BCOR=8.25mm,paper=A4,paper=landscape}
+
+
+
+
+%\usepackage[DIV13,BCOR1cm]{typearea} %setzt seitenränder hack31
+
+\usepackage{style}
 \usepackage{mechanik_v001}
 \usepackage{foto_v001}
 \usepackage{gplot}
+
+
+
+%Kopfzeile
+%gerade   linke  seiten mit \lehead, \cehead und \rehead
+%ungerade rechte seiten mit \lohead, \cohead und \rohead
+
+%Fusszeile wie bei der Kopfzeile nur statt head foot
+%\lefoot 
+\usepackage{scrlayer-scrpage}
+\lohead{Felix Binder}
+\rohead{Mechanik}
+\lofoot{Verlag Naseblau, Irgendwo}
+
+\pagestyle{scrheadings}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 %\author{Felix Binder}
 \title{Mechanik}
