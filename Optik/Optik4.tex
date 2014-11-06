@@ -1,0 +1,180 @@
+%\documentclass[11pt,a4paper,titlepage,twoside]{article}
+\documentclass[12pt,a4paper,twoside]{article}
+\usepackage{mystyle}
+\usepackage{optik_v002}
+\usepackage{foto_v001}
+\usepackage{gplot}
+\usepackage{import}
+
+%oben und unten
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\rhead{}
+\rfoot{Felix Binder}
+\renewcommand\headrulewidth{0pt}
+\renewcommand\footrulewidth{1pt}
+%ende oben und unten
+
+%\usepackage{schueler}
+%\usepackage{lehrer}
+\date{}
+%\author{Felix Binder}
+\title{Optik}
+
+
+\begin{document}
+%\maketitle
+
+\addtocounter{page}{5}
+\addtocounter{section}{9}
+\addtocounter{aufgabe}{27}
+
+
+\section{Optische Geräte}
+
+\subsection{Das menschliche Auge}
+%\import{./Eye_scheme.pdf}{./Eye_scheme.pdf_tex}
+\begin{center}
+\Bildeinbinden{Eye_scheme2.pdf}{0.65\textwidth}
+\end{center}
+
+Licht tritt durch die Pupille ins Auge ein. Der Durchmesser der Pupille ist veränderlich. Ist es sehr hell verengt sich die Pupille,
+ist es dunkel öffnet sich die Pupille, dadurch kann mehr Licht in das Auge eindringen. Beim Fotoapparat erfüllt die Blende die Funktion der Pupille. 
+
+Die Netzhaut ist eine dünne lichtempfindliche Schicht aus Nervenzellen. Es gibt zwei verschiedene Typen von Nervenzellen auf der Netzhaut,
+die Stäbchen und die Zäpfchen. Die Zäpfchen können verschiedene Farben unterscheiden, während die Stäbchen nur zwischen hell und dunkel unterscheiden können.
+Ist es dunkel sprechen nur die Stäbchen an, und man kann keine Farben erkennen.
+
+Die Form der Augenlinse, und damit auch die Brennweite der Linse, lässt sich durch die Ziliarkörper etwas verändern.
+Befindet sich ein Gegenstand nah am Auge, dann vergrössert der Zilarkörper die Krümmung der Linse, dadurch verringert sich die Brennweite der Linse, und
+die Strahlen vom Gegenstand werden wieder auf die Netzhaut fokussiert.
+Befindet sich ein Gegenstand zu nah am Auge, kann dieses den Gegenstand nicht mehr scharf auf der Netzhaut abbilden.
+Der minimale Abstand, bei dem ein Gegenstand noch scharf dargestellt werden kann heisst Nahpunkt.
+Der Nahpunkt kann von Mensch zu Mensch verschieden sein, und ändert sich auch im Laufe des Lebens.
+Als Standardwert gilt ein Nahbereich von \SI{25}{Zentimetern}.
+
+\begin{aufgabe}
+	Bestimmen Sie (am besten zu zweit) ihren persönlichen Nahpunkt.
+	\begin{loesung}
+		Der Nahpunkt variiert von Person zu Person, und kann zwischen 10 und \SI{200}{Zentimetern} liegen.
+Als Standardwert gilt ein Nahbereich von \SI{25}{Zentimetern}.
+	\end{loesung}
+\end{aufgabe}
+\begin{aufgabe}
+	In welchem Bereich liegt die Brennweite des menschlichen Auges. Der Abstand Netzhaut--Linse soll \SI{2.5}{Zentimeter} betragen.
+	\begin{loesung}
+		Ist ein Gegenstand weit entfernt ($g=\infty$), dann ist die Augenlinse beim Betrachten entspannt.
+		Aus der Linsengleichung wird in diesem Fall ($\nicefrac{1}{g}\to 0$)
+		\begin{eqnarray*}
+			\frac{1}{f}=\frac{1}{b}=\frac{1}{\SI{2.5}{cm}}\text{.}
+		\end{eqnarray*}
+		Die Brennweite ist dann also \SI{2.5}{cm}.
+
+		Ist der Gegenstand nah am Auge, hier $g=\SI{25}{cm}$, dann gilt
+		\begin{eqnarray*}
+			\frac{1}{f}=\frac{1}{b} + \frac{1}{g} =\frac{1}{\SI{2.5}{cm}} + \frac{1}{\SI{25}{cm}}=\SI{0.4}{cm^{-1}} + \SI{0.04}{cm^{-1}}=\SI{0.44}{cm^{-1}}\text{.}
+		\end{eqnarray*}
+		Damit ist die Brennweite für diesen Fall $f=\SI{2.27}{cm}$.
+	\end{loesung}
+\end{aufgabe}
+
+\subsection{Sehwinkel und Auflösung des Auges}
+Lichtstrahlen, die von einem Gegenstand ausgehen fallen unter einem bestimmten Winkel, dem \emph{Sehwinkel} in unser Auge.
+Ist der Gegenstand nah, so ist der Sehwinkel gross. Entfernt man den Gegenstand, wird der Sehwinkel kleiner.
+Je nach Grösse des Sehwinkels erscheint uns der Gegenstand gross oder klein.
+
+\begin{aufgabe}
+	Messen Sie mit einem Geodreieck den Sehwinkel in den zwei Skizzen. Welches Haus erscheint im Auge grösser?
+\begin{center}
+\begin{tikzpicture}
+	\Auge{(0,0)}{Auge}
+	\Nikolaushaus{(2,-0.0)}{Haus}
+	\draw (Auge O)--(Haus N);
+	\draw (Auge O)--(Haus SW);
+%	\draw (1,-2) node {grosser Sehwinkel};
+
+	\Auge{(6,0)}{Auge}
+	\Nikolaushaus{(14,-0.0)}{Haus}
+	\draw (Auge O)--(Haus N);
+	\draw (Auge O)--(Haus SW);
+%	\draw (8,-2) node {kleinerer Sehwinkel};
+\end{tikzpicture}
+\end{center}
+\end{aufgabe}
+
+\begin{aufgabe}
+	Finden Sie eine Formel für den Sehwinkel $\epsilon$. Benutzen sie die Gegenstandsweite und die Gegenstandsgrösse.
+	\begin{loesung}
+		\begin{eqnarray*}
+			\tan\epsilon = \nicefrac{G}{g}
+		\end{eqnarray*}
+		$G$ ist die Gegenstandsgrösse und $g$ ist die Gegenstandsweite.
+	\end{loesung}
+\end{aufgabe}
+
+\begin{aufgabe}
+	\label{zweiPunkte}
+	Sie haben in einem Buch gelesen, dass der minimale Sehwinkel, den das menschliche Auge noch auflösen kann etwa ein sechzigstell eines Grades gross ist.
+	Welchen Abstand müssen zwei Punkt mindestens voneinander haben, wenn Sie diese mit ihrem Auge noch als zwei separate Punkte erkennen wollen. 
+	Berechnen Sie den Abstand am Nahpunkt des Auges bei \SI{25}{Zentimetern}.
+	\begin{loesung}
+		Wir benutzen die Formel für den Sehwinkel. $G$ ist gesucht, die anderen Angaben stehen in der Aufgabe.
+		\begin{eqnarray*}
+			\tan\epsilon = \frac{G}{g}\to G=\tan\epsilon\cdot g=\tan(\frac{1}{60})\cdot\SI{0.25}{m}=\SI{2.91}\cdot\SI{0.25}{m}=\SI{7.3E-5}{m}=\SI{73}{\mu m}
+		\end{eqnarray*}
+		Sind zwei Punkte also näher als \SI{73}{\mu m} von einander entfernt, 
+		kann das Auge sie nicht mehr als zwei Punkte erkennen, wenn sie nicht näher als \SI{25}{cm} vor dem Auge sind.
+	\end{loesung}
+\end{aufgabe}
+
+
+\begin{aufgabe}
+	Sie machen mit ihrem Handy ein Foto, und wollen es später ausdrucken lassen. Die Kamera in ihrem Handy schafft eine Auflösung von $3264\times2448$
+	Pixeln.
+	\begin{enumerate} [a)]
+		\item Wie viele Pixel hat ihre Kamera?
+		\item In welcher grösse können Sie das Foto ausdrucken lassen, ohne Qualitätsverluste festzustellen 
+			(sie wollen das Foto wie in Aufgabe \ref{zweiPunkte} im Abstand von \SI{25}{Zentimetern} betrachten können).
+		\item Sie wollen das Foto ganz gross zeigen, und vergrössern es soweit, dass jedes Pixel \SI{1}{cm^2} gross ist. Wie gross wird dann das Foto? 
+			Aus welchem Abstand müssten Sie es betrachten, damit es für Sie aussieht wie in Aufgabenteil b).
+	\end{enumerate}
+	\begin{loesung}
+		\begin{enumerate} [a)]
+			\item Es sind \num{3264} mal \num{2448} Pixel. Das sind total \num{7990272} Pixel. Die Kamera hat also \SI{8}{Megapixel}.
+			\item In der Aufgabe \ref{zweiPunkte} haben wir den minimalen Abstand zwischen zwei Punkten berechnet.
+				Das können wir hier nutzen.
+				\begin{eqnarray*}
+					\begin{split}
+					3264\cdot\SI{73}{\mu m}&= \SI{0.24}{cm}\\
+					2448\cdot\SI{73}{\mu m}&= \SI{0.18}{cm}
+					\end{split}
+				\end{eqnarray*}
+	\item Ist jedes Pixel \SI{1}{cm} mal \SI{1}{cm} gross, dann ist das Foto insgesamt
+		\begin{eqnarray*}
+					\begin{split}
+						3264\cdot\SI{1}{cm}&= \SI{3264}{cm}=\SI{32.64}{m}\\
+						2448\cdot\SI{1}{cm}&= \SI{2448}{cm}=\SI{24.48}{m}
+					\end{split}
+				\end{eqnarray*}
+			gross.
+			Damit das grosse Foto so aussieht wie das kleine, muss der Sehwinkel gleich gross sein.
+			Es muss gelten:
+			\begin{eqnarray*}
+				\tan\epsilon=\frac{\RI{G}{klein}}{\RI{g}{klein}}=\frac{\RI{G}{gross}}{\RI{g}{gross}}\text{.}
+			\end{eqnarray*}
+			Auflösen der Formel nach \RI{g}{gross} und einsetzten der Werte ergibt:
+			\begin{eqnarray*}
+				\RI{g}{gross}=\frac{\RI{G}{gross}}{\RI{G}{klein}}\cdot\RI{g}{glein}=\frac{\SI{32.64}{m}}{\SI{0.24}{m}}\cdot\SI{0.25}{m}=\SI{34}{m}\text{.}	
+			\end{eqnarray*}
+			Betrachtet man das grosse Foto aus einem Abstand von \SI{34}{m} sieht es aus, wie das kleine Foto in einem Abstand von \SI{25}{cm}.
+		\end{enumerate}
+	\end{loesung}
+
+\end{aufgabe}
+
+\newpage
+\pagestyle{empty}
+\includesolutions
+
+\end{document}

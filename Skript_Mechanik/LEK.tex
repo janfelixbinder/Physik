@@ -1,0 +1,73 @@
+%\documentclass[11pt,a4paper,titlepage,twoside]{article}
+\documentclass[12pt,a4paper,twoside]{article}
+%\documentclass[12pt,a4paper,twoside]{scrartcl}
+\usepackage{mystyle}
+
+%\author{Felix Binder}
+\title{Aufgaben für die Lernkontrolle Mechanik}
+\date{}
+
+\def\dir{/home/felix/GITHUB/Aufgaben_Mechanik/}
+\newcommand{\Einbinden}[1]{\input{#1}}
+
+
+
+\begin{document}
+\maketitle
+
+\begin{aufgabe}
+	Nennen Sie mindestens drei Merkmale der gradlinig gleichförmig beschleunigten Bewegung.
+	\begin{loesung}
+		\begin{eqnarray*}
+			\text{Weg}\aprox\text{Zeit}^2
+		\end{eqnarray*}
+		\begin{eqnarray*}
+			\text{Geschwindigkeit}\aprox\text{Zeit}
+		\end{eqnarray*}
+		\begin{eqnarray*}
+			\text{Beschleunigung} = \text{konstant}
+		\end{eqnarray*}
+	\end{loesung}
+\end{aufgabe}
+
+
+
+\begin{aufgabe}
+	Im Urlaub in Kalifornien kaufen Sie eine Dose Cola für \SI{0.88}{\$}. 
+	Die Dose hat ein Volumen von \SI{10}{fl\ oz}.
+	Wie viel kostet ein Liter dieser Cola in Schweizer Franken?
+
+	\SI{1}{fl\ oz} entspricht \SI{29,5735}{cm^3}.
+	\SI{1}{SFr} entspricht \SI{1.0493}{\$}.
+
+\end{aufgabe}
+
+\begin{aufgabe}
+In der Tabelle befinden sich Messwerte aus einer Messreihe.
+\begin{enumerate} [a)]
+	\item Tragen Sie die Daten in ein passendes Koordinatensystem ein.
+	\item Um was für eine Art Bewegung handelt es sich?
+	\item Bestimmen Sie die charakteristische Grösse dieser Bewegung.
+\end{enumerate}
+
+\begin{center}
+	
+	\begin{tabular}{l r |c c c c c c}
+		Zeit & $t$ (s)	& 0         & 1         & 2         & 3          & 4          & 5\\\hline
+		Weg  & $s$ (m) & \num{2.5} & \num{5.0} & \num{7.5} & \num{10.0} & \num{12.5} & \num{15.0} \\
+	\end{tabular}
+\end{center}
+\end{aufgabe}
+
+\Einbinden{\dir/kreis01.tex}
+
+
+\begin{aufgabe}
+	Sie lassen von der \SI{70}{m} hohen Poyabrücke einen Stein fallen.
+	\begin{enumerate} [a)]
+		\item Wie lange dauert es bis der Stein den Boden erreicht?
+		\item Welche Geschwindigkeit hat der Stein beim Aufkommen?
+	\end{enumerate}
+\end{aufgabe}
+
+\end{document}

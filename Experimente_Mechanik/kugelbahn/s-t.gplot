@@ -1,0 +1,12 @@
+set terminal pdf
+set output "data.pdf"
+
+set xlabel "Zeit (s)"
+set ylabel "Weg (m)"
+
+
+f(x) =a*x**2
+fit f(x) "./data" u (($1-12)/10):($2/100) via a
+
+
+plot "data" u (($1-12)/10):($2/100) not w p lt 1, f(x) not w l lt 1

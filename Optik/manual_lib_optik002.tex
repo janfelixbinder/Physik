@@ -1,0 +1,90 @@
+%\documentclass[11pt,a4paper,titlepage,twoside]{article}
+\documentclass[12pt,a4paper,twoside]{article}
+\usepackage{mystyle}
+\usepackage{optik_v002}
+\usepackage{foto_v001}
+\usepackage{gplot}
+%\usepackage{schueler}
+%\usepackage{lehrer}
+\date{}
+%\author{Felix Binder}
+\title{Manual zur Optikbibliothek}
+
+
+
+\usepackage{listings}
+
+
+\begin{document}
+
+\section{Boxen}
+
+Variablen zum Ändern der Grüsse sind:
+
+\begin{lstlisting}[caption=Optionen]{Name}
+
+%\def\OBB{\textwidth}%textwidth funktioniert nicht. Warum auch immer.
+\def\OBB{15}%Breite der Box
+\def\OBH{10}%Hoehe der Box
+\def\IR{0.3}%soviel ist die innere begrenzung kleiner
+
+\end{lstlisting}
+
+
+
+
+
+\begin{tikzpicture}
+	\NObox%ersetellt die Box
+
+	%Ecken
+	\draw (SW) node {SW};
+	\draw (SO) node {SO};
+	\draw (NO) node {NO};
+	\draw (NW) node {NW};
+
+	%Innere Ecken
+	\draw (IN) node {IN}; %innen Nord
+	\draw (IS) node {IS}; %innen Süd
+	\draw (ISW) node {ISW}; %innen SüdWest
+	\draw (ISO) node {ISO};
+	\draw (INO) node {INO};
+	\draw (INW) node {INW};
+
+	%umrundung innen
+	\draw (INW)--(INO)--(ISO)--(ISW)--(INW);
+
+	\draw (IW) node {IW};
+	\draw (IO) node {IO};
+	\draw (IO1) node {IO1};
+	\draw (IO2) node {IO2};
+	\draw (IO3) node {IO3};
+	\draw (IO4) node {IO4};
+	\draw (IO5) node {IO5};
+	\draw (IO6) node {IO6};
+	\draw (IO7) node {IO7};
+	\draw (IO8) node {IO8};
+	\draw (IO9) node {IO9};
+	
+	\draw (INO1) node {INO1};
+	\draw (INO2) node {INO2};
+	\draw (INO3) node {INO3};
+	\draw (INO4) node {INO4};
+	\draw (INO5) node {INO5};
+	\draw (INO6) node {INO6};
+	\draw (INO7) node {INO7};
+	\draw (INO8) node {INO8};
+	\draw (INO9) node {INO9};
+
+	\draw (ISO1) node {ISO1};
+	\draw (ISO2) node {ISO2};
+	\draw (ISO3) node {ISO3};
+	\draw (ISO4) node {ISO4};
+	\draw (ISO5) node {ISO5};
+	\draw (ISO6) node {ISO6};
+	\draw (ISO7) node {ISO7};
+	\draw (ISO8) node {ISO8};
+	\draw (ISO9) node {ISO9};
+\end{tikzpicture}
+
+\end{document}

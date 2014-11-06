@@ -1,0 +1,65 @@
+\subsection*{Hydraulische Systeme}
+In täglichen Leben werden häufig hydraulische Systeme benutzt, um Kräfte zu verstärken.
+Ein Beispiel ist der hydraulische Wagenheber. Die Abbildung zeigt zwei Kolben, die
+mit einer Flüssigkeit verbunden sind.
+Erhöht man den Druck in einer Flüssigkeit indem man mit einem Kolben eine Kraft auf die
+Oberfläche ausübt, so erhöht sich der Druck gleichmässig in der gesamten Flüssigkeit.
+
+\begin{minipage}{0.5\textwidth}
+\begin{tikzpicture}[info text/.style={rounded corners, fill=red!20, inner sep=1ex}]
+%\begin{tikzpicture}
+%\usetikzlibrary{calc,intersections,through,backgrounds}
+%\usetikzlibrary{decorations.pathmorphing}
+%\draw[step=0.5cm,lightgray] (-0.5,-3.0) grid (6.5,5.0);
+
+\path[draw,fill=blue!50,line width=0.1cm] (0,0)--(0,-6)--(6,-6)--(6,0)--(3,0)--(3,-5)--(1.5,-5)--(1.5,0)--cycle;
+\draw [line width=0.1 cm] (0,0)--(0,1);
+\draw [line width=0.1 cm] (1.5,0)--(1.5,1);
+\draw [line width=0.1 cm] (6,0)--(6,1);
+\draw [line width=0.1 cm] (3,0)--(3,1);
+
+%zylinder klein
+\path[draw, fill=red!50] (0.05,-0.5)--(0.05,2)--(1,2)--(1.45,2)--(1.45,-0.5)--cycle;
+
+%zylinder gross
+\path[draw, fill=red!50] (3.05,-0.25)--(3.05,2.25)--(5.95,2.25)--(5.95,-0.25)--cycle;
+
+\draw[<-,Kraft] (0.75,2)--(0.75,3) node [above] {$\vec{F_1}$};
+\draw[->,Kraft] (4.5,2.25)--(4.5,5) node [above] {$\vec{F_2}$};
+
+\draw[<-,line width=0.05cm] (0.75,-0.5)--++(240:2) node [below] {$A_1$};
+\draw[<-,line width=0.05cm] (4.5,-0.25)--++(-60:2) node [below] {$A_2$};
+
+
+
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+Wird auf den linken Kolben eine Kraft $F_1$ ausgeübt, dann steigt der Druck in der Flüssigkeit. Der Druckanstieg
+ist
+\begin{eqnarray*}
+	P = \frac{F_1}{A_1}.
+\end{eqnarray*}
+
+Der Druck in der Flüssigkeit drückt nun auf den zweiten Kolben mit der Fläche $A_2$. Dies bewirkt eine Kraft $F_2$
+\begin{align*}
+	F_2 &= P\cdot A_2\\
+	&=\frac{F_1}{A_1}\cdot A_2\\
+	&=\frac{A_2}{A_1}\cdot F_1
+\end{align*}
+
+\end{minipage}
+\begin{aufgabe}
+	Die zwei Kolben eines Wagenhebers haben einen Durchmesser von \SI{2}{cm} und \SI{8}{cm}.
+	Wie gross ist die Kraftverstärkung?
+
+	\begin{loesung}
+		\begin{gather*}
+			A_1=r^2\cdot\pi=(\SI{0.01}{cm})^2\cdot \pi=\SI{0.0001}{m^2}\cdot \pi\\
+			A_2=r^2\cdot\pi=(\SI{0.04}{cm})^2\cdot \pi=\SI{0.0016}{m^2}\cdot \pi\\
+		\end{gather*}
+		Die Kraftverstärkung ist $A_2/A_1=16$.
+	\end{loesung}
+\end{aufgabe}
+
+

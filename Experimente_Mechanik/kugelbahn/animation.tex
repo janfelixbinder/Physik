@@ -1,0 +1,58 @@
+\documentclass{beamer}%    Standardklasse für Beamer
+%\documentclass[draft]{beamer}%  Entwickler-Modus in dem das File schneller kompiliert wird
+%\documentclass[handout]{beamer}%    Zum Ausdrucken besser geeignete Version der Folien
+%\documentclass{article}%Artikel-Version; Funktioniert nur, wenn man zusätzlich das Paket beamerarticle mittels \usepackage{beamerarticle} einbindet.
+%\usepackage{beamerarticle}
+\usepackage[german]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{lmodern}
+\usepackage{tikz}
+
+%\usetheme{Boadilla}
+\usetheme{Berlin}
+
+%\newcommand{\IGRAPH}[1]{\includegraphics[width=1.0\textwidth] {#1}}
+\newcommand{\IGRAPH}[5]{\includegraphics[trim = #2 #3 #4 #5, clip, width=\textwidth] {#1}}
+% left, bottom, right and top
+
+\setbeamercovered{transparent}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
+
+\title{Kugelbahn}
+
+\author[Felix Binder]{Felix Binder}
+
+\begin{document}
+
+%\begin{frame}
+%\titlepage	
+%\end{frame}
+
+\newcommand*\leadzeros[1]{\ifnum#1<10 00\else0\fi#1}
+
+\section{}
+\begin{frame}
+	\frametitle{Kugelbahn}
+	\begin{center}
+	\begin{tikzpicture}
+		
+	\foreach \x in {1,...,45}{
+	\draw (0,0) node {\includegraphics<\x>[width=0.99\textwidth]{./foo-\leadzeros{\x}.jpeg}};
+%	\onslide<\x>{\draw (0,-2) node [minimum size=1cm,circle,fill=white]{\x};}}
+	\only<\x>{\draw (0,-2) node [minimum size=1cm,circle,fill=white]{\x};}}
+%	\includegraphics<\x>[width=0.95\textwidth]{./foo-\leadzeros{\x}.jpeg};
+%	\includegraphics<2>[width=0.95\textwidth]{./foo-002.jpeg}
+%	\includegraphics<3>[width=0.95\textwidth]{./foo-003.jpeg}
+	\end{tikzpicture}
+	\end{center}
+
+	%	\draw (0,0) node {\IGRAPH{./foo-00\x.jpeg}{0cm}{0cm}{0cm}{0cm}};\pause
+\end{frame}
+
+\end{document}
+
+
+

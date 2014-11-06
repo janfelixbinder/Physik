@@ -1,0 +1,297 @@
+%\documentclass[11pt,a4paper,titlepage,twoside]{article}
+\documentclass[12pt,a4paper,twoside]{article}
+\usepackage{mystyle}
+\usepackage{foto_v001}
+\usepackage{gplot}
+\usepackage{tabelle_v001}
+\usepackage{mechanik_v001}
+%\usepackage{import}
+
+\usepackage{url}
+
+%oben und unten
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\rhead{}
+\rfoot{Felix Binder}
+\lfoot{Hydrostatik 2014}
+\renewcommand\headrulewidth{0pt}
+\renewcommand\footrulewidth{1pt}
+%ende oben und unten
+
+\date{}
+%\author{Felix Binder}
+\title{Hydrostatik\\{\large Die Physik von Flüssigkeiten und Gasen}}
+
+
+\begin{document}
+\maketitle
+
+%\addtocounter{page}{5}
+%\addtocounter{section}{9}
+%\addtocounter{aufgabe}{27}
+
+
+\section*{Einleitung}
+Die Hydrostatik beschäftigt sich mit der Physik von Flüssigkeiten und Gasen (Fluide).
+Dabei betrachten wir nur den statischen Fall, das Fluid strömt also nicht.
+
+\section*{Die Dichte}
+Die Dichte sollten Sie schon aus der Mechanik und der Chemie kennen. 
+Erinnern Sie sich noch?
+Sie ist wie folgt definiert:
+
+\begin{cbox}
+\begin{gather*}
+	\text{Dichte} = \frac{\text{Masse}}{\text{Volumen}} \quad\text{oder}\quad \rho = \frac{m}{V}\\
+	\text{Einheit}: [\rho]=\frac{\text{Kilogramm}}{\text{Kubikmeter}}=\frac{\si{kg}}{\si{m^3}}
+\end{gather*}
+\end{cbox}
+
+Das Formelzeichen der Dichte $\rho$ ist ein griechischer Buchstabe. Man spricht ihn rho aus.
+Wir benutzen als Einheit für die Dichte $\nicefrac{\textrm{kg}}{\textrm{m}^3}$. In der Chemie wird meistens die
+Einheit $\nicefrac{\textrm{g}}{\textrm{cm}^3}$ verwendet.
+
+\begin{aufgabe}
+	Rechnen Sie die Dichte von \SI{2.7}{g/cm^3} in die in der Physik gebräuchliche Einheit $\nicefrac{\textrm{kg}}{\textrm{m}^3}$ um.
+
+	\kloesung{\SI{2700}{kg/m^3}}
+
+	\begin{loesung}
+		\begin{eqnarray*}
+			\SI{2.7}{g/cm^3} = \num{2.7}\frac{\SI{1E-3}{kg}}{(\SI{1E-2}{m})\cdot(\SI{1E-2}{m})\cdot(\SI{1E-2}{m})}=\num{2.7}\frac{\SI{1E-3}{kg}}{\SI{1E-6}{m^3}}=\SI{2.7E3}{kg/m^3}=\SI{2700}{kg/m^3}
+		\end{eqnarray*}
+	\end{loesung}
+
+\end{aufgabe}
+
+\begin{aufgabe}
+Bestimmen Sie die Dichte der Schüler im Klassenraum.
+Welche maximale Dichte ist möglich? Wie kann man diese bestimmen?
+\end{aufgabe}
+
+
+Wir bestimmen nun die Dichte von Wasser und anschliessend die Dichte eines Steins. 
+Bitte machen sie Vorschläge wie man das machen könnte.\par
+
+
+\begin{aufgabe}
+	Bestimmen Sie das Volumen von \SI{1}{kg} Gold. Welche Kantenlänge hat ein Würfel mit diesem Volumen?
+	\begin{loesung}
+		Zuerst bestimmen wir das Volumen:
+		\begin{eqnarray*}
+			\rho=\frac{m}{V}\to V=\frac{m}{\rho}=\frac{\SI{1}{kg}}{\SI{19290}{kg/m^3}}=\SI{5.1840e-05}{m^3}
+		\end{eqnarray*}
+		Für einen Würfel gilt: $V=a^3\to a=\sqrt[3]{V}=\SI{0.037287}{m}\approx\SI{3.7}{cm}$.
+	\end{loesung}
+	\kloesung{$a\approx\SI{3.7}{cm}$}
+\end{aufgabe}
+\Karo{2}
+
+\begin{aufgabe}
+	Vervollständigen Sie die Tabelle.
+
+	\begin{tikzpicture}
+	
+	\matrix (A) [Tabelle,text width=10em]
+{
+      &                    &                &\\
+      & \SI{7.86}{g/cm^3}  & \SI{200}{cm^3} & \\
+      & \SI{13.55}{g/cm^3} &                & \SI{0.7}{kg} \\
+Gold  &                    & \SI{200}{cm^3} & \\
+Wasser&                    &                & \SI{0.7}{kg} \\
+};
+\end{tikzpicture}
+
+\begin{loesung}
+
+
+	\begin{tikzpicture}
+	
+	\matrix (A) [Tabelle,text width=10em]
+{
+Material      & Dichte             &   Volumen      & Masse\\
+Eisen         & \SI{7.86}{g/cm^3}  & \SI{200}{cm^3} & \SI{1.572}{kg}\\
+Quecksilber   & \SI{13.55}{g/cm^3} &\SI{51.66}{cm^3}& \SI{0.7}{kg} \\
+Gold          & \SI{19.29}{g/cm^3} & \SI{200}{cm^3} & \SI{3.858}{kg}\\
+Wasser        & \SI{1}{g/cm^3}     & \SI{700}{cm^3} & \SI{0.7}{kg} \\
+};
+\end{tikzpicture}
+	
+\end{loesung}
+
+\end{aufgabe}
+
+
+\subsection*{Die Dichte der Luft}
+\begin{aufgabe}
+	Wie kann man die Dichte von Luft messen?
+	Überlegen Sie sich eine Methode und beschreiben Sie die nötigen Schritte.
+\end{aufgabe}
+
+\begin{aufgabe}
+	Bestimmen Sie grob die Masse der Luft im Physikraum. 
+\end{aufgabe}
+
+
+\begin{aufgabe}
+	Wie viele Luftballons mit \SI{5}{Litern} Füllvolumen können mit \SI{100}{kg} Helium gefüllt werden
+	(bei normalem Luftdruck und \SI{0}{\celsius} Temperatur)?
+
+	\begin{loesung}
+		Das Volumen von \SI{100}{kg} Helium bei Normalbedingungen berechnet sich so:
+		\begin{eqnarray*}
+			\rho=\frac{m}{V}\to V=\frac{m}{\rho}=\frac{\SI{100}{kg}}{\SI{0.1768}{kg/m^3}}=\SI{565.61}{m^3}
+		\end{eqnarray*}
+
+		Ein Luftballon hat ein Volumen von $\SI{5}{l} = \SI{5}{dm^3} = \SI{5E-3}{m^3}$.
+		Es lassen sich also $\nicefrac{V}{\RI{V}{Ballon}}$ Luftballons füllen.
+		Das macht \SI{113122} Luftballons.
+
+	\end{loesung}
+
+\end{aufgabe}
+\Karo{2}
+
+\newpage
+\subsection*{Dichtetabelle $\rho$ [kg/m$^3$]}
+\input{./dichtetabelle.tex}	
+
+\newpage
+
+
+
+\section*{Der hydrostatische Druck}
+Der Druck in Flüssigkeiten und Gasen wird hydrostatischer Druck genannt.
+Dieser Druck wirkt in alle Raumrichtungen gleich. Um den Grund dafür zu verstehen,
+muss man sich das Fluid (Flüssigkeit oder Gas) aus Atomen oder Molekülen vorstellen.
+Diese Teilchen schwingen im Fluid und bewegen sich ungeordnet in alle Richtungen.
+Dabei üben sie eine Kraft aus, die in Bewegungsrichtung zeigt. Im Mittel wird also
+in alle Raumrichtungen die gleiche Kraft ausgeübt. Dadurch ist auch der Druck $P$ in alle
+Raumrichtungen gleich.
+
+Der Druck in einem Fluid wird mit steigender Tiefe höher. Als Beispiel können wir den Wasserdruck
+beim Tauchen betrachten. Während wir an der Wasseroberfläche den Druck nicht spüren, steigt dieser
+mit zunehmender Tauchtiefe. Gleichzeitig steigt das Gewicht (die Gewichtskraft) des Wassers über
+unserem Körper.
+
+Im folgenden wollen wir den Wasserdruck ($P_{\textrm w}$) in Abhängigkeit zur Wassertiefe herleiten:
+
+\begin{equation*}
+	P_{\textrm w} = \frac{F_{\textrm G}}{A}=\frac{m\cdot g}{A}=\frac{\overbrace{\rho_{\textrm w} \cdot V}^{m} \cdot g}{A}=\frac{\rho_{\textrm w} \cdot \overbrace{A \cdot h}^{V} \cdot g}{A}=\rho_{\textrm w}\cdot g\cdot h.
+\end{equation*}
+
+Dabei ist $F_{\textrm G}$ die Gewichskraft, $A$ die Fläche, $\rho_{\textrm w}$ die Dichte von Wasser, $V$ das Volumen und $h$
+die Wassertiefe.
+
+Zusammenfassend kann man schreiben:
+\begin{cbox}
+	\begin{eqnarray*}
+	P_{\textrm w} = \rho_{\textrm w}\cdot g\cdot h.
+	\end{eqnarray*}
+\end{cbox}
+
+Die Formel sagt aus, dass der Wasserdruck nur von der Wassertiefe abhängt (Wasserdichte und Fallbeschleunigung sind konstant)
+und nicht von der Form des Behälters.
+Dieser einfache Ausdruck für den Wasserdruck beruht auf der Annahme, dass die Wasserdichte unabhängig vom
+Wasserdruck konstant ist. Dies gilt näherungsweise für alle Flüssigkeiten. In Gasen ist diese einfache
+Annahme nicht gültig.
+
+Übt man auf die Wasseroberfläche einen zusätzlichen Druck $P_0$ aus kann man diesen zum Wasserdruck $P_{\textrm w}$ addieren
+und erhält dann den Gesamtdruck $P$.
+
+\begin{cbox}
+	\begin{equation*}
+		P = P_0 + P_{\textrm w} = P_0 + \rho \cdot g \cdot \Delta h
+	\end{equation*}
+\end{cbox}
+
+%nicht so eine gute aufgabe für den Anfang
+%\begin{aufgabe}
+%	Wie tief muss man Tauchen, damit sich der Druck im Vergleich zur Wasseroberfläche
+%verdoppelt?
+%\begin{loesung}
+%	Druck an der Wasseroberfläche ist etwa \SI{1000}{hPa}.
+%	\begin{equation*}
+%		P = \rho_{\textrm w} \cdot g \cdot h \to h = \frac{P}{\rho_{\textrm w}\cdot g}=\frac{\SI{1E5}{Pa}}{\SI{1000}{kg/m^3} \cdot \SI{10}{N/kg}} = \SI{10}{m}
+%	\end{equation*}
+%\end{loesung}
+%\kloesung{\SI{10}{m}}
+%\end{aufgabe}
+
+\begin{aufgabe}
+	Wie hoch ist der Wasserdruck bei a) \SI{3}{m} b) \SI{2000}{m} Wassertiefe?
+	\begin{loesung}
+	\begin{itemize}
+		\item[a)]
+			\begin{eqnarray*}
+				P=\rho_{\textrm w}\cdot g\cdot h=\SI{1000}{kg/m^3}\cdot\SI{10}{N/kg}\cdot\SI{3}{m}=\SI{30000}{Pa}
+			\end{eqnarray*}
+		\item[b)]
+			\begin{eqnarray*}
+				P=\rho_{\textrm w}\cdot g\cdot h=\SI{1000}{kg/m^3}\cdot\SI{10}{N/kg}\cdot\SI{2000}{m}=\SI{20000000}{Pa}
+			\end{eqnarray*}
+	\end{itemize}
+\end{loesung}
+\kloesung{a) \SI{30000}{Pa} und b) \SI{20000000}{Pa}}
+
+\end{aufgabe}
+
+\begin{aufgabe}
+	Die Staumauer Grand Dixence im Wallis ist eine der höchsten Staumauern der Welt.
+	Die maximale Höhe beträgt \SI{285}{Meter}, die maximale ``Dicke'' am Fuss \SI{198}{Meter}.
+	In der achtjährigen Bauzeit wurden sechs Millionen Kubikmeter Beton verarbeitet.
+	\begin{enumerate} [a)]
+		\item Warum spielte die Form und Länge des Stausees keine Rolle für die Dimensionalisierung der Mauer?
+		\item Musste der Luftdruck bei der Bestimmung der Mauerbeanspruchung berücksichtigt werden?
+	\end{enumerate}
+
+	\begin{loesung}
+		\begin{enumerate} [a)]
+			\item Für die Dimensionierung der Mauer muss der Druck auf die Mauer berücksichtigt werden.
+				Der Wasserdruck ist unabhängig von der Form des Wassergefässes, auch bei Seen.
+				Einzig der Wasserstand also die Höhe des Wassers hat einen Einfluss auf den Druck.
+			\item Nein. Der Luftdruck musste nicht berücksichtigt werden. Der Luftdruck drückt zwar auf die
+				Wasseroberfläche des Sees, der Druck im See ist damit höher als ohne den Luftdruck, aber
+				der Luftdruck drückt auch gegen die Staumauer und stützt diese dadurch.
+				Effektiv gleichen sich beide Effekte aus.
+		\end{enumerate}
+	\end{loesung}
+
+
+\end{aufgabe}
+
+\begin{aufgabe}
+	Welche Kraft wirkt auf einen Qudratzentimer der Körperoberfläche einer Taucherin in \SI{50}{m} Tiefe?
+	Der Luftdruck beträgt \SI{960}{hPa}.
+	\begin{loesung}
+		Der Druck in \SI{50}{m} Wassertiefe ist die Summe aus Luftdruck an der Oberfläche und Wasserdruck in \SI{50}{m} Tiefe.
+		\begin{eqnarray*}
+			P = P_0 + P_{\textrm w} = P_0 + \rho \cdot g \cdot \Delta h=\SI{960}{hPa}+\SI{1000}{kg/m^3}\cdot\SI{10}{m/s^2}\cdot\SI{50}{m}=\SI{5960}{hPa}
+		\end{eqnarray*}
+		Druck ist der Quotient aus Kraft $F$ und Fläche $A$
+		\begin{eqnarray*}
+			P=\frac{F}{A}\to F=P\cdot A=\SI{5960}{hPa}\cdot\SI{1E-4}{m^2}=\SI{59.6}{N}
+		\end{eqnarray*}
+	\end{loesung}
+	\kloesung{\SI{59.6}{N}}
+\end{aufgabe}
+
+\newpage
+\input{./Druckmessung.tex}
+\newpage
+\input{./Luftdruck.tex}
+\newpage
+\input{./MagdeburgerKugel.tex}
+\newpage
+\input{./hydraulischeSysteme.tex}
+\newpage
+\input{./Auftrieb.tex}
+\newpage
+\input{./temperatur_dichte.tex}
+
+\newpage
+\includesolutions
+
+\end{document}

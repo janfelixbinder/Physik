@@ -1,0 +1,54 @@
+\usetikzlibrary{positioning}
+\begin{center}
+\begin{tikzpicture}
+%	\node [rectangle, text width=20em](oben){Dichtetabelle\\Die Werte für Gase gelten bei \SI{0}{\celsius}};
+	
+	%\matrix (links) [below = of oben,Tabelle,text width=10em]
+	\matrix (links) [left,Tabelle,text width=10em]
+{
+Aluminium & 2700 \\
+Blei      & 11340\\
+Eisen     &  7860\\
+Gold      & 19290\\
+Kupfer    & 8920 \\
+Nickel    & 8900 \\
+Platin    & 21450\\
+Silber    & 10500\\
+Zink      & 7140 \\
+          &      \\
+Beton     & ca. 2000 \\
+Glas      & ca. 2600\\
+Plexiglas & 1190\\
+Messing   & ca. 8400\\
+Stahl     & ca. 7900\\
+Holz      & 500 - 700\\
+Kork      & ca. 300\\
+Eis (\SI{0}{\celsius} & 917 \\
+};
+%\matrix (rechts) [below= of oben, Tabelle,text width=10em]
+\matrix (rechts) [right, Tabelle,text width=10em]
+{
+Äther     & 714 \\
+Alkohol   & 789\\
+Olivenöl  & 914\\
+Petroleum & 850\\
+Quecksilber  & 13546 \\
+&  \\
+Wasser \SI{0}{\celsius}    & \num{999.84}\\
+Wasser \SI{4}{\celsius}    & \num{999.97}\\
+Wasser \SI{100}{\celsius}    & \num{958.35}\\
+    & \\
+	Chlorgas      & \num{3.214} \\
+	Helium        & \num{0.1768}\\
+	Kohlendioxid  & \num{1.9769} \\
+	Luft  & \num{1.2929} \\
+	Methan  & \num{0.7168} \\
+	Sauerstoff  & \num{1.429} \\
+	Stickstoff  & \num{1.2505} \\
+	Wasserstoff  & \num{0.0899} \\
+	};
+
+\end{tikzpicture}
+
+Die Werte der Gase gelten bei \SI{0}{\celsius}.
+\end{center}

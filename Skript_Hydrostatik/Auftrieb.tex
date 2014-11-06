@@ -1,0 +1,181 @@
+
+\section*{Auftrieb und archimedisches Prinzip}
+Wenn ein schwerer Körper an einer Feder aufgehängt und in Wasser eingetaucht wird, dann
+zeigt die Skala an der Federwaage eine geringere Gewichtskraft an, als wenn der Körper
+in Luft gewogen würde. Ursache dafür ist eine nach oben gerichtete Kraft, die von dem Wasser
+auf den Körper ausgeübt wird und einen Teil der Gewichtskraft kompensiert. Dieses Phänomen
+heisst Auftrieb. Der Auftrieb ist noch besser sichtbar, wenn man beispielsweise einen
+Korken in Wasser eintaucht. Wenn er vollständig in Wasser eingetaucht ist, dann erfährt 
+der Korken aufgrund des Wasserdrucks eine aufwärts gerichtete Kraft, die grösser ist
+als seine Gewichtskraft. Diese Kraft, die das Fluid auf einen ganz oder teilweise eingetauchten
+Körper ausübt, wird als Auftriebskraft $F_{\textrm A}$ bezeichnet. Sie hängt nicht von der Form
+oder Dichte des Körpers ab, sondern nur von der Dichte des Fluids. Ihr Betrag ist gleich Gewichtskraft der
+durch den Körper verdrängten Fluidmenge.
+
+\begin{cbox}
+Ein Körper, der ganz oder teilweise in ein Fluid eintaucht, erfährt eine Auftriebskraft,
+deren Betrag gleich der Gewichtskraft der durch den Körper verdrängten Fluidmenge ist.
+
+\begin{gather*}
+	\text{Auftriebskraft} = \text {Fluiddichte} \cdot \text{Fallbeschleunigung}\cdot\text{Volumen}\\
+	\RI{F}{A} = \RI{\rho}{w} \cdot g \cdot V
+\end{gather*}
+\end{cbox}
+
+\begin{aufgabe}
+	Was versteht man unter Auftrieb? Wovon hängt der Auftrieb ab?
+	\begin{loesung}
+		Auftrieb tritt in Flüssigkeiten und Gasen auf und beschreibt eine nach oben gerichtete Kraft.
+		Die Auftriebskraft hängt von der Dichte des Fluids und vom Volumen des eingetauchten Körpers ab.
+	\end{loesung}
+\end{aufgabe}
+
+\begin{aufgabe}
+	Wie gross ist der Auftrieb den ein Körper mit einem Volumen von \SI{0.25}{m^3} in Wasser erfährt?
+	\kloesung{\SI{2452.5}{N}}
+	\begin{loesung}
+		\begin{eqnarray*}
+			\RI{F}{A} = \RI{\rho}{w} \cdot g \cdot V=\SI{1000}{kg/m^3}\cdot\SI{9.81}{m/s^2}\cdot\SI{0.25}{m^3}=\SI{2452.5}{N}
+		\end{eqnarray*}
+	\end{loesung}
+\end{aufgabe}
+
+\begin{aufgabe}
+	Ein Taucher ist im Urlaub am Toten Meer ($\rho=\SI{1240}{kg/m^3}$) und möchte tauchen gehen. 
+	Daheim taucht er gewöhnlich in einem Süsswassersee.
+	\begin{enumerate} [a)]
+		\item Was sollte der Taucher beachten?
+		\item Wie viel grösser ist der Auftrieb im Toten Meer im Vergleich zum heimischen See?
+	\end{enumerate}
+	\kloesung{b) \num{1.24}}
+	\begin{loesung}
+		\begin{enumerate} [a)]
+		\item Die Dichte des Wassers im Toten Meer ist höher als im Süsswassersee.
+			Dadurch ist die Auftriebskraft grösser.
+		\item
+			\begin{eqnarray*}
+				\frac{\RI{F}{A}(\textrm{Totes Meer})}{\RI{F}{A}(\textrm{Süsswassersee})}=\frac{\RI{\rho}{w}(\textrm{Totes Meer})\cdot g\cdot V}{\RI{\rho}{w}(\textrm{Süsswasser})\cdot g\cdot V}=\frac{\RI{\rho}{w}(\textrm{Totes Meer})}{\RI{\rho}{w}(\textrm{Süsswasser})}=\frac{\SI{1240}{kg/m^3}}{\SI{1000}{kg/m^3}}=\num{1.24}
+			\end{eqnarray*}
+		\end{enumerate}
+	\end{loesung}
+
+\end{aufgabe}
+
+
+\newpage
+
+\subsection*{Die Entdeckung des archimedischen Prinzips}
+Quelle: \url{http://de.wikipedia.org/wiki/Archimedisches_Prinzip}
+
+Archimedes war von König Hieron II. von Syrakus beauftragt worden, herauszufinden, 
+ob dessen Krone wie bestellt aus reinem Gold wäre oder ob das Material durch billigeres Metall gestreckt worden sei. 
+Diese Aufgabe stellte Archimedes zunächst vor Probleme, da die Krone natürlich nicht zerstört werden durfte.
+
+Der Überlieferung nach hatte Archimedes schließlich den rettenden Einfall, 
+als er zum Baden in eine bis zum Rand gefüllte Wanne stieg und dabei das Wasser überlief. 
+Er erkannte, dass die Menge Wasser, die übergelaufen war, genau seinem Körpervolumen entsprach. 
+Angeblich lief er dann, nackt wie er war, durch die Straßen und rief Heureka (``Ich habe es gefunden'').
+
+Um die gestellte Aufgabe zu lösen, tauchte er einmal die Krone und dann einen Goldbarren, 
+der genauso viel wog wie die Krone, in einen bis zum Rand gefüllten Wasserbehälter und maß die Menge des überlaufenden Wassers. 
+Da die Krone mehr Wasser verdrängte als der Goldbarren und somit bei gleichem Gewicht voluminöser war,
+musste sie aus einem Material geringerer Dichte, also nicht aus reinem Gold, gefertigt worden sein.
+
+Diese Geschichte wurde vom römischen Architekten Vitruv überliefert.
+
+Obwohl der Legende nach auf dieser Geschichte die Entdeckung des archimedischen Prinzips beruht, 
+würde der Versuch von Archimedes auch mit jeder anderen Flüssigkeit funktionieren. 
+Das Interessanteste am archimedischen Prinzip, nämlich die Entstehung des Auftriebs und damit die Berechnung der Dichte des Fluids, 
+spielt in dieser Entdeckungsgeschichte gar keine Rolle.
+
+\begin{aufgabe}
+	Lesen Sie den obigen Text zur Entdeckung des archimedischen Prinzips.
+	\begin{enumerate} [a)]
+		\item Was hat Archimedes gemacht, um die Echtheit der Goldkrone zu überprüfen.
+        \item Was misst Archimedes eigentlich?
+		\item Warum funktioniert dieses Verfahren?
+		\item Welchen Nachteil hat diese Methode?
+		\item Fällt ihnen ein alternatives Verfahren ein, um die Echtheit der Krone zu überprüfen?
+	\end{enumerate}
+	\begin{loesung}
+		\begin{enumerate} [a)]
+			\item
+            \item Das Volumen der Krone, bzw. das Volumen des Goldbarren. 
+			\item Die Dichte von Gold ist sehr hoch. Es gibt keine Materialien, die günstiger sind als Gold mit vergleichbarer Dichte.
+			\item Man braucht zusätzlich Gold, mit der gleichen Masse der Krone.
+			\item
+		\end{enumerate}
+	\end{loesung}
+\end{aufgabe}
+
+\subsection*{Dichtebestimmung mit der Auftriebskraft}
+Am Auftrieb eines Körpers kann man eine erste Einschätzung seiner Dichte machen.
+Geht der Körper im Fluid unter, so ist seine Dicht grösser als die Dichte des Fluids.
+Beispiele sind der heliumgefüllte Luftballon der aufsteigt oder der Korken der auf der 
+Wasseroberfläche schwimmt. In beiden Fällen ist die Dichte des Körpers kleiner als die
+Dichte des Fluids. Der Stein, den man in den See wirft geht hingegen unter. Seine Dichte ist
+höher als die Dichte des Wassers.
+
+
+Man kann die Dichte eines Körpers mit Hilfe des Auftriebs aber auch genauer bestimmen.
+Der Auftrieb eines Körpers kann relativ leicht mit einer Federwaage bestimmt werden. Zuerst bestimmt man das Gewicht (Gewichtskraft)
+des Körpers in Luft ($F_{\textrm G}$). Dann hält man den Körper in die Flüssigkeit und bestimmt den Gewichtsverlust
+des Körpers. Der Gewichtsverlust ist die Auftriebskraft.
+
+Mit Gewichtskraft und Auftriebskraft kann man nun die Dichte des Körpers bestimmen:
+
+\begin{eqnarray*}
+	\frac{F_{\textrm G}}{F_{\textrm A}}=\frac{\rho\cdot g\cdot V}{\rho_{\textrm w}\cdot g\cdot V} \qquad\to\qquad\frac{F_{\textrm G}}{F_{\textrm A}}=\frac{\rho}{\rho_{\textrm w}}\qquad\to\qquad \rho=\rho_{\textrm w}\cdot\frac{F_{\textrm G}}{F_{\textrm A}} 
+\end{eqnarray*}
+
+
+\begin{aufgabe}
+	Das Gewicht eines Körpers in Luft ist \SI{5}{N}. In Wasser getaucht zeigt der Kraftmesser \SI{4.75}{N} an.
+	\begin{itemize}	
+		\item[a)] Welche Dichte hat der Körper und aus welchem Material besteht er vermutlich?
+		\item[b)] Wie gross ist das Volumen des Körpers?
+	\end{itemize}	
+
+	\kloesung{a) \SI{20000}{kg/m^3} vermutlich aus Gold, b) \SI{25}{cm^3}}
+
+	\begin{loesung}
+	\begin{itemize}	
+		\item[a)]
+			\begin{eqnarray*}
+				F_{\textrm A}=\SI{5}{N}-\SI{4.75}{N}=\SI{0.25}{N}
+			\end{eqnarray*}
+			\begin{eqnarray*}
+				\rho=\rho_{\textrm w}\cdot\frac{F_{\textrm G}}{F_{\textrm A}}=\SI{1000}{kg/m^3}\cdot\frac{\SI{5}{N}}{\SI{0.25}{N}}=\SI{20000}{kg/m^3} 
+			\end{eqnarray*}
+			Der Körper ist vermutlich aus Gold ($\rho_{\textrm{Gold}}=\SI{19290}{kg/m^3}$).
+		\item[b)]
+			\begin{eqnarray*}
+				m=\rho\cdot V \to V=\frac{m}{\rho}=\frac{F_{\textrm G}}{g\cdot\rho} =\frac{\SI{5}{N}}{\SI{10}{N/kg}\cdot\SI{20000}{kg/m^3}}=\SI{2.5E5}{m^3}=\SI{25}{cm^3}
+			\end{eqnarray*}
+	\end{itemize}	
+	\end{loesung}
+
+\end{aufgabe}
+
+
+
+\begin{aufgabe}
+	Ein Korken schwimmt auf der Wasseroberfläche. Wie viel vom Korken ist unter der Wasseroberfläche?
+	Die Dichte des Korkens ist $\RI{\rho}{Kork}=\SI{200}{kg/m^3}$.
+
+	\kloesung{\SI{20}{\percent}}
+
+	\begin{loesung}
+		Der Korken ist im Gleichgewicht: $\RI{F}{A}=\RI{F}{G}$.
+		Mit $V^*$ bezeichnen wir das Volumen des Körpers, dass unter der Wasseroberfläche ist.
+		Dieses ist für den Auftrieb wichtig.
+		\begin{eqnarray*}
+			\frac{\RI{F}{A}}{\RI{F}{G}} = \frac{\RI{\rho}{w}\cdot g\cdot V^*}{\RI{\rho}{Kork}\cdot g\cdot V}=1\to\frac{V^*}{V}=\frac{\RI{\rho}{Kork}}{\RI{\rho}{w}}=\frac{\SI{200}{kg/m^3}}{\SI{1000}{kg/m^3}}=\frac{1}{5}
+		\end{eqnarray*}
+		\SI{20}{\%} des Korkvolumens ist unter der Wasseroberfläche.
+	\end{loesung}
+
+\end{aufgabe}
+
+
+

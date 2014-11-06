@@ -1,0 +1,24 @@
+\def\h{7.5}
+\def\rErde{1.5cm}
+\def\rMond{1.0cm}
+
+%\draw (-\h,-\h) rectangle (\h,\h);
+
+%Sonne
+\foreach \n in {8,6,...,-8}
+\draw [->,force](-\h-3,\n) --++(0:2);
+\draw (-11,0) node [rotate=90] {Sonnenstrahlen};
+
+%Erde
+\draw [fill,yshift=-\rErde] (0,0) arc(-90:90:\rErde)--cycle;
+\draw [yshift=-\rErde] (0,0) arc(-90:270:\rErde) node [below] {Erde};
+
+
+%Mond
+\foreach \angle in {0,45,...,360}{
+\draw [fill,yshift=-\rMond] (\angle:4.5) arc(-90:90:\rMond)--cycle;
+\draw [yshift=-\rMond] (\angle:4.5) arc(-90:270:\rMond) node  (BMond) {};
+\draw [yshift=-\rMond] (\angle:7) arc(-90:270:\rMond);
+}
+%Beschriftung Mond
+\draw (BMond) node [below] {Mond};

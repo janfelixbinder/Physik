@@ -1,0 +1,122 @@
+%\documentclass[11pt,a4paper,titlepage,twoside]{article}
+\documentclass[12pt,a4paper,twoside]{article}
+\usepackage{mystyle}
+\usepackage{optik_v002}
+\usepackage{gplot}
+
+%oben und unten
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\rhead{}
+\rfoot{Felix Binder}
+\renewcommand\headrulewidth{0pt}
+\renewcommand\footrulewidth{1pt}
+%ende oben und unten
+
+%\usepackage{schueler}
+%\usepackage{lehrer}
+\date{}
+%\author{Felix Binder}
+\title{Optik}
+
+
+\begin{document}
+%\maketitle
+
+\addtocounter{page}{2}
+\addtocounter{section}{8}
+\addtocounter{aufgabe}{26}
+
+
+\section{Abbildungen mit Linsen}
+Eine Linse kann einen Gegenstand abbilden. Die Konstruktion verläuft sehr ähnlich
+wie bei der Abbildung am gewölbten Spiegel. Wir zeichnen jeweils den Parallelstahl,
+den Brennpunktstrahl und den Mittelpunktstahl von der Spitze des Gegenstands ein.
+
+\begin{tikzpicture}
+\NObox
+	\Biconvex{(IO5)}{Lin}
+	\draw [OAchse] (IW)--(IO);
+	\draw [OAchse] (IN)--(IS);
+	\BP{(IO3)}
+	\BP{(IO7)}
+	\OG{(IW)}
+\end{tikzpicture}
+
+
+Aus geometrischen Überlegungen kann man für dünne Linsen eine Formel finden,
+die die Brennweite $f$, die Bildweite $b$ und die Gegenstandsweite $g$ miteinander
+in Beziehung setzt. Es gilt
+\begin{eqnarray*}
+	\frac{1}{f} = \frac{1}{b} + \frac{1}{g}\text{.}
+\end{eqnarray*}
+
+Zwischen der Grösse des Bildes $B$ und der Grösse des Gegenstandes $G$ gilt das selbe Verhältnis,
+wie wir es auch schon bei anderen Abbildungen gesehen haben
+\begin{eqnarray*}
+	A = \frac{B}{G} = \frac{b}{g}\text{.}
+\end{eqnarray*}
+
+\begin{aufgabe}
+	Die Sammellinse eines Diaprojektors hat eine Brennweite von \SI{10}{cm}. Ein Dia ($G=\SI{36}{mm}$)
+	soll auf die Leinwand, die \SI{2.5}{m} von der Linse entfernt ist, abgebildet werden.
+	\begin{enumerate} [a)]
+		\item Wie weit ist die Linse vom Dia entfernt?
+		\item Wie gross ist das Bild auf der Leinwand?
+	\end{enumerate}
+\end{aufgabe}
+
+\subsection*{$g=2\cdot f$}
+\begin{tikzpicture}
+\NObox
+	\Biconvex{(IO5)}{Lin}
+	\draw [OAchse] (IW)--(IO);
+	\draw [OAchse] (IN)--(IS);
+	\BP{(IO3)}
+	\BP{(IO7)}
+	\OG{(IO1)}
+\end{tikzpicture}
+
+\subsection*{$g>f$ und $g<2\cdot f$}
+\begin{tikzpicture}
+\NObox
+	\Biconvex{(IO5)}{Lin}
+	\draw [OAchse] (IW)--(IO);
+	\draw [OAchse] (IN)--(IS);
+	\BP{(IO3)}
+	\BP{(IO7)}
+	\OG{(IO2)}
+\end{tikzpicture}
+
+\subsection*{$g=f$}
+\begin{tikzpicture}
+\NObox
+	\Biconvex{(IO5)}{Lin}
+	\draw [OAchse] (IW)--(IO);
+	\draw [OAchse] (IN)--(IS);
+	\BP{(IO3)}
+	\BP{(IO7)}
+	\OG{(IO3)}
+\end{tikzpicture}
+
+\subsection*{$g<f$}
+\begin{tikzpicture}
+\NObox
+	\Biconvex{(IO5)}{Lin}
+	\draw [OAchse] (IW)--(IO);
+	\draw [OAchse] (IN)--(IS);
+	\BP{(IO3)}
+	\BP{(IO7)}
+	\OG{(IO4)}
+\end{tikzpicture}
+
+
+%\newpage
+%\includesolutions
+
+
+
+
+
+\end{document}
