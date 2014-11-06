@@ -1,0 +1,119 @@
+%\documentclass[11pt,a4paper,titlepage,twoside]{article}
+\documentclass[12pt,a4paper,twoside]{article}
+\usepackage{mystyle}
+\usepackage{optik_v001}
+\usepackage{gplot}
+%\usepackage{schueler}
+%\usepackage{lehrer}
+\date{}
+%\author{Felix Binder}
+\title{Optik}
+
+%\usepackage{enumerate}
+
+\newcommand{\Obox}{\draw (0,0) rectangle (\textwidth,0.7\textwidth);}
+
+
+
+
+\begin{document}
+%\maketitle
+
+\addtocounter{section}{7}
+\addtocounter{aufgabe}{23}
+
+
+\section{Linsen}
+
+Optische Linsen sind aus lichtdurlässigen Materialien, wie Glas oder Plastik, manchmal auch aus durchsichtigen Kristallen.
+Einfache (sphärische) Linsen kann man sich aus einer Kugel geschnitten vorstellen. Der Kugelradius kann dabei verschieden gross sein.
+Beim Durchlauf des Lichtstrahl durch die Linse, passiert er zwei Grenzflächen, an denen er nach dem Brechungsgesetz gebrochen wird.
+
+\begin{aufgabe}
+Zeichnen Sie den vollständigen Strahlengang für mindestens zwei parallel einlaufende Lichtstrahlen.
+Die optische Dichte der Linse ist \num{1.5}.
+\end{aufgabe}
+
+\begin{center}
+\begin{tikzpicture}
+	\draw [mmPapier, xstep=0.5, ystep=0.5, shift={(-7,-5)}](0,0) grid (14,10);
+	\def\RI{8}
+	\def\RII{7}
+	\Linse{(0,0)}{\RI}{\RII}{4}{0}{Lin}{Glas}
+
+	%Mittelpunkte
+	\draw [fill] (Lin Cl) circle(0.1cm) node [below] {C};
+	\draw [dotted] (Lin POSr) arc (0:90:\RI);
+	\draw [dotted] (Lin POSr) arc (0:-90:\RI);
+	\draw [LS,->] (Lin Cl) --+(65:\RI) node [above, sloped, midway] {$R_1$};
+	
+	\draw [fill] (Lin Cr) circle(0.1cm) node [below] {C};
+	\draw [dotted] (Lin POSl) arc (180:90:\RII);
+	\draw [dotted] (Lin POSl) arc (180:270:\RII);
+	\draw [LS,->] (Lin Cr) --+(125:\RII) node [above, sloped, midway] {$R_2$};
+
+	
+	\draw [dotted] (Lin POSo) -- (Lin POSu);
+	\draw [dotted] (-7,0)--(7,0);
+\end{tikzpicture}
+\end{center}
+
+
+Linsen werden in sehr vielen optischen Geräten verwendet. Um deren Funktionsweise verstehen zu können, ist es meistens nicht
+nötig den genauen Stahlengang eines Lichtstrahl durch die Linse zu kennen. Für technische Anwendungen, und auch für unseren weiteren
+Unterricht, läuft ein parallel zur optischen Achse einlaufender Lichtstrahl, bis zur \emph{Mittelebene} der Linse, und wird erst dort gebrochen.
+
+\begin{aufgabe}
+	Zeichnen Sie den Strahlengang für einen parallel zur optischen Achse einlaufenden Lichtstrahl, für einen Lichtstrahl, der durch
+	den Brennpunkt auf die Linse fällt und für einen Lichtstrahl, der durch den Mittelpunkt der Linse verläuft.
+\end{aufgabe}
+
+\begin{center}
+\begin{tikzpicture}
+%	\draw [mmPapier, xstep=0.5, ystep=0.5, shift={(-7,-5)}](0,0) grid (14,10);
+	\def\RI{12}
+	\def\RII{12}
+	\Linse{(0,0)}{\RI}{\RII}{4}{0}{Lin}{Glas}
+
+	%Mittelpunkte
+	\draw [fill] (-5,0) circle(0.1cm) node [below] {F};
+	
+	\draw [fill] (5,0) circle(0.1cm) node [below] {F};
+
+	
+	\draw [dotted] (Lin POSo) -- (Lin POSu);
+	\draw [dotted] (-7,0)--(7,0);
+\end{tikzpicture}
+\end{center}
+
+\begin{aufgabe}
+	Zeichnen Sie den Strahlengang für parallel zur optischen Achse einlaufende Lichtstrahlen ein.
+\end{aufgabe}
+
+\begin{center}
+\begin{tikzpicture}
+%	\draw [mmPapier, xstep=0.5, ystep=0.5, shift={(-7,-5)}](0,0) grid (14,10);
+	\def\RI{-12}
+	\def\RII{-12}
+	\Linse{(0,0)}{\RI}{\RII}{4}{2}{Lin}{Glas}
+
+	%Mittelpunkte
+	\draw [fill] (-5,0) circle(0.1cm) node [below] {F};
+	
+	\draw [fill] (5,0) circle(0.1cm) node [below] {F};
+
+	
+	\draw [dotted] (Lin POSo) -- (Lin POSu);
+	\draw [dotted] (-7,0)--(7,0);
+\end{tikzpicture}
+\end{center}
+
+
+%\newpage
+%\includesolutions
+
+
+
+
+
+\end{document}

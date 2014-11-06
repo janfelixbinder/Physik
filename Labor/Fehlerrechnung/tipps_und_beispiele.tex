@@ -1,0 +1,60 @@
+\documentclass[12pt,a4paper, twosite]{article}
+\usepackage{mystyle}
+
+%oben und unten
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{St. Michael\\Fribourg}
+\rhead{Labor: Messfehler}
+\rfoot{Felix Binder}
+\lfoot{September 2014}
+\renewcommand\headrulewidth{1pt}
+\renewcommand\footrulewidth{1pt}
+%ende oben und unten
+
+%\newcommand{\Beispiel}[0]{\par\rm{Beispiel:}\par}
+
+\author{}
+\date{}
+\title{Fragen und Beispiele zu Messungenauigkeiten}
+
+\begin{document}
+\maketitle
+%\thispagestyle{empty}
+
+\section{Messungenauigkeit}
+\Beispiel
+Sie wollen die Kraft, die der Luftdruck auf eine runde Fläche ausübt berechnen.
+Der Durchmesser der Fläche ist etwa \SI{16}{cm}. Da Sie mit einem normalen Geodreieck mit zerstossenen Enden messen,
+schätzen Sie den absoluten Messfehler auf \SI{1}{cm}. Also $d=\SI{0.16}{m}\pm \SI{1}{cm}$.
+Der Luftdruck ist etwa $\SI{950}{hPa} \pm \SI{20}{hpa}$.
+
+Aus der Definition des Drucks ($P=\nicefrac{F}{A}$)
+erhalten Sie durch umformen
+\begin{eqnarray*}
+	F=P\cdot A = P\cdot\pi \cdot r^2 = \SI{95000}{Pa}\cdot\pi\cdot(\SI{0.08}{m})^2 = \SI{1910.088}{N}\text{.}
+\end{eqnarray*}
+
+Die absolute Messungenauigkeit berechnen Sie so
+\begin{eqnarray*}
+	\Delta F= P\cdot\pi\cdot r^2\left(\frac{\Delta P}{P} + 0 + 2\cdot\frac{\Delta r}{r}\right)=\SI{1910.088}{N}\cdot\left(\num{0.021}+\num{0.125}\right)=\SI{278.973}{N}
+\end{eqnarray*}
+
+
+%wie gibt man ergebnisse an?
+\section{Runden der absoluten Messungenauigkeit}
+Runden Sie die absolute Messungenauigkeit auf eine signifikante Stelle.
+Sie können beim runden die normalen Rundungsregeln benutzen. 
+Falls Sie unsicher sind, dass die Messunsicherheit damit zu klein wird können Sie auch aufrunden.
+\Beispiel
+\begin{eqnarray*}
+	\Delta F= \SI{278.973}{N} \approx \SI{300}{N}
+\end{eqnarray*}
+
+\section{Wie gibt man das Endergebnis an?}
+\Beispiel
+\begin{eqnarray*}
+	F =  \SI{1910.088}{N} \pm  \SI{278.973}{N}\approx\SI{1900}{N}\pm\SI{300}{N} 
+\end{eqnarray*}
+
+\end{document}

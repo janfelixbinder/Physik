@@ -1,0 +1,7 @@
+-ss startzeit; -t endzeit; -r bilder/sekunde
+avconv -i kugel_auf_schieferebene.MTS -ss 00:00:28 -t 00:00:34 -r 10 -f image2 foo-%03d.jpeg
+
+for i in *.jpeg ; do convert $i -crop 1250x350+100+500 +repage crop/$i ; done
+
+dann latex beamer zu finden: /home/felix/GITHUB/Experimente_Mechanik/kugelbahn
+

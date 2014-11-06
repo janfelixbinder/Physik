@@ -1,0 +1,131 @@
+
+%\subsection*{Experiment: Schwebende Ballone}
+\begin{aufgabe}
+	Im Unterricht sehen Sie ein Experiment.
+	Beantworten Sie dazu die folgenden Fragen.
+\begin{enumerate} [a)]
+	\item Sie sehen zwei mit Wasser gefüllte Bechergläser in denen jeweils ein Ballon schwebt.
+	Warum schweben die Ballone?
+\item Die Ballone werden nun vertauscht. Der rechte Ballon wird ins linke Gefäss und der linke Ballon ins rechte Gefäss gegeben.
+	Machen Sie eine Skizze. Was beobachten Sie?
+\item Wie können Sie sich das Beobachtete erklären?
+\end{enumerate}
+\end{aufgabe}
+
+
+
+\begin{aufgabe}
+	Ein Messbecher mit einem Volumen von \SI{200}{ml} 
+	ist mit Wasser von \SI{4}{\celsius} bis zum Rand gefüllt ($\rho=\SI{1000}{kg/m^3}$).
+	Das Wasser wird auf \SI{80}{\celsius} erwärmt. Dabei laufen \SI{6}{g} Wasser über.
+	Nehmen Sie an, dass Volumen des Gefässes ändert sich durch die Temperaturänderung nicht.
+	\begin{enumerate} [a)]
+		\item Welche Masse hat das Wasser bei \SI{4}{\celsius}?
+		\item Welche Dichte hat Wasser von \SI{80}{\celsius}?
+	\end{enumerate}
+	
+	\kloesung{a) \SI{0.2}{kg}, b) \SI{970}{kg/m^3}}
+
+	\begin{loesung}
+		\begin{enumerate}[a)]
+			\item Die Masse berechnet sich mit der Definition der Dichte:
+				\begin{eqnarray*}
+					\rho =\frac{m}{V}\to m=\rho\cdot V=\SI{1000}{kg/m^3}\cdot\SI{2E-4}{m^3}=\SI{2E-1}{kg}=\SI{0.2}{kg}
+				\end{eqnarray*}
+			\item Mit der Definition der Dichte bekommen wir
+				\begin{eqnarray*}
+					\rho =\frac{m}{V}=\frac{\SI{0.2}{kg}-\SI{0.006}{kg}}{\SI{2E-4}{m^3}}=\SI{970}{kg/m^3}
+				\end{eqnarray*}
+		\end{enumerate}
+	\end{loesung}
+
+\end{aufgabe}
+
+
+\begin{aufgabe}
+	Im Schwimmbad liegt eine Person auf einer Schwimmmatte.
+	Die Matte ist zwei Meter lang, ein Meter breit und zehn Zentimeter hoch.
+	Die Matte wird durch das Gewicht der Person um etwa \SI{3.5}{Zentimeter} unter Wasser gedrückt.
+	Wie schwer ist die Person?
+	
+	\kloesung{etwa \SI{70}{kg}}
+	
+	\begin{loesung}
+		Die Eintauchtiefe der Matte ist konstant \SI{3.5}{Zentimeter}. 
+		Das bedeutet die Gewichtskraft und die Auftriebskraft sind bei diesem Wert im Gleichgewicht.
+		\begin{eqnarray*}
+			\begin{split}
+		\RI{F}{G}&=\RI{F}{A}\\
+		m\cdot g &=\RI{\rho}{w}\cdot V\cdot g\\
+		m&=\RI{\rho}{w}\cdot V = \SI{1000}{kg/m^3}\cdot\SI{2}{m}\cdot\SI{1}{m}\cdot\SI{0.035}{m}=\SI{70}{kg}
+			\end{split}
+		\end{eqnarray*}
+Das Volumen bei der Auftriebskraft ist das Volumen der Matte, das unter der Wasseroberfläche liegt.
+	\end{loesung}
+\end{aufgabe}
+
+
+\begin{aufgabe}
+	Während einer Lektion haben wir die Dichte von Luft bestimmt. Erinnern Sie sich noch?
+	Ein Vorschlag der gemacht wurde war einen Luftballon mit und ohne Luft zu wiegen.
+	Warum kann dieser Vorschlag nicht funktionieren?
+\end{aufgabe}
+
+\begin{aufgabe}
+	Ein Eiswürfel schwimmt in einem Glas mit Wasser. 
+	Wie viel von einem Eiswürfel ist über der Wasseroberfläche zu sehen?
+	Die Dichte von Eis ist \SI{917}{kg/m^3}.
+
+	\kloesung{etwa \SI{8}{\percent}}
+
+	\begin{loesung}
+		Der Eiswürfel ist im Gleichgewicht. Das heisst $\RI{F}{G}=\RI{F}{A}$.
+		\begin{eqnarray*}
+			1=\frac{\RI{F}{G}}{\RI{F}{A}}=\frac{\RI{\rho}{Eis}\cdot\RI{V}{Eis}\cdot g}{\RI{\rho}{Wasser}\cdot V^*\cdot g}
+		\end{eqnarray*}
+		$V^*$ ist das Volumen des Eiswürfels das sich unter Wasser befindet.
+		Umstellen der oberen Formel nach $\nicefrac{V^*}{\RI{V}{Eis}}$ gibt uns den Anteil des Einswürfels der unter
+		der Wasseroberfläche ist.
+		\begin{eqnarray*}
+			\frac{V^*}{\RI{V}{Eis}}=\frac{\RI{\rho}{Eis}}{\RI{\rho}{Wasser}} = \frac{\SI{917}{kg/m^3}}{\SI{1000}{kg/m^3}}=\num{0.917}\approx\SI{92}{\percent}
+		\end{eqnarray*}
+		Der Rest des Eiswürfels (\SI{8}{\percent}) ist also über der Wasseroberfläche.
+	\end{loesung}
+\end{aufgabe}
+
+
+\begin{aufgabe}
+	Ein Gefäss ist randvoll mit Wasser gefüllt. Auf dem Wasser schwimmt ein Stück Eis.
+	Was passiert, wenn das Eis schmilzt? Erklären Sie.
+\end{aufgabe}
+
+\begin{aufgabe}
+	Ein Liter Wasser ($\rho=\SI{1000}{kg/m^3}$) wird in einem sehr dünnen Gefäss gewogen. 
+	Was zeigt die Waage an? Denken Sie bei dieser Aufgabe an den Auftrieb der Luft.
+
+	\kloesung{\SI{0.9987}{kg}}
+
+	\begin{loesung}
+		Um den Auftrieb in Luft zu bestimmen braucht man die Dichte der Luft und das Volumen
+		des Gegenstandes. Die Dichte ist etwa \SI{1.3}{kg/m^3}. Das Volumen ist $\SI{1}{l}=\SI{1}{dm^3}=\SI{1E-3}{m^3}$.
+		Damit ergibt sich die Auftriebskraft zu
+		\begin{eqnarray*}
+			\RI{F}{A}=\rho\cdot g \cdot V=\SI{1.3}{kg/m^3}\cdot\SI{9.81}{m/s^2}\SI{1E-3}{m^3}=\SI{0.012753}{N}
+		\end{eqnarray*}
+		Mit der Formel für die Gewichtskraft bekommt man die Masse, die dieser Kraft entspricht
+		\begin{eqnarray*}
+			\RI{F}{G}=m\cdot g\to m=\frac{\RI{F}{G}}{g}=\frac{\SI{0.012753}{N}}{\SI{9.81}{m/s^2}}=\SI{0.0013}{kg}\text{.}
+		\end{eqnarray*}
+		Damit ergibt sich für die Anzeige
+		\begin{eqnarray*}
+			\SI{1}{kg}-\SI{0.0013}{kg}=\SI{0.9987}{kg}\text{.}
+		\end{eqnarray*}
+	\end{loesung}
+
+\end{aufgabe}
+
+%\begin{aufgabe}
+%	Ein Heissluftballon mit einem Volumen von \SI{5000}{m^3} wird auf eine Temperatur von \SI{100}{\celsius} erwärmt.
+%	Wie schwer kann der angehängten Korb sein, damit der Ballon anfängt zu schweben?
+%\end{aufgabe}
+
