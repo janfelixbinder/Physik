@@ -1,0 +1,29 @@
+\documentclass{article}
+
+\usepackage{pgf}
+\usepackage{pgfplots}
+%\usepackage{tikz}
+\usepackage{gnuplot-lua-tikz}
+\pgfplotsset{compat=1.9}
+
+\def\folder{/tmp/auswertung}
+
+\begin{document}
+Man benötigt das octave Script ``auswertung.m''. Dieses erstellt eine Datei namens ``hist.dat``. 
+Diese Datei wird dann vom gnuplot Skript auswertung.gplot in eine tikz Datei gewandelt.
+
+\section{Histogramm über die Noten der SuS}
+
+\input{\folder/histogramm.tex}
+
+\section{Mittlere Anzahl Punkte pro Aufgabe}
+\input{\folder/mittelwertaufgaben.tex}
+
+\section{Wie korrelierten die einzelnen Aufgaben mit der Summe der Punktzahl der anderen Aufgaben?}
+\input{\folder/corr1.tex}
+\input{\folder/corr2.tex}
+\input{\folder/corr3.tex}
+\input{\folder/corr4.tex}
+\input{\folder/corr5.tex}
+
+\end{document}
