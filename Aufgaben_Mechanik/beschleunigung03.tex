@@ -3,31 +3,48 @@
 \begin{aufgabe}
 Ein Ball wird mit einer Geschwindigkeit von \SI{30}{m/s} nach oben geworfen, und fällt
 durch die Fallbeschleunigung wieder zu Boden.
-\begin{itemize}
-	\item[a)] Zeichnen Sie den Wurf in ein Beschleunigungs-Zeit-, ein Geschwindigkeits-Zeit- und ein Weg-Zeit-Diagramm.
-	\item[b)] Wie lange braucht der Ball bis zum höchsten Punkt?
-	\item[c)] Wie hoch steigt der Ball insgesamt?
-	\item[d)] Der Ball soll \SI{50}{m} hoch kommen. Mit welcher Geschwindigkeit $v_0$ muss er hochgeworfen werden?
-\end{itemize}
+\begin{enumerate}[a)]
+	\item Zeichnen Sie ein Beschleunigungs-Zeit- und in ein Weg-Zeit-Diagramm für diesen Wurf.
+	\item Wie lange braucht der Ball bis zum höchsten Punkt?
+	\item Wie hoch steigt der Ball insgesamt?
+	\item Der Ball soll \SI{50}{m} hoch kommen. Mit welcher Geschwindigkeit $v_0$ muss er hochgeworfen werden?
+	\item Zeichnen Sie ein Weg-Zeit-Diagramm und erklären Sie es.
+\end{enumerate}
 
-\kloesung{b) \SI{3}{s}, c) \SI{45}{m}, d) \SI{31.6}{m/s}}
+\kloesung{b) \SI{3.06}{s}, c) \SI{45.87}{m}, d) \SI{31.3}{m/s}}
 
 \begin{loesung}
-\begin{itemize}
-	\item[b)] Am höchsten Punkt ist die Geschwindigkeit $v=0$. Wir können also schreiben $0 = v_0 + a\cdot t \to t=-\frac{v_0}{a}=\frac{\SI{30}{m/s}}{{10}{m/s^2}}=\SI{3}{s}$.
+	\begin{enumerate}[a)]
+		\item
+		\item Am höchsten Punkt ist die Geschwindigkeit $v=0$. 
+		Wir können also schreiben
+		\begin{eqnarray*}
+		0 = v_0 + a\cdot t \to t=-\frac{v_0}{a}=\frac{\SI{30}{m/s}}{{9.81}{m/s^2}}=\SI{3.06}{s}.
+		\end{eqnarray*}
 
-	\item[c)] Dies kann auf drei unterschiedlichen Wegen bestimmt werden. 
+	\item Dies kann auf drei unterschiedlichen Wegen bestimmt werden. 
 \begin{itemize}
-	\item Man bestimmt die Fläche im $v$-$t$-Diagramm.
-	\item $\bar{v}=\frac{1}{2}\cdot (v_0+v_1)$ $\to s=\bar{v}\cdot t=\SI{15}{m/s}\cdot\SI{3}{s}=\SI{45}{m}$
-	\item Oder $s=v_0\cdot t +\frac{1}{2}\cdot a \cdot t^2 = \SI{30}{m/s}\cdot\SI{3}{s}+0.5\cdot(\SI{-10}{m/s^2})\cdot(\SI{3}{s})^2=\SI{90}{m}-\SI{45}{m}=\SI{45}{m}$
+	\item $s=v_0\cdot t +\frac{1}{2}\cdot a \cdot t^2 = \SI{30}{m/s}\cdot\SI{3.06}{s}+0.5\cdot(\SI{-9.81}{m/s^2})\cdot(\SI{3.06}{s})^2=\SI{91.743}{m}-\SI{45.872}{m}=\SI{45.872}{m}$
+	\item $\bar{v}=\frac{1}{2}\cdot (v_0+v_1)$ $\to s=\bar{v}\cdot t=\SI{15}{m/s}\cdot\SI{3.06}{s}=\SI{45.872}{m}$
+	\item Oder man bestimmt die Fläche im $v$-$t$-Diagramm.
 \end{itemize}
-	\item[d)]
+	\item Der Ball braucht genauso viel Zeit um von unten nach oben aufzusteigen, wie um von oben nach unter herabzufallen.
+		Wir berechnen nun die Zeit um 50 Meter zu fallen.
+		\begin{eqnarray*}
+			s=\frac{1}{2}\cdot a\cdot t^2 \to t=\sqrt{\frac{2\cdot s}{a}}=\sqrt{\frac{\SI{100}{m}}{\SI{9.81}{m/s^2}}}=\SI{3.2}{s}
+		\end{eqnarray*}
+		Mit
+		\begin{eqnarray*}
+			v=v_0 + a\cdot t\to v_0=-a\cdot t=\SI{9.81}{m/s^2}\cdot\SI{3.2}{s}=\SI{31.321}{m/s}\text{.}
+		\end{eqnarray*}
+
+		Alternativ kann man auch folgendes rechnen:
+
 		\begin{align*}
-		v^2=v_0^2 + 2\cdot a \cdot \Delta s \to v_0 &= \sqrt{v^2 - 2\cdot a \cdot \Delta s}=\sqrt{\SI{0}{m/s} - 2\cdot (\SI{-10}{m/s^2})\cdot\SI{50}{m}}=\\
-			&=\sqrt{\SI{1000}{m^2/s^2}}=\SI{31.6}{m/s}
+		v^2=v_0^2 + 2\cdot a \cdot \Delta s \to v_0 &= \sqrt{v^2 - 2\cdot a \cdot \Delta s}=\sqrt{\SI{0}{m/s} - 2\cdot (\SI{-9.81}{m/s^2})\cdot\SI{50}{m}}=\\
+			&=\sqrt{\SI{981}{m^2/s^2}}=\SI{31.321}{m/s}
 		\end{align*}
-\end{itemize}
+\end{enumerate}
 
 
 \end{loesung}
