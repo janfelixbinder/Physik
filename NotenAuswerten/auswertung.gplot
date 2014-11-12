@@ -1,0 +1,128 @@
+#set terminal lua tikz size 8.5cm,4.6cm font '\sffamily,9'
+set terminal lua tikz
+folder = sprintf("/tmp/auswertung/")
+gnuplot_input  = sprintf("%sgnuplot_input",folder)
+load(gnuplot_input)
+
+
+set style line 1 lt 1 pt 7 lc rgb 'red' lw 2 ps 1
+set style line 2 lt 1 pt 5 lc rgb 'blue' lw 2 ps 1
+set style line 3 lt 1 pt 9 lc rgb 'green' lw 2 ps 1
+set style line 4 lt 1 pt 6 lc rgb 'black' lw 2 ps 1
+
+
+
+outhist  = sprintf("%shistogramm.tex",folder)
+#set output "histogramm.tex"
+set output outhist
+
+
+set arrow 1 from mittelwert_HIST1,graph(0,0) to mittelwert_HIST1,graph(1,1) nohead front
+set label "Mittelwert" at graph mittelwert_HIST1,graph(0,0)
+
+set arrow 2 from median_HIST1,graph(0,0) to median_HIST1,graph(1,1) nohead front
+set label "Median" at graph median_HIST1,graph(0,0)
+
+
+set xlabel "Noten"
+set ylabel "Anzahl"
+
+#druckt das histogramm
+inhist  = sprintf("%shist.dat",folder)
+#plot [1:6][0:] 'hist.dat' not with boxes fs solid 0.25
+plot [1:6][0:] inhist not with boxes fs solid 0.25
+
+
+
+#########################################################################
+#WIE VIELE PUNKTE HABEN DIE SUS BEI DEN EINZELNEN AUFGABEN ERHALTEN? ####
+#
+
+outmitt  = sprintf("%smittelwertaufgaben.tex",folder)
+set output outmitt
+
+set arrow 1 from graph(0,0),0.6 to graph(1,1),0.6 nohead front
+set arrow 2 from graph(0,0),0.8 to graph(1,1),0.8 nohead front
+
+set xlabel "Aufgabe"
+set ylabel "Mittlere Punktzahl"
+
+#druckt
+inmitt  = sprintf("%smittelwertaufgaben.dat",folder)
+plot [0.5:5.5][0:1] inmitt not with boxes fs solid 0.25
+
+unset arrow 1
+unset arrow 2
+
+##########################################################################
+#Wie correliert die einzelne Aufgabe mit der Gesamtpunktzahl minus der Punktzahl dieser Aufgabe?
+#
+#### 1 ###
+output  = sprintf("%scorr1.tex",folder)
+set output output 
+
+set xlabel "Erreichte Anzahl Punkte A1"
+set ylabel "Summe - A1"
+
+f(x) = a * x
+g(x) = b0 + b1 * x
+
+indata  = sprintf("%sgnuplot_data",folder)
+fit f(x) indata using 1:($2+$3+$4+$5) via a
+fit g(x) indata using 1:($2+$3+$4+$5) via b0, b1 
+plot [0:1][0:4] indata using 1:($2+$3+$4+$5) not w p ls 1,\
+f(x) not w l ls 1,\
+g(x) not w l ls 2
+
+
+#### 2 ###
+output  = sprintf("%scorr2.tex",folder)
+set output output 
+
+set xlabel "Erreichte Anzahl Punkte A2"
+set ylabel "Summe - A2"
+
+fit f(x) indata using 2:($1+$3+$4+$5) via a
+fit g(x) indata using 2:($1+$3+$4+$5) via b0, b1 
+plot [0:1][0:4] indata using 2:($1+$3+$4+$5) not w p ls 1,\
+f(x) not w l ls 1,\
+g(x) not w l ls 2
+
+#### 3 ###
+output  = sprintf("%scorr3.tex",folder)
+set output output 
+
+set xlabel "Erreichte Anzahl Punkte A3"
+set ylabel "Summe - A3"
+
+fit f(x) indata using 3:($1+$2+$4+$5) via a
+fit g(x) indata using 3:($1+$2+$4+$5) via b0, b1 
+plot [0:1][0:4] indata using 3:($1+$2+$4+$5) not w p ls 1,\
+f(x) not w l ls 1,\
+g(x) not w l ls 2
+
+#### 4 ###
+output  = sprintf("%scorr4.tex",folder)
+set output output 
+
+set xlabel "Erreichte Anzahl Punkte A4"
+set ylabel "Summe - A4"
+
+fit f(x) indata using 4:($1+$2+$3+$5) via a
+fit g(x) indata using 4:($1+$2+$3+$5) via b0, b1 
+plot [0:1][0:4] indata using 4:($1+$2+$3+$5) not w p ls 1,\
+f(x) not w l ls 1,\
+g(x) not w l ls 2
+
+#### 5 ###
+output  = sprintf("%scorr5.tex",folder)
+set output output 
+
+set xlabel "Erreichte Anzahl Punkte A5"
+set ylabel "Summe - A5"
+
+fit f(x) indata using 5:($1+$2+$3+$4) via a
+fit g(x) indata using 5:($1+$2+$3+$4) via b0, b1 
+plot [0:1][0:4] indata using 5:($1+$2+$3+$4) not w p ls 1,\
+f(x) not w l ls 1,\
+g(x) not w l ls 2
