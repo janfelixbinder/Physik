@@ -22,12 +22,13 @@ Note =Summe + 1;
 ############### ANFANG HISTOGRAMM #######################################
 
 
-Einteilung = [1 3 4 4.5 5 6];
-NofCa = NofEl=size(Einteilung)(1,2) - 1;#Anzahl Kategorien
+Einteilung = [1 3 4 4.5 5 6+0.000001];#das plus epsilon behebt ein problem beim einordnen der 6
+NofCa = size(Einteilung)(1,2) - 1;#Anzahl Kategorien
+
 for i=1:NofCa
-X(1,i) = 0.5*(Einteilung(i+1)-Einteilung(i)) + Einteilung(i);#erstellt den X Wert mit Hilfe der Einteilung
-X(2,i) = sum(Note(:) < Einteilung(i+1));
-X(3,i) = Einteilung(i+1) - Einteilung(i); 
+	X(1,i) = 0.5*(Einteilung(i+1)-Einteilung(i)) + Einteilung(i);#erstellt den X Wert mit Hilfe der Einteilung
+	X(2,i) = sum(Note(:) < Einteilung(i+1));
+	X(3,i) = Einteilung(i+1) - Einteilung(i); 
 endfor
 
 
@@ -40,7 +41,7 @@ M=[0 X(2,(1:4))]; X(2,:) = X(2,:)-M;
 ############### ANFANG Balkendiagramm Mittlere Punktzahl pro Aufgabe ###############
 
 Einteilung = [0 1 2 3 4 5];
-NofCa = NofEl=size(Einteilung)(1,2) - 1;#Anzahl Kategorien
+NofCa = size(Einteilung)(1,2) - 1;#Anzahl Kategorien
 for i=1:NofCa
 Xe(1,i) = i; 
 Xe(2,i) = mean(Data(:,i)); 
