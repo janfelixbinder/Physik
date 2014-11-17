@@ -1,0 +1,109 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{mystyle}
+\usepackage{schueler}
+%\usepackage{lehrer}
+
+
+\usepackage{circuitikz}
+
+\author{}
+\title{Optische Abbildungen}
+
+\begin{document}
+\maketitle
+
+%\thispagestyle{empty}
+
+\section{Einleitung}
+In diesem Praktikumsversuch sollen optische Abbildungen untersucht werden.
+Dazu werden wir Gegenstände mit Hilfe einer Sammellinse auf einem Schirm abbilden.
+Wir werden die Vergrösserung des Bildes untersuchen und die Linsengleichung
+bestätigen.
+
+\section{Versuchsaufbau}
+
+\begin{figure}[h]
+	\begin{center}
+	\input{versuchsaufbau.tex}
+	\caption{\label{fig1} Skizze des Versuchsaufbaus.} 
+	\end{center}
+\end{figure}
+
+Auf eine optische Bank wird eine Halogenlampe, eine Linse und ein Schirm montiert.
+Dabei dient die Halogenlampe im ersten Teil als Gegenstand $G$.
+Das Bild $B$ wird auf den Schirm abgebildet.
+Der Abstand zwischen Gegenstand und Linse heisst Gegenstandsweite $g$, der Abstand zwischen
+Linse und Schirm heisst Bildweite $b$.
+Die Linse hat eine Brennweite $f$.
+
+\section{Versuch}
+
+Für den ersten Versuch variieren wir die Gegenstandsweite und messen die Bildweite.
+Ausserdem messen wir die Grösse des Bildes $B$. Alle Messwerte sind links in Tabelle \ref{tab1} angegeben.
+Im rechten Teil der Tabelle \ref{tab1} wurden die Messdaten schon ausgewertet. 
+
+\begin{table}
+\begin{center}
+\begin{tabular}{ccc|cccc}
+	\multicolumn{3}{c}{Messung} & \multicolumn{4}{c}{Auswertung}\\
+$g$ (cm) & $b$ (cm) &   $B$ (cm)   & $1/g$ (1/cm) & $1/b$ (1/cm) &  $b/g$   & $B/G$\\\hline
+13   &   43     &   1.3      & 0.076923   & 0.02325    & 3.30769  &3.25 \\
+15   &   30     &   0.8      & 0.066667   & 0.03333    & 2        &2    \\
+20   &   19.3   &   0.5      & 0.050000   & 0.05181    & 0.965    &1.25 \\
+21   &   18.5   &   0.5      & 0.047619   & 0.05405    & 0.880952 &1.25 \\
+23   &   17     &   0.4      & 0.043478   & 0.05882    & 0.73913  &1 \\
+30   &   14.5   &   0.4      & 0.033333   & 0.06896    & 0.483333 &1\\
+\end{tabular}
+\caption{\label{tab1}
+Für diese Messreihe wurde die Linse mit der Brennweite $f=\SI{10}{cm}$ verwandt. 
+Im linken Teil der Tabelle stehen Messwerte, rechts wurden die Daten schon bearbeitet.
+}
+\end{center}
+\end{table}
+
+\subsection{Vergrösserung}
+\begin{figure}[h]
+\input{./Fig3.tex}
+\caption{\label{fig3} Experimentelle Überprüfung der Vergrösserung durch Gleichung \ref{V} und deren theoretischer Verlauf.} 
+\end{figure}
+
+Die Vergrösserung $V$ ist definiert als das Verhältnis der Grösse des Bildes $B$ zur Grösse des Gegenstands $G$.
+Das gleiche Verhältnis gilt auch für die Bildweite $b$ und die Gegenstandsweite $g$.
+\begin{eqnarray}
+	V=\frac{B}{G}=\frac{b}{g}
+	\label{V}
+\end{eqnarray}
+
+Die Verhältnisse $B/G$ und $b/g$ haben wir in Tabelle \ref{tab1} berechnet. Zur besseren Übersicht haben wir sie auch in
+einem Graphen dargestellt (siehe Graph \ref{fig3}). Man sieht, dass Formel \ref{V} für grosse $V$ sehr gut stimmt.
+Für kleine $V$ weichen die Messwerte etwas ab. Dies kann damit begründet werden, dass das Bild sehr klein wurde, und damit
+Messfehler eine grössere Rolle spielen.
+
+
+\subsection{Linsengleichung}
+Als nächstes wollen wir die Linsengleichung experimentell überprüfen. Für Abbildungen mit Linsen gilt
+die Linsengleichung:
+\begin{eqnarray}
+	\frac{1}{f} = \frac{1}{b} + \frac{1}{g}\text{.}
+	\label{L}
+\end{eqnarray}
+$f$ steht für die Brennweite der Linse.
+
+
+\begin{figure}[h]
+\input{./Fig2.tex}
+\caption{\label{fig1} Experimentelle Überprüfung der Linsengleichung (Formel \ref{L}). Zum Vergleich die theoretische Kurve.} 
+\end{figure}
+
+In Graph \ref{fig1} ist die reziproke Bildweite $1/b$ über der reziproken Gegenstandsweite $1/g$ dargestellt.
+Wir sehen einen linearen Verlauf von $1/b$. Zum Vergleich ist auch die theoretische Kurve, die durch die Linsengleichung (Gleichung \ref{L})
+beschrieben wird dargestellt. Man sieht, dass die Messpunkte ausgezeichnet mit der theoretischen Kurve übereinstimmt.
+
+\section{Zusammenfassung}
+In diesem Experiment haben wir optische Abbildungen durch Linsen untersucht.
+Wir haben überprüft, wie die Vergrösserung $V$ mit Bildweite $b$ und Gegenstandsweite $g$ verknüpft ist. 
+Wir konnten den bekannten Zusammenhang $V=b/g$ experimentell bestätigen.
+In einer zweiten Auswertung konnten wir die Linsengleichung experimentell bestätigen.
+
+
+\end{document}
