@@ -1,5 +1,20 @@
 \documentclass{article}
 
+\usepackage[german]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{nicefrac}
+
+\usepackage{pdflscape}%damit laesst sich eine Seite im Querformat setzen
+\usepackage{booktabs}%linien in tabellen
+
+
+
+
+
 \usepackage{pgf}
 \usepackage{pgfplots}
 %\usepackage{tikz}
@@ -9,12 +24,16 @@
 \def\folder{/tmp/auswertung}
 
 \begin{document}
+\section{Aufbau und Dokumentation des Programms}
 Man benötigt das octave Script ``auswertung.m''. Dieses erstellt eine Datei namens ``hist.dat``. 
 Diese Datei wird dann vom gnuplot Skript auswertung.gplot in eine tikz Datei gewandelt.
+
+\newpage
 
 \section{Histogramm über die Noten der SuS}
 
 \input{\folder/histogramm.tex}
+\input{\folder/histogramm2.tex}
 
 \section{Mittlere Anzahl Punkte pro Aufgabe}
 \input{\folder/mittelwertaufgaben.tex}

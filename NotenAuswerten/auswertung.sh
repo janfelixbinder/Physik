@@ -1,14 +1,21 @@
 #!/bin/bash
 
-folder=/tmp/auswertung
+tempfolder=/tmp/auswertung
+exfolder=/home/felix/GITHUB/NotenAuswerten
+folder=$(pwd)
 
-mkdir $folder
+mkdir $tempfolder
 
-cp auswertung.m auswertung.gplot auswertung.tex $folder
+cp $exfolder/auswertung.m $exfolder/auswertung.gplot $exfolder/auswertung.tex $folder/$1 $tempfolder
 
-cd $folder
+cd $tempfolder
 
-./auswertung.m $1
+$exfolder/auswertung.m $1
+
+mv auswertung.pdf $folder
+
+#rm -r $tempfolder
+
 
 #gnuplot auswertung.gplot
 #pdflatex auswertung.tex
