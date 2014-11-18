@@ -33,6 +33,27 @@ inhist  = sprintf("%shist.dat",folder)
 plot [1:6][0:] inhist not with boxes fs solid 0.25
 
 
+#zweites histogramm
+outhist  = sprintf("%shistogramm2.tex",folder)
+#set output "histogramm.tex"
+set output outhist
+
+
+set arrow 1 from mittelwert_HIST1,graph(0,0) to mittelwert_HIST1,graph(1,1) nohead front
+set label "Mittelwert" at graph mittelwert_HIST1,graph(0,0)
+
+set arrow 2 from median_HIST1,graph(0,0) to median_HIST1,graph(1,1) nohead front
+set label "Median" at graph median_HIST1,graph(0,0)
+
+
+set xlabel "Noten"
+set ylabel "Anzahl"
+
+#druckt das histogramm
+inhist  = sprintf("%shist2.dat",folder)
+#plot [1:6][0:] 'hist.dat' not with boxes fs solid 0.25
+plot [1:6][0:] inhist not with boxes fs solid 0.25
+
 
 #########################################################################
 #WIE VIELE PUNKTE HABEN DIE SUS BEI DEN EINZELNEN AUFGABEN ERHALTEN? ####

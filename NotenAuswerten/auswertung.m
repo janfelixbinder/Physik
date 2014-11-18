@@ -20,7 +20,7 @@ Summe = Data(:,1)+Data(:,2)+Data(:,3)+Data(:,4)+Data(:,5);
 Note =Summe + 1;
 
 ############### ANFANG HISTOGRAMM #######################################
-
+#HISTOGRAMM 1
 
 Einteilung = [1 3 4 4.5 5 6+0.000001];#das plus epsilon behebt ein problem beim einordnen der 6
 NofCa = size(Einteilung)(1,2) - 1;#Anzahl Kategorien
@@ -35,6 +35,30 @@ endfor
 #korregiert die anzahl elemente im histogramm
 M=[0 X(2,(1:4))]; X(2,:) = X(2,:)-M;
 
+#ausgabe schreiben
+dlmwrite ("hist.dat",X'," ")
+
+############### ENDE HISTOGRAMM Noten der SuS#######################################
+
+
+############### ANFANG HISTOGRAMM #######################################
+#HISTOGRAMM 2
+
+Einteilung = [1 2 3 4 5 6+0.000001];#das plus epsilon behebt ein problem beim einordnen der 6
+NofCa = size(Einteilung)(1,2) - 1;#Anzahl Kategorien
+
+for i=1:NofCa
+	X(1,i) = 0.5*(Einteilung(i+1)-Einteilung(i)) + Einteilung(i);#erstellt den X Wert mit Hilfe der Einteilung
+	X(2,i) = sum(Note(:) < Einteilung(i+1));
+	X(3,i) = Einteilung(i+1) - Einteilung(i); 
+endfor
+
+
+#korregiert die anzahl elemente im histogramm
+M=[0 X(2,(1:4))]; X(2,:) = X(2,:)-M;
+
+#ausgabe schreiben
+dlmwrite ("hist2.dat",X'," ")
 
 ############### ENDE HISTOGRAMM Noten der SuS#######################################
 
@@ -52,23 +76,23 @@ Xe(3,:) = ones(5)(1,:);
 
 
 ### AUSGABEN SCHREIBEN ######################################
-
+#wird jetzt durch wrapper erledigt
 folder = sprintf("/tmp/auswertung/");
-createfolder = sprintf("mkdir %s",folder);
-system(createfolder);
+#createfolder = sprintf("mkdir %s",folder);
+#system(createfolder);
 
 
 #schreibt den inhalt von
-gdata =sprintf("%sgnuplot_data",folder);
-dlmwrite (gdata,Data," ");
+#gdata =sprintf("%sgnuplot_data",folder);
+#dlmwrite (gdata,Data," ");
+dlmwrite ("./gnuplot_data",Data," ");
 
 #schreibt den inhalt von X transponiert in die Datei
-ghist =sprintf("%shist.dat",folder);
-dlmwrite (ghist,X'," ")
+#ghist =sprintf("%shist.dat",folder);
 
 #schreibt den inhalt von Xe transponiert in die Datei
-gmittelwert =sprintf("%s/mittelwertaufgaben.dat",folder);
-dlmwrite (gmittelwert,Xe'," ")
+#gmittelwert =sprintf("%s/mittelwertaufgaben.dat",folder);
+dlmwrite ("mittelwertaufgaben.dat",Xe'," ")
 
 
 mittelwert_HIST1 = mean(Note)
