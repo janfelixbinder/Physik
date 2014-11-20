@@ -1,21 +1,27 @@
 #!/bin/bash
 
+
 tempfolder=/tmp/auswertung
 exfolder=/home/felix/GITHUB/NotenAuswerten
 folder=$(pwd)
 
 mkdir $tempfolder
 
-cp $exfolder/auswertung.m $exfolder/auswertung.gplot $exfolder/auswertung.tex $folder/$1 $tempfolder
+cp $exfolder/auswertung.m $exfolder/auswertung.gplot $exfolder/auswertung.tex $exfolder/gnuplot_style $folder/$1 $tempfolder
 
 cd $tempfolder
 
-$exfolder/auswertung.m $1
+./auswertung.m $1
 
-mv auswertung.pdf $folder
+pdflatex --shell-escape auswertung.tex
+
+#extrahiert filename aus filename.pdf
+#name=${1%.*}
+#echo $name
+
+mv auswertung.pdf $folder/auswertung_${1%.*}.pdf
 
 #rm -r $tempfolder
 
 
 #gnuplot auswertung.gplot
-#pdflatex auswertung.tex

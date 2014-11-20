@@ -122,7 +122,7 @@ system ("gnuplot /home/felix/GITHUB/NotenAuswerten/auswertung.gplot");
 
 
 #erstelle pdf mit pdflatex
-[output, text] = system ("pdflatex /home/felix/GITHUB/NotenAuswerten/auswertung.tex");
+#[output, text] = system ("pdflatex /home/felix/GITHUB/NotenAuswerten/auswertung.tex");
 
 
 
