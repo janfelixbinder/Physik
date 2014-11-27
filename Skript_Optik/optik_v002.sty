@@ -1,0 +1,259 @@
+\ProvidesPackage{optik_v002}
+
+\tikzset{LS/.style={>=latex,line width=0.05cm}}%Lichtstrahl
+\tikzset{DS/.style={>=latex,line width=0.15cm}}
+\tikzset{Spiegel/.style={line width=0.05cm}}
+\tikzset{OAchse/.style={dotted}}
+\tikzset{OObjekt/.style={>=latex, line width=0.12cm}}
+\tikzset{Diamant/.style={fill, color=blue!25}}
+\tikzset{Glas/.style={fill, color=blue!20}}
+\tikzset{Begrenzung/.style={line width=0.05cm}}
+
+\def\BPunkt{0.05cm}%grösse eines Brennpunktes, Mittelpunktes,\ldots
+
+
+%Boxen
+%\def\OBB{\textwidth}%textwidth funktioniert nicht. Warum auch immer.
+\def\OBB{15}%Breite der Box
+\def\OBH{10}%Hoehe der Box
+\def\IR{0.3}%soviel ist die innere begrenzung kleiner
+
+\newcommand{\NObox}{%
+	\clip [draw] (0,0) rectangle (\OBB,\OBH);
+	\path (0,0) -- (\OBB,0) node [pos=0, shape=coordinate] (SW) {} node [pos=0.5, shape=coordinate] (S) {} node [pos=1, shape=coordinate] (SO) {};%untere begrenzung
+	\path (0,\OBH) -- (\OBB,\OBH) node [pos=0, shape=coordinate] (NW) {} node [pos=0.5, shape=coordinate] (N) {} node [pos=1, shape=coordinate] (NO) {};%obere begrenzung
+
+\draw (SW) -- (NW) node [pos=0.5, shape=coordinate] (W) {};%linke begrenzung
+\draw (SO) -- (NO) node [pos=0.5, shape=coordinate] (O) {};%rechte begrenzung
+%innere Begrenzung
+
+\path (\IR,\IR) -- (\OBB-\IR,\IR) node [pos=0, shape=coordinate] (ISW) {} node [pos=0.5, shape=coordinate] (IS) {} node [pos=1, shape=coordinate] (ISO) {};%untere begrenzung
+\path (\IR,\OBH-\IR) -- (\OBB-\IR,\OBH-\IR) node [pos=0, shape=coordinate] (INW) {} node [pos=0.5, shape=coordinate] (IN) {} node [pos=1, shape=coordinate] (INO) {};%obere begrenzung
+\path (ISW) -- (INW) node [pos=0.5, shape=coordinate] (IW) {};%linke begrenzung
+\path (ISO) -- (INO) node [pos=0.5, shape=coordinate] (IO) {};%rechte begrenzung
+
+\path (INW) -- (INO) %
+node [pos=0.1, shape=coordinate] (INO1) {}
+node [pos=0.2, shape=coordinate] (INO2) {}
+node [pos=0.3, shape=coordinate] (INO3) {}
+node [pos=0.4, shape=coordinate] (INO4) {}
+node [pos=0.5, shape=coordinate] (INO5) {}
+node [pos=0.6, shape=coordinate] (INO6) {}
+node [pos=0.7, shape=coordinate] (INO7) {}
+node [pos=0.8, shape=coordinate] (INO8) {}
+node [pos=0.9, shape=coordinate] (INO9) {};
+
+
+\path (IW) -- (IO) %
+node [pos=0.1, shape=coordinate] (IO1) {}
+node [pos=0.2, shape=coordinate] (IO2) {}
+node [pos=0.3, shape=coordinate] (IO3) {}
+node [pos=0.4, shape=coordinate] (IO4) {}
+node [pos=0.5, shape=coordinate] (IO5) {}
+node [pos=0.6, shape=coordinate] (IO6) {}
+node [pos=0.7, shape=coordinate] (IO7) {}
+node [pos=0.8, shape=coordinate] (IO8) {}
+node [pos=0.9, shape=coordinate] (IO9) {};
+
+
+\path (ISW) -- (ISO) %
+node [pos=0.1, shape=coordinate] (ISO1) {}
+node [pos=0.2, shape=coordinate] (ISO2) {}
+node [pos=0.3, shape=coordinate] (ISO3) {}
+node [pos=0.4, shape=coordinate] (ISO4) {}
+node [pos=0.5, shape=coordinate] (ISO5) {}
+node [pos=0.6, shape=coordinate] (ISO6) {}
+node [pos=0.7, shape=coordinate] (ISO7) {}
+node [pos=0.8, shape=coordinate] (ISO8) {}
+node [pos=0.9, shape=coordinate] (ISO9) {};
+
+%ENDE NOBOX
+}
+
+
+
+%Linse Biconvex
+
+\newcommand{\LBiconvex}[4]{%
+\begin{scope}[xshift=#1, yshift=#2, xscale=#3, yscale=#4, on background layer]
+\clip (-1,0) circle (1.25cm);
+\clip (1,0) circle (1.25cm);
+\fill [color=black!20] (-2,-2) rectangle (2,2);
+\draw [dotted] (0,0.75)--(0,-0.75);
+\end{scope}}
+
+\newcommand{\Prisma}[5]{%
+\begin{scope}[xshift=#1, yshift=#2, xscale=#3, yscale=#4, on background layer, every node/.style={shape=coordinate}]
+\draw [#5] (0,0) node (PC1){}--+(0:1cm) node (PC2) {}--++(60:1cm) node (PC3) {} -- (PC1);
+\draw [Begrenzung] (PC1)--(PC2)--(PC3)--(PC1);
+\end{scope}}
+
+\newcommand{\Viereck}[5]{%
+\begin{scope}[xshift=#1, yshift=#2, xscale=#3, yscale=#4, on background layer, every node/.style={shape=coordinate}]
+	\draw [#5] (0,0) node (VC1){}--(1,0) node (VC2) {}--(1,1) node (VC3) {} -- (0,1) node (VC4) {} -- (VC1);
+\draw [Begrenzung] (VC1)--(VC2)--(VC3)--(VC4)--(VC1);
+\end{scope}}
+
+\newcommand{\Halbkreis}[5]{%
+\begin{scope}[xshift=#1, yshift=#2, xscale=#3, yscale=#4, on background layer, every node/.style={shape=coordinate}]
+	\draw [#5] (0,0) arc(180:0:1) -- (0,0);
+	\draw [Begrenzung] (0,0) arc(180:0:1) -- (0,0);
+	\draw (1,0) node (C) {};% circle (0.01); 
+%	\draw [Begrenzung] (-0.1,0) arc(180:0:1.1) -- (-0.1,0);
+\end{scope}}
+
+\newcommand{\HalbkreisPf}[6]{%
+\begin{scope}[xshift=#1, yshift=#2, xscale=#3, yscale=#4, on background layer, every node/.style={shape=coordinate}]
+	\draw [#5] (0,0) arc(180:0:1) -- (0,0);
+	\draw [Begrenzung] (0,0) arc(180:0:1) -- (0,0);
+	\draw (1,0) node (C) {};% circle (0.01); 
+%	\draw [Begrenzung] (-0.1,0) arc(180:0:1.1) -- (-0.1,0);
+\path (0.0,0) arc(180:#6:1.0) node (IP){};
+\path (-0.25,0) arc(180:#6:1.25) node (AP){};
+\draw [LS,->] (AP)--(IP);
+\end{scope}}
+
+
+%neue Methode einen Hohlspiegel zu zeichnen
+%#1 Koordinate des Ursprungs
+%#2 Radius
+%#3 Winkel von Null
+%#4 Name
+\newcommand{\SSpiegel}[4]{%
+%ausgehend von der koordinate wird ein teil eines kreises gezeichnet
+	\path (#1) arc (0:#3:#2) node [shape=coordinate] (#4 oben) {};
+	\draw [Spiegel, name path = #4] (#4 oben) arc (#3:-#3:#2);
+
+%	\draw [Spiegel] (#1) arc (0:#3:#2);
+%	\draw [Spiegel] (#1) arc (0:-#3:#2);
+%
+	%Mittelpunkt des Kreise
+	\coordinate (#4 C) at ($(#1)-(#2,0)$); 
+	\draw [fill] (#4 C) circle (\BPunkt); 
+	\draw  (#4 C) node [below, transform shape] {C};
+	%
+	%Brennpunkt
+\draw ($(#4 C)!0.5!(#1)$) node [circle,fill,color=black,inner sep=0pt,minimum height=0.02cm] (#4 F) {};
+}
+%Benutzt die Methode SSpiegel mit festen Werten für den Radius (9cm) und Winkel (25 grad)
+\newcommand{\HSpiegel}[3]{\SSpiegel{#1}{9}{25}{#2}}
+
+%Benutzt die Methode SSpiegel mit festen Werten für den Radius (-9cm) und Winkel (25 grad)
+\newcommand{\WSpiegel}[3]{\SSpiegel{#1}{-9}{25}{#2}}
+
+
+
+\newcommand{\AbbHS}[1]{%
+%	
+\NObox%
+%
+\HSpiegel{IO}{Spiegel}%
+%
+%\draw [OAchse, name path=OAchse] (IO) -- (IW);%
+\draw (IO) -- (IW);%
+%
+\draw [OObjekt, ->] (#1) --++(90:2cm) node [shape=coordinate] (Spitze) {};%
+\path [OObjekt, ->] (#1) --++(-90:2cm) node [shape=coordinate] (MSpitze) {};%der Gegenstand an der optischen Achse gespiegelt
+}
+
+%\newcommand{AbbHSLoesung}[1]{%
+%\AbbHS{#1}%
+%}
+%
+%%Loesung
+%%Parallelstrahl wird Brennstrahl
+%\path [name path = IParallelstrahl] (Spitze) --++(20,0);%
+%\path [name intersections={of=IParallelstrahl and Spiegel, by={IPS}}];%
+%\draw [color=red] (Spitze)--(IPS)--($(IPS)!3!(Spiegel F)$);%
+%\path [name path = OBrennstrahl] (IPS)--($(IPS)!3!(Spiegel F)$);%
+%%
+%%
+%%Brennstrahl wird Parallelstrahl
+%\path [name path = IBrennstrahl] (Spitze) --($(Spitze)!10!(Spiegel F)$);%
+%\path [name intersections={of=IBrennstrahl and Spiegel, by={IBS}}];%Intersection Brennstrahl Spiegel IBS
+%\draw [color=red] (Spitze)--(IBS)--++(-10,0);%
+%%
+%%Mittelpunktstrahl
+%\draw [color=red] (Spitze)--(IO)--($(IO)!1.2!(MSpitze)$);%
+%%
+%\path [name path = OMittelpunktstrahl] (IO)--($(IO)!1.2!(MSpitze)$);%
+%\path [name intersections={of=OBrennstrahl and OMittelpunktstrahl, by={SBild}}];%
+%\path [name path = Bild] (SBild)--++(0,10);%
+%\path [name intersections={of=Bild and OAchse, by={UBild}}];%
+%\draw [OObjekt, ->] (UBild)--(SBild) node [midway, right] {B};%
+%%
+%}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%LINSE
+\newcommand{\Linse}[7]{%
+%#1 Koordinate 
+%#2 Radius der rechen Linsen Haelfte \RI
+%#3 Radius der linken Linsen Haelfte \RII
+%#4 Hoehe der Linse (muss kleiner oder gleich der Radien sein \H
+%#5 Breite ein extra Stueck, dass zwischen die beiden Linsenhaelften gesetzt wird \B
+%#6 Name
+%#7 Style
+%
+%#1 rechter Punkt der Linse
+%POSl linker Punkt der Linse
+%POSo oberster Punkt der Linse
+%POSu unterster Punkt der Linse
+%POSc zentraler Punkt der Linse
+
+\pgfmathsetmacro{\alphaI}{( asin(#4/#2)};
+\pgfmathsetmacro{\alphaII}{( asin(#4/#3)};
+%
+%mittelpunkt der linse finden, vielleicht etwas kompliziert
+\path [] #1 arc (0:\alphaI:#2) --+(-#5,0) node [midway, shape=coordinate] (#6 POSo) {};
+\path (#6 POSo) --+(0,-#4) node [shape=coordinate] (#6 POSc) {};
+%
+\draw [#7] #1--+($#1 - (#6 POSc)$) node [shape=coordinate] (#6 POSr) {} arc (0:\alphaI:#2) --+(-#5,0) node [midway, shape=coordinate] (#6 POSo) {} arc (180-\alphaII:180:#3) node [shape=coordinate] (#6 POSl) {} arc (180:180+\alphaII:#3)--+(#5,0) node [midway, shape=coordinate] (#6 POSu) {} arc (-\alphaI:0:#2);
+\coordinate (#6 Cl)   at ($(#6 POSr) - (#2,0)$);
+\coordinate (#6 Cr)   at ($(#6 POSl) + (#3,0)$);
+%\draw [#7] #1 arc (0:\alphaI:#2) --+(-#5,0) arc (180-\alphaII:180+\alphaII:#3)--+(#5,0) arc (-\alphaI:0:#2);
+}
+
+\newcommand{\Biconvex}[2]{%
+	\Linse{#1}{30}{30}{4}{0}{#2}{Glas}%
+	}%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Brennpunkt
+\newcommand{\BP}[1]{%
+	\draw [fill] #1 circle(\BPunkt) node [below] {F};
+	}
+
+%Pfeil Optischer Gegenstand
+\newcommand{\OG}[1]{
+\draw [OObjekt, ->] #1 --++(90:2cm);
+}
+
+%Auge
+%#1 POS
+%#2 Name
+\newcommand{\Auge}[2]{
+\def\RI{1}
+\def\RII{0.8}
+\def\AI{0.12}
+\def\AII{0.25}
+%
+%
+\draw [fill,color=black!50] #1 ++(\RII-0.04,0) circle (\AII);
+\draw [fill] #1 ++(\RII-0.04,0) circle (\AI);
+%
+\draw [fill, color=white] #1++(30:\RII) arc(30:-30:\RII)--++(-30:1+\RI-\RII) arc(-30:30:\RI+1)--cycle;%zum verdecken der Kreise (Pupille u.)
+\draw #1++(0:\RII) node [shape=coordinate] (#2 O) {};
+%
+\draw #1 --++(30:\RI) #1--++(-30:\RI);%Eck
+\draw #1++(30:\RII) arc(30:-30:\RII);%Augenkruemmung
+}
+
+%Nikolaushaus
+%#1 POS
+%#2 Name
+\newcommand{\Nikolaushaus}[2]{
+\draw #1 node [shape=coordinate] (#2 SW) {}--++(1,0) node [shape=coordinate] (#2 SO) {}--++(0,1)--++(-0.5,0.5) node [shape=coordinate] (#2 N) {} --++(-0.5,-0.5)--++(1,0)--++(-1,-1)--++(0,1)--++(1,-1);
+}
