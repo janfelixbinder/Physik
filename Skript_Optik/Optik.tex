@@ -392,18 +392,57 @@ Lichtstrahlen am Wölbspiegel (konvexer Spiegel) reflektiert werden.
 	Betrachten Sie sich in einem Hohlspiegel. Was sehen Sie? Ist das Bild abhängig vom Abstand zum Spiegel?
 \end{aufgabe}
 
+
+\begin{center}
+	\begin{tikzpicture}
+		\AbbHS{IO4}
+	\end{tikzpicture}
+\end{center}
+
+%\begin{center}
+%	\begin{tikzpicture}
+%		\AbbHSLoesung{IO4}
+%	\end{tikzpicture}
+%\end{center}
+
+
 \begin{center}
 \begin{tikzpicture}
 \NObox
 
-\HSpiegel{IO}{3}
+\HSpiegel{IO}{Spiegel}
 
-\draw [OAchse] (IO) -- (IW);
+\draw [OAchse, name path=OAchse] (IO) -- (IW);
 
-\draw [OObjekt, ->] (IO3) --++(90:2cm);
+\draw [OObjekt, ->] (IO3) --++(90:2cm) node [shape=coordinate] (Spitze) {};
+\path [OObjekt, ->] (IO3) --++(-90:2cm) node [shape=coordinate] (MSpitze) {};%der Gegenstand an der optischen Achse gespiegelt
+
+%Loesung
+%Parallelstrahl wird Brennstrahl
+\path [name path = IParallelstrahl] (Spitze) --++(20,0);
+\path [name intersections={of=IParallelstrahl and Spiegel, by={IPS}}];
+\draw [color=red] (Spitze)--(IPS)--($(IPS)!3!(Spiegel F)$);
+\path [name path = OBrennstrahl] (IPS)--($(IPS)!3!(Spiegel F)$);
+
+
+%Brennstrahl wird Parallelstrahl
+\path [name path = IBrennstrahl] (Spitze) --($(Spitze)!10!(Spiegel F)$);
+\path [name intersections={of=IBrennstrahl and Spiegel, by={IBS}}];%Intersection Brennstrahl Spiegel IBS
+\draw [color=red] (Spitze)--(IBS)--++(-10,0);
+
+%Mittelpunktstrahl
+\draw [color=red] (Spitze)--(IO)--($(IO)!1.2!(MSpitze)$);
+
+\path [name path = OMittelpunktstrahl] (IO)--($(IO)!1.2!(MSpitze)$);
+\path [name intersections={of=OBrennstrahl and OMittelpunktstrahl, by={SBild}}];
+\path [name path = Bild] (SBild)--++(0,10);
+\path [name intersections={of=Bild and OAchse, by={UBild}}];
+\draw [OObjekt, ->] (UBild)--(SBild) node [midway, right] {B};
 
 \end{tikzpicture}
 \end{center}
+
+
 
 \begin{center}
 \begin{tikzpicture}

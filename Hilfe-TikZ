@@ -7,3 +7,11 @@ sloped
 
 
 shape=coordinate
+
+
+Intersections
+
+\path [name path = Radius] (A) --++ (0,-\Radius);
+
+\path [name intersections={of=Kreis and Radius, by={G}}];
+
