@@ -1,0 +1,21 @@
+\def\Radius{4.5cm}
+\def\dx{4cm}
+
+\usetikzlibrary{calc,intersections,through,backgrounds}
+
+
+\draw [name path = Kreis] (0,0) circle(\Radius);
+%\draw (0,0) --++(0,\Radius) node [midway, left] {$R$};
+
+\draw [->] (0,\Radius) --++(\dx,0) node [midway, above] {$x$} node [shape=coordinate] (A){};
+\path [name path = Radius] (A) --++ (0,-\Radius);
+
+\path [name intersections={of=Kreis and Radius, by={G}}];
+
+\draw [->] (A) -- (G) node [midway,right]{$y$};
+
+\draw(0,0)--(0,-\Radius)--(G)--(0,\Radius)--(0,0);
+
+\draw (G)--++(-\Radius,0);
+
+\draw [fill] (0,0) circle(0.1);
