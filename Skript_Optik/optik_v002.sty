@@ -121,20 +121,19 @@ node [pos=0.9, shape=coordinate] (ISO9) {};
 %#4 Name
 \newcommand{\SSpiegel}[4]{%
 %ausgehend von der koordinate wird ein teil eines kreises gezeichnet
-	\path (#1) arc (0:#3:#2) node [shape=coordinate] (#4 oben) {};
-	\draw [Spiegel, name path = #4] (#4 oben) arc (#3:-#3:#2);
-
-%	\draw [Spiegel] (#1) arc (0:#3:#2);
-%	\draw [Spiegel] (#1) arc (0:-#3:#2);
+	\path (#1) arc (0:#3:#2) node [shape=coordinate] (#4 oben) {};%
+	\draw [Spiegel, name path = #4] (#4 oben) arc (#3:-#3:#2);%
+%
 %
 	%Mittelpunkt des Kreise
-	\coordinate (#4 C) at ($(#1)-(#2,0)$); 
-	\draw [fill] (#4 C) circle (\BPunkt); 
-	\draw  (#4 C) node [below, transform shape] {C};
+	\coordinate (#4 C) at ($(#1)-(#2,0)$);%
+	\draw [fill] (#4 C) circle (\BPunkt);%
+	\draw  (#4 C) node [below, transform shape] {C};%
 	%
 	%Brennpunkt
-\draw ($(#4 C)!0.5!(#1)$) node [circle,fill,color=black,inner sep=0pt,minimum height=0.02cm] (#4 F) {};
+\draw ($(#4 C)!0.5!(#1)$) node [circle,fill,color=black,inner sep=0pt,minimum height=0.02cm] (#4 F) {};%
 }
+
 %Benutzt die Methode SSpiegel mit festen Werten für den Radius (9cm) und Winkel (25 grad)
 \newcommand{\HSpiegel}[3]{\SSpiegel{#1}{9}{25}{#2}}
 
@@ -147,42 +146,43 @@ node [pos=0.9, shape=coordinate] (ISO9) {};
 %	
 \NObox%
 %
-\HSpiegel{IO}{Spiegel}%
-%
-%\draw [OAchse, name path=OAchse] (IO) -- (IW);%
-\draw (IO) -- (IW);%
+\HSpiegel{IO}{Spiegel}%seltsam, ohne die folgende leerzeile wird die gepunktete linie nicht gedruckt
+
+\draw [OAchse, name path=OAchse] (IO) -- (IW);%
+%\draw (IO) -- (IW);%
 %
 \draw [OObjekt, ->] (#1) --++(90:2cm) node [shape=coordinate] (Spitze) {};%
 \path [OObjekt, ->] (#1) --++(-90:2cm) node [shape=coordinate] (MSpitze) {};%der Gegenstand an der optischen Achse gespiegelt
+}%
+
+\newcommand{\AbbHSLoesung}[1]{%
+\AbbHS{#1}%
+
+%Loesung
+%Parallelstrahl wird Brennstrahl
+\path [name path = IParallelstrahl] (Spitze) --++(20,0);%
+\path [name intersections={of=IParallelstrahl and Spiegel, by={IPS}}];%
+\draw [color=red] (Spitze)--(IPS)--($(IPS)!3!(Spiegel F)$);%
+\path [name path = OBrennstrahl] (IPS)--($(IPS)!3!(Spiegel F)$);%
+%
+%
+%Brennstrahl wird Parallelstrahl
+\path [name path = IBrennstrahl] (Spitze) --($(Spitze)!10!(Spiegel F)$);%
+\path [name intersections={of=IBrennstrahl and Spiegel, by={IBS}}];%Intersection Brennstrahl Spiegel IBS
+\draw [color=red] (Spitze)--(IBS)--++(-10,0);%
+%
+%Mittelpunktstrahl
+\draw [color=red] (Spitze)--(IO)--($(IO)!1.2!(MSpitze)$);%
+%
+\path [name path = OMittelpunktstrahl] (IO)--($(IO)!1.2!(MSpitze)$);%
+\path [name intersections={of=OBrennstrahl and OMittelpunktstrahl, by={SBild}}];%
+\path [name path = Bild] (SBild)--++(0,10);%
+\path [name intersections={of=Bild and OAchse, by={UBild}}];%
+\draw [OObjekt, ->] (UBild)--(SBild) node [midway, right] {B};%
+%
 }
 
-%\newcommand{AbbHSLoesung}[1]{%
-%\AbbHS{#1}%
-%}
-%
-%%Loesung
-%%Parallelstrahl wird Brennstrahl
-%\path [name path = IParallelstrahl] (Spitze) --++(20,0);%
-%\path [name intersections={of=IParallelstrahl and Spiegel, by={IPS}}];%
-%\draw [color=red] (Spitze)--(IPS)--($(IPS)!3!(Spiegel F)$);%
-%\path [name path = OBrennstrahl] (IPS)--($(IPS)!3!(Spiegel F)$);%
-%%
-%%
-%%Brennstrahl wird Parallelstrahl
-%\path [name path = IBrennstrahl] (Spitze) --($(Spitze)!10!(Spiegel F)$);%
-%\path [name intersections={of=IBrennstrahl and Spiegel, by={IBS}}];%Intersection Brennstrahl Spiegel IBS
-%\draw [color=red] (Spitze)--(IBS)--++(-10,0);%
-%%
-%%Mittelpunktstrahl
-%\draw [color=red] (Spitze)--(IO)--($(IO)!1.2!(MSpitze)$);%
-%%
-%\path [name path = OMittelpunktstrahl] (IO)--($(IO)!1.2!(MSpitze)$);%
-%\path [name intersections={of=OBrennstrahl and OMittelpunktstrahl, by={SBild}}];%
-%\path [name path = Bild] (SBild)--++(0,10);%
-%\path [name intersections={of=Bild and OAchse, by={UBild}}];%
-%\draw [OObjekt, ->] (UBild)--(SBild) node [midway, right] {B};%
-%%
-%}
+
 
 
 
