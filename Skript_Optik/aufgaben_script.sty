@@ -1,0 +1,80 @@
+\ProvidesPackage{aufgaben_script}
+
+\usepackage{verbatim} %wird für die loesungen gebrauch
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%AUFGABEN%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%AUFGABEN UMGEBUNG
+% neuen Zähler deklarieren:
+\newcounter{aufgabe}%[section]
+% Darstellung des Zählers als Abschnitt.Nummer:
+\renewcommand*\theaufgabe{\arabic{aufgabe}}
+
+% Label der Umgebung: Lemma x.y
+\newcommand*\aufgabelabel{\textsc{Aufgabe~\theaufgabe:~}}
+\newcommand*\loesunglabel{\textsc{Lösung~\theaufgabe:~}}
+ 
+% angepasste Umgebung, die Zähler erhöht und darstellt:
+\newenvironment{aufgabe}{\par\vspace*{0.5cm}\begingroup%
+\refstepcounter{aufgabe}%
+{\aufgabelabel}}{\hfill\par\endgroup}
+
+
+
+\makeatletter
+
+
+% Datei zum Schreiben oeffnen:
+\newwrite\ex@file
+\immediate\openout\ex@file=\jobname.sol
+
+% Wird bei \begin{loesung} ausgefuehrt:
+\newcommand*{\loesung}{\@bsphack
+\let\do\@makeother\dospecials
+\catcode`\^^M\active
+\def\verbatim@processline{%
+\immediate\write\ex@file{\the\verbatim@line}}%
+\immediate\write\ex@file{%
+\string\begin{ex@loesung}{\theaufgabe}}%
+\verbatim@start}
+
+% Wird bei \end{loesung} ausgefuehrt:
+\def\endloesung{%
+\immediate\write\ex@file{%
+\hrule
+\string\end{ex@loesung}}\@esphack}
+
+\newenvironment{ex@loesung}[1]{\par\vspace*{0.5cm}\textsc{Lösung~#1:~}}{}
+%\newenvironment{ex@loesung}[1]{\paragraph{#1}}{}
+
+\newcommand*{\includesolutions}{%
+\immediate\closeout\ex@file
+\section*{Musterlösungen}
+\InputIfFileExists{\jobname.sol}{}{}}
+
+
+\makeatother
+
+
+\newcommand{\kloesung}[1]{\tiny{Lösung~#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%alternative zur kurzloesung direkt im Anschluss an die Aufgabe.
+%hier wird die Lösung später angegeben
+
+%um die aufgaben einzugrenzen
+%\newcommand{\startkloesung}[0]{%
+%\newwrite\tempfile%
+%\immediate\openout\tempfile=kloesung.tex%
+%}
+
+%\newcommand{\kloesung}[1]{\immediate\write\tempfile{A\string\ \theaufgabe\string.\string~#1\string\\}}
+
+%\newcommand{\printkloesung}[0]{\immediate\closeout\tempfile%
+%\input{kloesung.tex}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%ENDE AUFGABEN%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
