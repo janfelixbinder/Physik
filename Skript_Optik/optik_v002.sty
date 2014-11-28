@@ -143,16 +143,27 @@ node [pos=0.9, shape=coordinate] (ISO9) {};
 
 
 \newcommand{\AbbHS}[1]{%
+%Boxen
+%\def\OBB{\textwidth}%textwidth funktioniert nicht. Warum auch immer.
+\def\OBB{15}%Breite der Box
+\def\OBH{4}%Hoehe der Box
+\def\IR{0.3}%soviel ist die innere begrenzung kleiner
 %	
 \NObox%
 %
-\HSpiegel{IO}{Spiegel}%seltsam, ohne die folgende leerzeile wird die gepunktete linie nicht gedruckt
-
+\SSpiegel{IO}{9}{10}{Spiegel}
 \draw [OAchse, name path=OAchse] (IO) -- (IW);%
 %\draw (IO) -- (IW);%
+	\draw [fill] (Spiegel F) circle (\BPunkt);%
+	\draw  (Spiegel F) node [below, transform shape] {F};%
 %
-\draw [OObjekt, ->] (#1) --++(90:2cm) node [shape=coordinate] (Spitze) {};%
-\path [OObjekt, ->] (#1) --++(-90:2cm) node [shape=coordinate] (MSpitze) {};%der Gegenstand an der optischen Achse gespiegelt
+\draw [OObjekt, ->] (#1) --++(90:1.0cm) node [shape=coordinate] (Spitze) {};%
+\path [OObjekt, ->] (#1) --++(-90:1.0cm) node [shape=coordinate] (MSpitze) {};%der Gegenstand an der optischen Achse gespiegelt
+%Boxen
+%\def\OBB{\textwidth}%textwidth funktioniert nicht. Warum auch immer.
+\def\OBB{15}%Breite der Box
+\def\OBH{10}%Hoehe der Box
+\def\IR{0.3}%soviel ist die innere begrenzung kleiner
 }%
 
 \newcommand{\AbbHSLoesung}[1]{%
