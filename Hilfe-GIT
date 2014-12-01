@@ -22,3 +22,6 @@ abholen von daten vom server, die von anderen geändert wurden
 git pull origin master
 
 
+damit habe ich die Datei aus dem Repo gelöscht (Datei war zu gross für github)
+git filter-branch -f --index-filter "git rm -rf --cached --ignore-unmatch ./Experimente_Mechanik/kugelbahn/kugel_auf_schieferebene.MTS" -- --all
+
