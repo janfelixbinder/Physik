@@ -6,6 +6,15 @@
 \usepackage{mechanik_v001}
 
 
+\usepackage[shell]{gnuplottex}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usepackage{gnuplot-lua-tikz}
+\pgfplotsset{compat=1.9}
+
+
+
+
 %\author{Felix Binder}
 \title{Mechanik}
 \date{}
@@ -171,6 +180,47 @@ Was müssten Sie bei einer Wasserschlacht mit Wasserpistolen beachten?
 \end{aufgabe}
 
 
+\begin{center}
+
+\begin{tikzpicture}
+  \draw [draw=none,use as bounding box] (0cm,0cm) rectangle (14cm,8cm);{
+    \begin{gnuplot}[terminal=tikz,terminaloptions={size 14cm, 8cm}]
+		load("../gnuplot_style")
+g = 9.81
+s = 0.8 #beschleunigungsstrecke daten.dat
+s = 0.95 #beschleunigungsstrecke daten2.dat
+
+f(x) = a0 + a1*x
+fit f(x) "./Experimente_Mechanik/dynamik_auto/daten2.dat"  u ((2*s)/($2**2)):(($1*0.001)*g) via a0, a1 
+
+set xlabel "Beschleunigung (m/s$^2$)"
+set ylabel "Kraft (N)"
+
+
+plot [0:0.6][0:] "./Experimente_Mechanik/dynamik_auto/daten2.dat" u ((2*s)/($2**2)):(($1*0.001)*g) not "F(a)" w p ls 1, f(x) not w l ls 1
+    \end{gnuplot}
+ };
+
+\end{tikzpicture}
+\end{center}
+
+\begin{aufgabe}
+Der Graph zeigt, wie ein Spielzeugauto durch eine Kraft $F$ beschleunigt wurde.
+Die Gerade ist so zwischen die Messpunkte gelegt, dass die Summe der Abstände zu den Messpunkten möglichst klein ist.
+
+\begin{enumerate} [a)]
+	\item Beschreiben Sie den Graphen.
+	\item Wie gross ist die Steigung der Geraden? Welche Einheit hat die Steigung?
+	\item Wie erklären Sie sich, dass die Gerade nicht im Ursprung des Koordinatensystems beginnt?
+\end{enumerate}
+Die Masse der Autos beträt \SI{40.5}{g}.
+
+\end{aufgabe}
+
+\Einbinden{\dir/dynamik02.tex}
+\Einbinden{\dir/newton02.tex}
+\Einbinden{\dir/newton03.tex}
+
 
 %\input{./Mechanik/dichte.tex}
 
@@ -189,7 +239,7 @@ Was müssten Sie bei einer Wasserschlacht mit Wasserpistolen beachten?
 %\newpage
 %\printkloesung
 
-\newpage
+\clearpage
 \includesolutions
 
 \end{document}

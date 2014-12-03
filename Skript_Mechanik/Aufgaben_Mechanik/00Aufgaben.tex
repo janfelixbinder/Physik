@@ -17,6 +17,8 @@
 \begin{document}
 \maketitle
 
+\tableofcontents
+
 \section{Einheiten}
 \Einbinden{\dir/einheiten01.tex}
 \Einbinden{\dir/einheiten02.tex}
@@ -42,13 +44,48 @@
 \Einbinden{\dir/geschwindigkeit03.tex}
 \Einbinden{\dir/geschwindigkeit04.tex}
 \Einbinden{\dir/geschwindigkeit05.tex}
-\Einbinden{\dir/geschwindigkeit06.tex}
-\Einbinden{\dir/geschwindigkeit07.tex}
 
 \section{Beschleunigung}
+\Einbinden{\dir/geschwindigkeit06.tex}
+\Einbinden{\dir/geschwindigkeit07.tex}
 \Einbinden{\dir/beschleunigung01.tex}
 \Einbinden{\dir/beschleunigung02.tex}
 \Einbinden{\dir/kinematik01.tex}
+
+\subsection{Aufgaben mit beiden Formeln}
+
+\begin{aufgabe}
+Sie schieben ein Spielzeugauto über den Tisch.
+Nachdem es die Hand verlassen hat, hat es eine Geschwindigkeit von \SI{3}{m/s}.
+Nach \SI{2.5}{m} bleibt das Auto stehen.
+
+\begin{enumerate}[a)]
+	\item Wie gross ist die Beschleunigung?
+	\item Nach welcher Zeit kommt der Wagen zum stehen?
+\end{enumerate}
+
+\begin{loesung}
+   Gegeben: $v_0=\SI{3}{m/s}$, $\Delta s=\SI{2.5}{m}$.
+   \begin{enumerate}[a)]
+	   \item 
+   Für die beschleunigte Bewegung haben wir zwei Formeln. Beide enthalten die Zeit $t$.
+   Wir formen $v=\nicefrac{v}{t}$ nach $t$ um und setzten in $s=\nicefrac{1}{2}\cdot a\cdot t^2$ ein. 
+        \begin{eqnarray*}
+			s=\frac{1}{2}\frac{v^2}{a} \to a=\frac{1}{2}\frac{v^2}{s} =\num{0.5}\cdot\frac{\SI{3}{m/s}^2}{\SI{2.5}{m}}=\SI{1.8}{m/s^2}
+		\end{eqnarray*}
+		Die Geschwindigkeit nimmt ab. Die Beschleunigung muss also negativ sein. $a=\SI{-1.8}{m/s^2}$.
+	\item Das Ergebnis von a) in $v=a\cdot t$ einsetzen.
+		\begin{eqnarray*}
+			v=a\cdot t\to t=\frac{v}{a}=\frac{\SI{3}{m/s}}{\SI{1.8}{m/s^2}}=\SI{1.667}{s}
+		\end{eqnarray*}
+   \end{enumerate}
+\end{loesung}
+
+\kloesung{a) $=a=\SI{-1.8}{m/s^2}$, b) \SI{1.667}{s}}
+
+\end{aufgabe}
+
+
 
 \section{Kreisbewegung}
 Die Aufgaben \ref{rasenmaeher}, \ref{flugzeugturbine} und \ref{elektromotor} sind alle vom gleichen Typ.

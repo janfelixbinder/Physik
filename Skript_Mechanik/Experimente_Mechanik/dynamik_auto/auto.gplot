@@ -1,11 +1,12 @@
 g = 9.81
-s = 0.8 #beschleunigungsstrecke
+s = 0.8 #beschleunigungsstrecke daten.dat
+s = 0.95 #beschleunigungsstrecke daten2.dat
 
 f(x) = a0 + a1*x
-fit f(x) "./daten.dat"  u ((2*s)/($2**2)):(($1*0.001)*g) via a0, a1 
+fit f(x) "./daten2.dat"  u ((2*s)/($2**2)):(($1*0.001)*g) via a0, a1 
 
 set xlabel "Beschleunigung (m/s**2)"
 set ylabel "Kraft (N)"
 
 
-plot "./daten.dat" u ((2*s)/($2**2)):(($1*0.001)*g) t "F(a)" w p lt 1, f(x) not w l lt 1
+plot [][0:] "./daten2.dat" u ((2*s)/($2**2)):(($1*0.001)*g) not "F(a)" w p lt 1, f(x) not w l lt 1
