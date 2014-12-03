@@ -15,7 +15,11 @@
 
 %\usepackage{enumerate}
 
-\newcommand{\Obox}{\draw (0,0) rectangle (\textwidth,0.7\textwidth);}
+
+%{\par\vspace*{0.5cm}\begin{tikzpicture}\draw node[text width=1.00\linewidth, rounded corners, thick,double, inner sep=1ex,draw]\bgroup}
+\newenvironment{lernziele}
+{\par\vspace*{0.5cm}\begin{tikzpicture}\draw node[text width=0.98\linewidth, rounded corners, inner sep=2ex,fill, color=black!20]\bgroup}
+				{\egroup;\end{tikzpicture}\par\vspace*{0.5cm}}
 
 
 
@@ -27,7 +31,17 @@ Die Optik beschäftigt sich mit den Eigenschaften des Lichtes. Lichteffekte bege
 überall. Man sieht etwas, das heisst Lichtstrahlen werden von einem Objekt reflektiert und fallen in unser Auge.
 %Licht an glatten Oberflächen wird reflektiert. Beim Übergang von zwei verschieden Medien wird Licht gebrochen.
 
-\section{Lichtquellen}
+\section{Licht und Schatten}
+
+\begin{lernziele}
+	\begin{itemize}
+		\item Sie kennen die drei Modelle für Lichtquellen und können mit diesen Schattenwürfe konstruieren.
+
+		\item Sie kennen die Begriffe Gegenstandsweite $g$ und Bildweite $b$ sowie Gegenstandsgrösse $G$ und Bildgrosse $B$ 
+		im Zusammenhang mit dem Schattenwurf und können Aufgaben dazu lösen.
+	\end{itemize}
+\end{lernziele}
+
 
 Es gibt sehr verschiedene Lichtquellen: Die Sonne, Kerzen, Lampen, der Fernseher und viele mehr.
 Man unterscheidet zwischen drei verschiedenen Typen von Lichtquellen. Punktlichtquelle, Parallelstrahler und Flächenstrahler.
@@ -77,11 +91,8 @@ Sonne betrachten. Die Lichtstrahlen die auf der Erde ankommen sind nahezu parall
 Sonnenoberfläche, so ist die Sonne ein Flächenstrahler. Aus sehr grosser Entfernung ist unsere Sonne ein Stern,
 also ein Punkt im dunklen Universum.
 
-\section{Licht und Schatten}
-
-\newcommand{\Schirm}[3]{\draw [DS] (#1)--(#2) node [rotate=90, above right] {#3};}
-\newcommand{\SchirmR}[0]{\Schirm{INO}{ISO}{Schirm}}
-%\newcommand{\SchirmR}[0]{\draw [DS] (INO)--(ISO) node [rotate=90, above right] {Schirm};}
+\begin{aufgabe}
+Konstruieren Sie den Schattenwurf für die folgenden drei Lichtquellen.	
 
 %Schatten Punktlichtquelle
 \begin{tikzpicture}
@@ -113,6 +124,7 @@ also ein Punkt im dunklen Universum.
     \draw [DS] (INO)--(ISO) node [rotate=90, above right] {Schirm};
 %\draw (0.15\textwidth,1) node {Lampe}; 
 \end{tikzpicture}
+\end{aufgabe}
 
 \begin{aufgabe}
 Eratosthenes (*276 v. Chr., $\dagger$ 194 v. Chr. in Alexandria) wusste, dass
@@ -127,7 +139,7 @@ Eratosthenes (*276 v. Chr., $\dagger$ 194 v. Chr. in Alexandria) wusste, dass
 \end{aufgabe}
 
 
-\section{Bilder mit Licht und Schatten}
+%\section{Bilder mit Licht und Schatten}
 \begin{aufgabe}
 	Konstruiere den Schlagschatten des Gegenstandes auf der Bildebene.
 
@@ -150,7 +162,6 @@ Eratosthenes (*276 v. Chr., $\dagger$ 194 v. Chr. in Alexandria) wusste, dass
 \end{aufgabe}
 
 
-\newpage
 
 
 \begin{aufgabe}
@@ -163,7 +174,55 @@ Eratosthenes (*276 v. Chr., $\dagger$ 194 v. Chr. in Alexandria) wusste, dass
 	\end{enumerate}
 \end{aufgabe}
 
+\begin{aufgabe}
+	Die Höhe eines Obelisken im Karnak-Tempel, \SI{2,5}{Kilometer} nördlich von Luxor, soll bestimmt werden.
+	Ein zwei Meter langer Stab wirft einen Schatten von \SI{3,2}{Meter}. Der Schatten des Obelisken ist \SI{48}{Meter} lang.
+
+	\kloesung{\SI{30}{m}}
+	
+	\begin{loesung}
+		Der Stab und sein Schatten soll benutzt werden, um die Höhe des Obelisken zu bestimmen. Die Vergrösserung (der Abbildungsmassstab)
+		von Stab und Schatten und Obelisk und dessen Schatten sind gleich gross, da die Sonne als Parallelstahler angesehen werden kann.
+		\begin{eqnarray*}
+			V=\frac{B}{G}=\frac{\SI{3.2}{m}}{\SI{2}{m}} = \num{1.6}
+		\end{eqnarray*}
+		Damit lässt sich die Höhe des Obelisken bestimmen:
+		\begin{eqnarray*}
+			V=\frac{B}{G}\to G=\frac{B}{V}=\frac{\SI{48}{m}}{\num{1.6}}=\SI{30}{m}\text{.}
+		\end{eqnarray*}
+	\end{loesung}
+\end{aufgabe}
+
+\begin{aufgabe}
+	Beim Fingerschattenspiel werden Schatten, die von der Hand geformt werden an eine Leinwand projiziert.
+	Als Lichtquelle dient eine Kerze. Sie soll \SI{25}{cm} von den Händen aufgestellt sein. Der Abstand von
+	den Händen zur Wand soll \SI{90}{cm} betragen. Wie gross erscheint der Schattenriss des \SI{6.5}{cm} langen Daumen?
+
+	\kloesung{\SI{29.9}{cm}}
+
+	\begin{loesung}
+		Zum Lösen der Aufgabe ist eine Skizze empfehlenswert.
+		\begin{eqnarray*}
+			V=\frac{b}{g}=\frac{\SI{25}{cm} + \SI{90}{cm}}{\SI{25}{cm}}=\num{4.6}
+		\end{eqnarray*}
+		\begin{eqnarray*}
+			V=\frac{B}{G}\to B=V\cdot G = \num{4.6}\cdot\SI{6.5}{cm}=\SI{29.9}{cm}\text{.}
+		\end{eqnarray*}
+	\end{loesung}
+\end{aufgabe}
+
+
 \section{Lochkamera}
+
+\begin{lernziele}
+	\begin{itemize}
+
+	\item Sie können das Prinzip der Lochkamera erklären, den Strahlengang zeichnen und Rechnungen 
+		mit Bildweite, Gegenstandsweite, Bildgrösse und Gegenstandsgrösse durchführen.
+	\item Sie können erklären wie das Bild bei einer Lochkamera mit der Lochgrösse zusammenhängt.
+	
+	\end{itemize}
+\end{lernziele}
 \begin{aufgabe}
 	Konstruiere das Bild des Gegenstandes auf dem Schirm.
 
@@ -190,40 +249,12 @@ Eratosthenes (*276 v. Chr., $\dagger$ 194 v. Chr. in Alexandria) wusste, dass
 \end{aufgabe}
 
 \begin{aufgabe}
-	Die Höhe eines Obelisken im Karnak-Tempel, \SI{2,5}{Kilometer} nördlich von Luxor, soll bestimmt werden.
-	Ein zwei Meter langer Stab wirft einen Schatten von \SI{3,2}{Meter}. Der Schatten des Obelisken ist \SI{48}{Meter} lang.
-	\begin{loesung}
-		Der Stab und sein Schatten soll benutzt werden, um die Höhe des Obelisken zu bestimmen. Die Vergrösserung (der Abbildungsmassstab)
-		von Stab und Schatten und Obelisk und dessen Schatten sind gleich gross, da die Sonne als Parallelstahler angesehen werden kann.
-		\begin{eqnarray*}
-			V=\frac{B}{G}=\frac{\SI{3.2}{m}}{\SI{2}{m}} = \num{1.6}
-		\end{eqnarray*}
-		Damit lässt sich die Höhe des Obelisken bestimmen:
-		\begin{eqnarray*}
-			V=\frac{B}{G}\to G=\frac{B}{V}=\frac{\SI{48}{m}}{\num{1.6}}=\SI{30}{m}\text{.}
-		\end{eqnarray*}
-	\end{loesung}
-\end{aufgabe}
-
-\begin{aufgabe}
-	Beim Fingerschattenspiel werden Schatten, die von der Hand geformt werden an eine Leinwand projiziert.
-	Als Lichtquelle dient eine Kerze. Sie soll \SI{25}{cm} von den Händen aufgestellt sein. Der Abstand von
-	den Händen zur Wand soll \SI{90}{cm} betragen. Wie gross erscheint der Schattenriss des \SI{6.5}{cm} langen Daumen?
-	\begin{loesung}
-		Zum Lösen der Aufgabe ist eine Skizze empfehlenswert.
-		\begin{eqnarray*}
-			V=\frac{b}{g}=\frac{\SI{90}{cm}}{\SI{25}{cm}}=\num{3.6}
-		\end{eqnarray*}
-		\begin{eqnarray*}
-			V=\frac{B}{G}\to B=V\cdot G = \num{3.6}\cdot\SI{6.5}{cm}=\SI{23.4}{cm}\text{.}
-		\end{eqnarray*}
-	\end{loesung}
-\end{aufgabe}
-
-\begin{aufgabe}
 	Die Rückseite einer Lochkamera der Firma Kodak aus dem Jahre 1930 ist \SI{4.25}{''} von der Blende entfernt.
 	Eine \SI{12}{cm} grosse Kerze ist \SI{50}{cm} von der Kamera entfernt. Wie gross ist die Kerze auf dem Filmnegativ?
 	Wie ist die Vergrösserung?
+
+	\kloesung{\SI{2.59}{cm}}
+
 	\begin{loesung}
 		Zum Lösen der Aufgabe ist eine Skizze empfehlenswert.
 		Die Bildweite ist $b=\SI{4.25}{''}=\SI{10.8}{cm}$.
@@ -241,6 +272,9 @@ Eratosthenes (*276 v. Chr., $\dagger$ 194 v. Chr. in Alexandria) wusste, dass
 	Das Auflagemass, das ist der Abstand vom Bildsensor zum Objektivgewinde ist \SI{44}{mm}.
 	Schraubt man auf das Objektivgewinde eine Lochblende, steht diese weiter \SI{5}{mm} hervor.
 	In welcher Entfernung zur Kamera muss eine \SI{1,70}{m} grosse Person mindestens stehen, um vollständig auf einem Foto zu erscheinen?
+
+	\kloesung{\SI{5.63}{m}}
+	
 	\begin{loesung}
 		Zum Lösen der Aufgabe ist eine Skizze empfehlenswert.
 		Die Bildweite ist $b=\SI{44}{mm}+\SI{5}{mm}=\SI{49}{mm}$.
@@ -253,9 +287,14 @@ Eratosthenes (*276 v. Chr., $\dagger$ 194 v. Chr. in Alexandria) wusste, dass
 	\end{loesung}
 \end{aufgabe}
 
-\newpage
 \section{Reflexion und Streuung}
 
+\begin{lernziele}
+	\begin{itemize}
+	\item Sie können das Reflexionsgesetz erklären und sowohl an Planspiegeln als auch an Wölbspiegeln anwenden.
+	\item Sie können erklären, was beim Auftreffen von Licht auf eine raue Oberfläche passiert.
+	\end{itemize}
+\end{lernziele}
 
 \begin{aufgabe}
 Zeichnen Sie den Lichtstahl, der von der Lampe kommt weiter. Was passiert, wenn der Lichtstrahl auf den Spiegel trifft?	
@@ -298,7 +337,6 @@ Zeichnen Sie den Lichtstahl, der von der Lampe kommt weiter. Was passiert, wenn 
 
 \end{minipage}
 
-\newpage
 
 \begin{aufgabe}
 Erinnern Sie sich an Spiegelungen in der Mathematik? Zeichnen Sie den Strahlengang vom Objekt zum Auge ein, ohne einen Winkel zu messen.\\	
@@ -339,9 +377,8 @@ nennt man Streuung.
 \draw [DS] (0.1\textwidth,0.5)--++(-11:1cm)--++(13:1.2cm)--++(88:1cm)--++(-20:2cm)--++(70:2.5cm)--++(-55:1cm)--++(17:2.2cm)--++(-49:0.8cm)--++(-30:1cm)--++(75:1cm)--++(-88:2cm)--++(5:1cm)--++(-35:1.7cm)--++(40:1.2cm) node [above] {Spiegel};
 \end{tikzpicture}
 
-\newpage
 
-\section{Gewölbte Spiegel}
+\subsection{Gewölbte Spiegel}
 Im folgenden wollen wir das Reflexionsgesetz für gewölbten Spiegel anwenden. 
 \begin{aufgabe}
 Überlegen Sie, wie die parallel einfallenden
@@ -362,7 +399,6 @@ Lichtstrahlen am Hohlspiegel (konkaver Spiegel) reflektiert werden.
 \end{center}
 \end{aufgabe}
 
-\newpage
 
 
 %\begin{aufgabe}
@@ -389,10 +425,15 @@ Lichtstrahlen am Wölbspiegel (konvexer Spiegel) reflektiert werden.
 \end{center}
 %\end{aufgabe}
 
-\newpage
 \input{./abbildungen_woelbspiegel.tex}
-\newpage
+
 \section{Brechung}
+\begin{lernziele}
+	\begin{itemize}
+	\item Sie können das Brechungsgesetz erklären und rechnerisch anwenden. 
+		Ausserdem können Sie den Strahlengang beim Übergang von einem Material in ein anderes einzeichnen.
+	\end{itemize}
+\end{lernziele}
 
 \begin{minipage}{0.5\textwidth}
 \begin{aufgabe}
@@ -531,7 +572,12 @@ Der Diamant funkelt.
 
 
 \section{Linsen}
-
+\begin{lernziele}
+	\begin{itemize}
+	\item Sie können erklären, wie das Brechungsgesetz mit der Ausbreitung von Licht durch Linsen zusammenhängt.
+	\item Sie kennen die Linsengleichung und können Sie anwenden.
+	\end{itemize}
+\end{lernziele}
 Optische Linsen sind aus lichtdurlässigen Materialien, wie Glas oder Plastik, manchmal auch aus durchsichtigen Kristallen.
 Einfache (sphärische) Linsen kann man sich aus einer Kugel geschnitten vorstellen. Der Kugelradius kann dabei verschieden gross sein.
 Beim Durchlauf des Lichtstrahl durch die Linse, passiert er zwei Grenzflächen, an denen er nach dem Brechungsgesetz gebrochen wird.
@@ -615,7 +661,6 @@ Unterricht, läuft ein parallel zur optischen Achse einlaufender Lichtstrahl, bi
 \end{tikzpicture}
 \end{center}
 
-\newpage
 \section{Abbildungen mit Linsen}
 Eine Linse kann einen Gegenstand abbilden. Die Konstruktion verläuft sehr ähnlich
 wie bei der Abbildung am gewölbten Spiegel. Wir zeichnen jeweils den Parallelstahl,
@@ -699,7 +744,6 @@ wie wir es auch schon bei anderen Abbildungen gesehen haben
 \end{tikzpicture}
 
 
-\newpage
 
 \section{Optische Geräte}
 

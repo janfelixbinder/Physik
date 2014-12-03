@@ -71,6 +71,12 @@ node [pos=0.9, shape=coordinate] (ISO9) {};
 }
 
 
+%Schirm zum Auffangen von Bildern
+\newcommand{\Schirm}[3]{\draw [DS] (#1)--(#2) node [rotate=90, above right] {#3};}
+\newcommand{\SchirmR}[0]{\Schirm{INO}{ISO}{Schirm}}
+
+
+
 
 %Linse Biconvex
 
