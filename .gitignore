@@ -2,4 +2,7 @@
 *.dvi
 *.log
 *.sol
-
+*.nav
+*.out
+*.snm
+*.toc
