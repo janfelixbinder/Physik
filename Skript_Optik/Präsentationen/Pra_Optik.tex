@@ -1,0 +1,45 @@
+\documentclass{beamer}%    Standardklasse für Beamer
+%\documentclass[draft]{beamer}%  Entwickler-Modus in dem das File schneller kompiliert wird
+%\documentclass[handout]{beamer}%    Zum Ausdrucken besser geeignete Version der Folien
+%\documentclass{article}%Artikel-Version; Funktioniert nur, wenn man zusätzlich das Paket beamerarticle mittels \usepackage{beamerarticle} einbindet.
+%\usepackage{beamerarticle}
+\usepackage[german]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{foto_v001}
+
+\def\dir{./}
+\newcommand{\Einbinden}[1]{\par Sie finden diese Folie: \url{#1}.\par\input{#1}}
+
+
+
+%\usetheme{Boadilla}
+\usetheme{boxes}
+
+%schwarzer Hinergrund
+\setbeamercolor{background canvas}{bg=black}
+
+\setbeamercolor{alerted text}{fg=white}
+\setbeamercolor{normal text}{bg=black,fg=yellow}
+
+\setbeamertemplate{itemize item}{\color{yellow}$\blacksquare$}
+\setbeamertemplate{itemize subitem}{\color{orange}$\blacktriangleright$}
+
+
+\setbeamercovered{transparent}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
+
+\title{Hochschulreife und Studierfähigkeit}
+
+\author[Felix Binder]{Felix Binder}
+
+\begin{document}
+
+\Einbinden{./Pra_Bild_im_Weinglas.tex}
+
+\end{document}
+
+
+
