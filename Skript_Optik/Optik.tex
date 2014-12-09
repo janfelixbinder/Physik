@@ -463,6 +463,9 @@ Lichtstrahlen am Wölbspiegel (konvexer Spiegel) reflektiert werden.
 
 \begin{aufgabe}
 	Ein Lichtstrahl trifft auf eine Wasseroberfläche. Der Einfallswinkel beträgt \SI{30}{\degree}. Wie gross ist der Brechungswinkel?
+
+	\kloesung{\SI{22}{\degree}}
+
 	\begin{loesung}
 		Es ist nützlich eine Skizze zu machen.
 		\begin{eqnarray*}
@@ -475,6 +478,16 @@ Lichtstrahlen am Wölbspiegel (konvexer Spiegel) reflektiert werden.
 \begin{aufgabe}
 	Ein Lichtstrahl trifft aus der Luft unter einem Einfallswinkel von \SI{72}{\degree} auf eine Diamantenoberfläche.
 	Wie gross ist der Brechungswinkel?
+
+	\kloesung{\SI{23.1}{\degree}}
+
+	\begin{loesung}
+		Es ist nützlich eine Skizze zu machen.
+		\begin{eqnarray*}
+			n_1\cdot\sin\alpha_1 = n_2\cdot\sin\alpha_2 \to \sin\alpha_2=\frac{\sin\alpha_1}{n_2}=\frac{\sin\SI{72}{\degree}}{\num{2.42}}=\num{0.393}
+		\end{eqnarray*}
+		Damit ist der Brechungswinkel etwa \SI{23.1}{\degree}.
+	\end{loesung}
 \end{aufgabe}
 
 \Spalten{0.5}{
@@ -699,6 +712,25 @@ wie wir es auch schon bei anderen Abbildungen gesehen haben
 		\item Wie weit ist die Linse vom Dia entfernt?
 		\item Wie gross ist das Bild auf der Leinwand?
 	\end{enumerate}
+
+	\begin{loesung}
+		Gegeben ist hier: $f=\SI{10}{cm}$, $G=\SI{3.6}{cm}$, $b=\SI{250}{cm}$.
+
+		\begin{enumerate} [a)]
+			\item Mit der Linsengleichung berechnen wir zuerst $g$ (also den Abstand zwischen Gegenstand und Linse):
+
+			\begin{eqnarray*}
+			\frac{1}{f}=\frac{1}{b}+\frac{1}{g}\to\frac{1}{g}=\frac{1}{f}-\frac{1}{b}=\frac{1}{\SI{10}{cm}}-\frac{1}{\SI{250}{cm}}=\SI{0.096}{cm^{-1}}\to g=\SI{10.42}{cm}
+		\end{eqnarray*}
+			\item Nun berechnen wir die Grösse des Bildes:
+				\begin{eqnarray*}
+					\frac{B}{G}=\frac{b}{g}\to B = G\cdot\frac{b}{g}=\SI{3.6}{cm}\cdot\frac{\SI{250}{cm}}{\SI{10.42}{cm}}=\SI{86.4}{cm}\text{.}
+				\end{eqnarray*}
+
+		\end{enumerate}
+	\end{loesung}
+
+
 \end{aufgabe}
 
 \subsection*{$g=2\cdot f$}
