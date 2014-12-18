@@ -25,3 +25,12 @@ git pull origin master
 damit habe ich die Datei aus dem Repo gelöscht (Datei war zu gross für github)
 git filter-branch -f --index-filter "git rm -rf --cached --ignore-unmatch ./Experimente_Mechanik/kugelbahn/kugel_auf_schieferebene.MTS" -- --all
 
+
+#stellt die Datei Mechanik.tex wieder her Quelle: http://noqqe.de/blog/2010/08/18/git-dateien-wiederherstellen/
+git checkout HEAD -- Mechanik.tex
+
+#zeigt nur eine zeile des logs an
+git log --oneline 
+
+#mit dem hash tag aus der logdatei die datei verloren.tex wieder herstellen
+git checkout 746f92c -- verloren.txt
