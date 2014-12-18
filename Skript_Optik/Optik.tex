@@ -437,6 +437,29 @@ Lichtstrahlen am Wölbspiegel (konvexer Spiegel) reflektiert werden.
 
 \input{Aufgaben/bademeister.tex}
 
+
+\begin{table}
+	\centering
+	\begin{tabular}{ll}
+		Vakuum          &	exakt 1\\
+		Luft (bodennah) & \num{1,000292}\\
+		Eis 	        & \num{1,31}\\
+        Wasser          & \num{1,33}\\
+		menschl. Augenlinse 	& \num{1,35}\dots\num{1,42}\\
+        Ethanol         & \num{1,36}\\
+		Quarzglas 	    & \num{1,46}\\
+		Plexiglas 	    & \num{1,49}\\
+		Fensterglas 	& \num{1,52}\\
+		Glas 	        & \num{1,45}\dots\num{2,14}\\
+		Bleikristall 	& bis \num{1,93}\\
+		Diamant 	    & \num{2,42}
+	\end{tabular}
+	\caption{Brechungsindex einiger ausgewählter Materialien für die Wellenlänge \SI{589}{nm}(gelb-orange) Natrium-D-Linie.}
+	\label{tab:brechungsindex}
+\end{table}
+
+
+
 \begin{minipage}{0.5\textwidth}
 \begin{aufgabe}
 	Zum Splitterschutz werden Fensterscheiben auf der Innenseite oft mit einer Plastikfolie versehen.
@@ -531,6 +554,10 @@ und zeichnen Sie die Lichtstrahlen in der Zeichnung weiter.
 \begin{aufgabe}
 Wie gross ist der Grenzwinkel für Totalreflexion beim Übergang zwischen Wasser und Luft?
 Wie gross ist er für den Übergang Diamant - Luft und für den Übergang Diamant - Wasser?	
+
+
+\kloesung{\SI{48.8}{\degree}, \SI{24.4}{\degree}, \SI{33.3}{\degree}}
+
 \begin{loesung}
 	Es gilt das Brechungsgesetz. Wenn ein Lichtstrahl aus einem optisch dichteren in ein optisch dünneres Material wechselt,
 	dann wird der Lichtstrahl vom Lot weg gebrochen. Das heisst, der Brechungswinkel ist grösser als der Einfallswinkel.
@@ -539,9 +566,9 @@ Wie gross ist er für den Übergang Diamant - Luft und für den Übergang Diaman
 			n_1\cdot\sin\alpha_1 = n_2\cdot\sin\alpha_2 \to \sin\alpha_1=\frac{n_2}{n_1}\cdot\sin\alpha_2=\frac{n_2}{n_1}\cdot\sin\SI{90}{\degree}=\frac{n_2}{n_1}
 		\end{eqnarray*}
 		Nun können wir die einzelnen Fälle untersuchen:\\
-		Wasser -- Luft: $\sin\alpha_1=\frac{n_2}{n_1}=\frac{1}{\num{1.333}} \to \alpha_1=\SI{48.6}{\degree}$\\
-		Diamant -- Luft: $\sin\alpha_1=\frac{n_2}{n_1}=\frac{1}{\num{2.}} \to \alpha_1=\SI{48.6}{\degree}$\\
-		Diamant -- Wasser: $\sin\alpha_1=\frac{n_2}{n_1}=\frac{1.333}{\num{2.}} \to \alpha_1=\SI{48.6}{\degree}$\\\\
+		Wasser -- Luft: $\sin\alpha_1=\frac{n_2}{n_1}=\frac{1}{\num{1.33}} \to \alpha_1=\SI{48.8}{\degree}$\\
+		Diamant -- Luft: $\sin\alpha_1=\frac{n_2}{n_1}=\frac{1}{\num{2.42}} \to \alpha_1=\SI{24.4}{\degree}$\\
+		Diamant -- Wasser: $\sin\alpha_1=\frac{n_2}{n_1}=\frac{1.33}{\num{2.42}} \to \alpha_1=\SI{33.3}{\degree}$\\\\
 
 \end{loesung}
 \end{aufgabe}
@@ -557,24 +584,29 @@ Der Diamant funkelt.
 \begin{itemize}
 	\item [a)] Wie gross ist der Grenzwinkel der Totalreflexion für Diamant und Luft?
 	\item [b)] Zeichnen Sie den Strahlengang durch die folgenden Diamanten und geben Sie alle Winkel an.
-		\begin{center}
+\begin{center}
 			
-\begin{tikzpicture}
-\draw [line width=0.05cm] (0,0)--+(0:5cm)--++(60:5cm)--cycle;
-\draw [LS,->] (1,-2)--(1,0);
-\end{tikzpicture}
+	\begin{tikzpicture}
+		\draw [line width=0.05cm] (0,0)--+(0:5cm)--++(60:5cm)--cycle;
+		\draw [LS,->] (1,-2)--(1,0);
+	\end{tikzpicture}
 
+\end{center}
 \vspace*{1cm}
 
-\begin{tikzpicture}
-\draw [line width=0.05cm] (0,0) rectangle (5,5);
-\draw [LS,<-] (2.5,0)--+(-45:2cm);
 
-\draw [<->=latex, line width=0.05cm] (4,0) arc (0:-45:1.5cm);
-\path (4,0) arc (0:-22.5:1cm) node [left] {$\SI{45}{\degree}$};
+\begin{center}
+	
+	\begin{tikzpicture}
+		\draw [line width=0.05cm] (0,0) rectangle (5,5);%Koerper
+		\draw [LS,<-] (2.5,0)--+(-45:2cm);%Lichtstrahl
 
-\end{tikzpicture}
-		\end{center}
+		%Beschriftung des Winkels
+		\draw [<->=latex, line width=0.05cm] (4,0) arc (0:-45:1.5cm);
+		\path (4,0) arc (0:-22.5:1cm) node [left] {$\SI{45}{\degree}$};
+
+	\end{tikzpicture}
+\end{center}
 
 
 \end{itemize}
