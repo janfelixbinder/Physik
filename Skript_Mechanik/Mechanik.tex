@@ -4,6 +4,7 @@
 \usepackage{mystyle}
 \usepackage{gplot}
 \usepackage{mechanik_v001}
+\usepackage{foto_v001}
 
 
 \usepackage[shell]{gnuplottex}
@@ -223,6 +224,20 @@ Die Masse der Autos beträt \SI{40.5}{g}.
 
 \newpage
 
+\begin{table}
+	\centering
+	\begin{tabular}{ccc}
+		Materialien  & Haftreibung  & Gleitreibung \\
+		Holz auf Holz   &  \num{0.6}  & \num{0.4} \\
+		Stahl auf Stahl &  \num{0.15} & \num{0.1}\\
+		Stahl auf Eis   &  \num{0.027}& \num{0.014}\\
+	\end{tabular}
+	\caption{Haft- und Gleitreibungszahlen.}
+	\label{tab:reibung}
+\end{table}
+
+
+
 \begin{aufgabe}
 	Bestimmen Sie die Reibungszahl zwischen Tisch und Schachtel aus Aufgabe \ref{SchachtelBeschleunigungKraft}.
 \end{aufgabe}
@@ -237,6 +252,19 @@ Die Masse der Autos beträt \SI{40.5}{g}.
 \Einbinden{\dir/kraefte.tex}
 
 \newpage
+
+\begin{aufgabe}
+	Wie gross war die Anfangsgeschwindigkeit eines Fahrzeugs, das längs einer waagerechten Strecke von
+	\SI{200}{m} infolge der Reibung ($\mu=\SI{0.02}$) zur Ruhe kommt?
+
+	Hilfestellungen:
+	\begin{enumerate} [a)]
+		\item Machen Sie sich eine Skizze und tragen Sie alle Kräfte ein.
+		\item Bestimmen Sie die resultierend Kraft.
+		\item Setzen Sie die resultierende Kraft mit dem zweiten Newtonschen Axiom gleich.
+	\end{enumerate}<++>
+\end{aufgabe}
+
 
 %\input{./Mechanik/dichte.tex}
 
@@ -254,6 +282,134 @@ Die Masse der Autos beträt \SI{40.5}{g}.
 
 %\newpage
 %\printkloesung
+
+\newpage
+
+\section*{Die schiefe Ebene}
+
+\begin{aufgabe}
+	Sie sehen in einem Experiment einen Holzklotz auf einer Ebene liegen. 
+	Die Ebene lässt sich schrägstellen. Die folgenden drei Skizzen zeigen drei
+	typische Schieflagen der Ebene.
+	\begin{enumerate} [a)]
+		\item Machen Sie sich neben der Skizze Notizen, was mit dem Holzklotz im Experiment passiert.
+		\item Zeichen Sie alle auftretenden Kräfte in die Skizzen ein (Gewichtskraft, Normalkraft, Reibungskraft).
+		\item Wie ändern sich die Kräfte mit der Änderung des Winkels?
+	\end{enumerate}
+
+\subsection*{Keine Steigung der Ebene}
+
+\Spalten{0.5}{
+\begin{center}
+\begin{tikzpicture}
+
+\def\angle{0}%Winkel
+
+\coordinate (P0) at (6,0);
+
+\draw (0,0)--(7,0);
+\draw (P0)--++(180-\angle:6);
+
+
+%winkel
+%\draw [->] (5,0) arc(180:180-\angle:1cm);%winkelbogen
+%\draw  (P0) ++(180-0.5*\angle:0.75) node {$\alpha$};%alpha
+
+\def\hoehe{1}
+\def\breite{2}
+\draw (P0) ++(180-\angle:2.25cm)--++(90-\angle:\hoehe)--++(180-\angle:\breite)--++(270-\angle:\hoehe);
+
+%\draw [color=white] (0,-3)--(2,-3);%abstand nach unten
+	\end{tikzpicture}
+\end{center}
+\vspace*{1.5cm}
+}{0.5}{}
+
+\subsection*{Geringe Steigung der Ebene}
+\Spalten{0.5}{
+\begin{center}
+\begin{tikzpicture}
+
+\def\angle{15}%Winkel
+
+\coordinate (P0) at (6,0);
+
+\draw (0,0)--(7,0);
+\draw (P0)--++(180-\angle:6);
+
+
+%winkel
+\draw [->] (5,0) arc(180:180-\angle:1cm);%winkelbogen
+\draw  (P0) ++(180-0.5*\angle:0.75) node {$\alpha$};%alpha
+
+\def\hoehe{1}
+\def\breite{2}
+\draw (P0) ++(180-\angle:2.25cm)--++(90-\angle:\hoehe)--++(180-\angle:\breite)--++(270-\angle:\hoehe);
+	\end{tikzpicture}
+\end{center}
+\vspace*{1.5cm}
+}{0.5}{}
+
+\subsection*{Grosse Steigung der Ebene}
+\Spalten{0.5}{
+\begin{center}
+\begin{tikzpicture}
+
+\def\angle{65}%Winkel
+
+\coordinate (P0) at (6,0);
+
+\draw (0,0)--(7,0);
+\draw (P0)--++(180-\angle:6);
+
+
+%winkel
+\draw [->] (5,0) arc(180:180-\angle:1cm);%winkelbogen
+\draw  (P0) ++(180-0.5*\angle:0.75) node {$\alpha$};%alpha
+
+\def\hoehe{1}
+\def\breite{2}
+\draw (P0) ++(180-\angle:2.25cm)--++(90-\angle:\hoehe)--++(180-\angle:\breite)--++(270-\angle:\hoehe);
+	\end{tikzpicture}
+\end{center}
+\vspace*{1.5cm}
+}{0.5}{}
+
+\end{aufgabe}
+
+\begin{aufgabe}
+	Ein Holzklotz mit dem Gewicht von \SI{300}{Gramm} liegt auf einer schiefen Ebene.
+	Bei einer Steigung von \SI{35}{\degree} beginnt der Block zu rutschen.
+	\begin{enumerate}[a)]
+		\item Machen Sie sich eine Skizze der Situation und vervollständigen sie diese mit den auftretenden Kräften.
+		\item Bestimmen Sie die Normalkraft und die Reibungskraft.
+		\item Wie gross ist die Haftreibungszahl?
+	\end{enumerate}
+	\begin{loesung}
+		\begin{enumerate} [a)]
+			\item Skizze wie über der Aufgabe. 
+			\item Um Normalkraft und Reibungskraft zu erhalten, muss die Gewichtskraft in eine Komponente senkrecht zur Ebene (Normalkraft)
+				und eine parallel zur Ebene (Reibungskraft) zerlegt werden.
+				\begin{eqnarray*}
+					\RI{F}{N}=\cos\alpha\RI{F}{G}
+				\end{eqnarray*}
+				und
+				\begin{eqnarray*}
+					\RI{F}{R}=\sin\alpha\RI{F}{G}\text{.}
+				\end{eqnarray*}
+			\item Mit der Formel für die Reibungskraft ergibt sich die Haftreibungszahl:
+				\begin{eqnarray*}
+					\RI{F}{R}=\mu\cdot\RI{F}{N}\to\mu=\frac{\RI{F}{R}}{\RI{F}{N}}=\frac{\sin\alpha}{\cos\alpha}=\num{0.7}\text{.}
+				\end{eqnarray*}
+		\end{enumerate}
+	\end{loesung}
+	\kloesung{c) $\mu=\num{0.7}$}
+\end{aufgabe}
+
+\newpage
+\includesolutions
+
+
 
 \begin{table}
 	\centering
