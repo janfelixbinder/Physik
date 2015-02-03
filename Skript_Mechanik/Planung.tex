@@ -1,0 +1,92 @@
+%\documentclass[11pt,a4paper,titlepage,twoside]{article}
+\documentclass[12pt,a4paper,twoside]{article}
+%\documentclass[12pt,a4paper,twoside]{scrartcl}
+\usepackage{mystyle}
+\usepackage{gplot}
+\usepackage{mechanik_v001}
+\usepackage{foto_v001}
+
+
+\usepackage[shell]{gnuplottex}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usepackage{gnuplot-lua-tikz}
+\pgfplotsset{compat=1.9}
+
+
+\newcommand{\Oberthema}[1]{\section{#1}}
+\newcommand{\Unterthema}[1]{\subsection{#1}}
+\newcommand{\Ziele}[1]{\subsubsection*{Ziele: #1}}
+\newcommand{\Teilziele}[1]{\subsubsubsection*{Teiliel: #1}}
+
+
+
+%\author{Felix Binder}
+\title{Jahresplanung Mechanik}
+\date{}
+
+
+
+\def\dir{./Aufgaben_Mechanik/}
+\newcommand{\Einbinden}[1]{\input{#1}}
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\Oberthema{Kräfte}
+	\Unterthema{Kräfte sind Vektoren}
+		\Ziele{Sie können Kräfte graphisch und rechnerisch addieren.}
+		\Ziele{Sie können Kräfte graphisch und rechnerisch zerlegen.}
+
+	\Unterthema{Statik mit gemeinsamem Angriffspunkt}
+		\Ziele{Sie können auftretende Kräfte in einen Kräfteplan einzeichnen.}
+		\Ziele{Sie können erklären warum die resultierende Kraft bei Statikproblemen Null sein muss.}
+		\Ziele{Sie können die resultierende Kraft graphisch und rechnerisch bestimmen.}
+
+	\Unterthema{Schiefe Ebene}
+		\Ziele{Die SuS können die Hangabtriebskraft erklären und in Beispielen berechnen.}
+
+\Oberthema{Kinematik}
+	\Unterthema{Geschwindigkeit}
+		\Ziele{Sie können den Unterschied zwischen Durchschnittsgeschwindigkeit und Momentangeschwindigkeit.}
+
+	\Unterthema{Beschleunigung}
+		\Ziele{Sie kennen Situationen in denen beschleunigte Bewegungen vorkommen.}
+		\Ziele{Sie können beschreiben, wie viel Weg ein Gegenstand während einer gleichmässig beschleunigten Bewegung zurücklegt.}
+		\Ziele{Sie können beschreiben, wie sich die Geschwindigkeit während einer gleichmässig beschleunigten Bewegung ändert.}
+	\Unterthema{Bewegungsdiagramme}
+		\Ziele{Sie können Weg-Zeit-Diagramme, Geschwindigkeit-Zeit-Diagramme und Beschleunigung-Zeit-Diagramme lesen und erstellen.}
+
+	\Unterthema{Kreisbewegungen}
+		\Ziele{Sie können erklären, warum man für Kreisbewegungen neue Grössen einführt.}
+		\Ziele{Sie können Frequenz, Umlaufzeit und Winkelgeschwindigkeit an Beispielen erklären.}
+		\Ziele{Sie können Frequenz, Umlaufzeit und Winkelgeschwindigkeit in Aufgaben anwenden.}
+
+
+	\Unterthema{Zusammengesetzte Bewegungen}
+		\Ziele{Die SuS können erklären, was mit einem Ball passiert, der in die Luft geworfen wird.}
+
+
+\Oberthema{Dynamik der Translationen}
+	\Unterthema{Zweites Newtonsches Gesetz}
+		\Ziele{Sie können das zweite Newtonsche Gesetz erklären und dieses in Aufgaben anwenden.}
+
+	\Unterthema{Reibung}
+		\Ziele{Sie kennen die Reibung und können zwischen Haft-, Gleit- und Rollreibung unterscheiden.}
+
+	\Unterthema{Komplexe Aufgaben Dynamikaufgaben}
+		\Ziele{Sie können Berechnungen an der schiefen Ebene durchführen.}
+		\Ziele{Sie können Berechnungen an der schiefen Ebene durchführen.}
+	
+\Oberthema{Dynamik der Rotationen}
+	\Unterthema{Hebelgesetz}
+	\Unterthema{Das Drehmoment}
+	\Unterthema{Statik mit Drehmomenten}
+	\Unterthema{Zentripetalkraft}
+
+\Oberthema{Arbeit und Energie}
+
+
+\end{document}
