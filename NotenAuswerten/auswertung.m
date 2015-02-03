@@ -22,13 +22,15 @@ Note =Summe + 1;
 ############### ANFANG HISTOGRAMM #######################################
 #HISTOGRAMM 1
 
+Breite = 0.1;
+
 Einteilung = [1 3 4 4.5 5 6+0.000001];#das plus epsilon behebt ein problem beim einordnen der 6
 NofCa = size(Einteilung)(1,2) - 1;#Anzahl Kategorien
 
 for i=1:NofCa
 	X(1,i) = 0.5*(Einteilung(i+1)-Einteilung(i)) + Einteilung(i);#erstellt den X Wert mit Hilfe der Einteilung
 	X(2,i) = sum(Note(:) < Einteilung(i+1));
-	X(3,i) = Einteilung(i+1) - Einteilung(i); 
+	X(3,i) = Einteilung(i+1) - Einteilung(i) - Breite; 
 endfor
 
 
@@ -50,7 +52,7 @@ NofCa = size(Einteilung)(1,2) - 1;#Anzahl Kategorien
 for i=1:NofCa
 	X(1,i) = 0.5*(Einteilung(i+1)-Einteilung(i)) + Einteilung(i);#erstellt den X Wert mit Hilfe der Einteilung
 	X(2,i) = sum(Note(:) < Einteilung(i+1));
-	X(3,i) = Einteilung(i+1) - Einteilung(i); 
+	X(3,i) = Einteilung(i+1) - Einteilung(i) - Breite; 
 endfor
 
 
@@ -115,10 +117,10 @@ fclose (fid);
 #### AUSFÜHREN VON EXTERNEN PROGRAMMEN ################################
 
 #lasse das gnuplot skript laufen
-gcd =sprintf("cd %s",folder)
-system(gcd)
-system("pwd")
-system ("gnuplot /home/felix/GITHUB/NotenAuswerten/auswertung.gplot");
+#gcd =sprintf("cd %s",folder)
+#system(gcd)
+#system("pwd")
+#system ("gnuplot /home/felix/GITHUB/NotenAuswerten/auswertung.gplot");
 
 
 #erstelle pdf mit pdflatex

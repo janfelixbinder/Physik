@@ -12,6 +12,8 @@ cp $exfolder/auswertung.m $exfolder/auswertung.gplot $exfolder/auswertung.tex $e
 cd $tempfolder
 
 ./auswertung.m $1
+gnuplot auswertung.gplot
+
 
 pdflatex --shell-escape auswertung.tex
 

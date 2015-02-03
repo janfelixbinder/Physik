@@ -17,11 +17,11 @@ outhist  = sprintf("%shistogramm.tex",folder)
 set output outhist
 
 
-set arrow 1 from mittelwert_HIST1,graph(0,0) to mittelwert_HIST1,graph(1,1) nohead front
-set label "Mittelwert" at graph mittelwert_HIST1,graph(0,0)
+#set arrow 1 from mittelwert_HIST1,graph(0,0) to mittelwert_HIST1,graph(1,1) nohead front
+#set label "Mittelwert" at graph mittelwert_HIST1,graph(0,0)
 
-set arrow 2 from median_HIST1,graph(0,0) to median_HIST1,graph(1,1) nohead front
-set label "Median" at graph median_HIST1,graph(0,0)
+#set arrow 2 from median_HIST1,graph(0,0) to median_HIST1,graph(1,1) nohead front
+#set label "Median" at graph median_HIST1,graph(0,0)
 
 label_mittelwert = sprintf("Mittelwert = %f\\\\Median = %f",mittelwert_HIST1, median_HIST1)
 set label 1 label_mittelwert at 1,graph 0.95
@@ -41,11 +41,11 @@ outhist  = sprintf("%shistogramm2.tex",folder)
 set output outhist
 
 
-set arrow 1 from mittelwert_HIST1,graph(0,0) to mittelwert_HIST1,graph(1,1) nohead front
-set label "Mittelwert" at graph mittelwert_HIST1,graph(0,0)
+#set arrow 1 from mittelwert_HIST1,graph(0,0) to mittelwert_HIST1,graph(1,1) nohead front
+#set label "Mittelwert" at graph mittelwert_HIST1,graph(0,0)
 
-set arrow 2 from median_HIST1,graph(0,0) to median_HIST1,graph(1,1) nohead front
-set label "Median" at graph median_HIST1,graph(0,0)
+#set arrow 2 from median_HIST1,graph(0,0) to median_HIST1,graph(1,1) nohead front
+#set label "Median" at graph median_HIST1,graph(0,0)
 
 
 set xlabel "Noten"
