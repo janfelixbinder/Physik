@@ -19,33 +19,79 @@
 
 \begin{document}
 
-\begin{aufgabe}
-	Mit Ski ($\mu=0.1$) fahren Sie einen um \SI{20}{\degree} geneigten Hang herunter.
+\begin{tikzpicture}
+	
+\def\Radius{4.5cm}
+\def\dx{2cm}
 
-	\begin{enumerate}[a)]
-		\item Zeichnen Sie alle auftretenden Kräfte in einen Kräfteplan.
-		\item Stellen Sie die resultierende Kraft auf.
-		\item Welche Geschwindigkeit haben Sie nach 10 Sekunden?
-	\end{enumerate}
-\end{aufgabe}
+\usetikzlibrary{calc,intersections,through,backgrounds}
+
+\draw [dotted] (0,\Radius+1)--(0,-\Radius-1);
+\draw [dotted] (\Radius+1, 0)--(-\Radius-1,0);
+
+\draw [name path = Kreis] (0,0) circle(\Radius);
+%\draw (0,0) --++(0,\Radius) node [midway, left] {$R$};
+
+\draw [->,force] (0,\Radius) --++(\dx,0) node [midway, above] {$x$} node [shape=coordinate] (A){};
+\path [name path = Radius] (A) --++ (0,-\Radius);
+
+\path [name intersections={of=Kreis and Radius, by={G}}];
+
+\draw [->,force] (A) -- (G) node [midway,right]{$r-y$};
+\draw (0,0) -- (G) node [midway, above] {$r$};
+
+%\draw(0,0)--(0,-\Radius)--(G)--(0,\Radius)--(0,0);
+
+%\draw (0,0) -- (G) node [midway, above] {$r$};
+
+%\draw (G)--++(-\Radius,0);
+
+\draw [fill] (0,0) circle(0.1);
+
+\end{tikzpicture}
 
 
-\section*{Kräfte}
+An einem Kreis gilt
+\begin{eqnarray*}
+	r=\sqrt{x^2 + y^2}\text{.}
+\end{eqnarray*}
 
-\begin{enumerate}
-	\item Sie können Kräfte in Skizzen einzeichnen.
-	\item Sie können Kräfte graphisch und rechnerisch addieren.
-	\item Sie können Kräfte graphisch und rechnerisch zerlegen.
-	\item Sie kennen die Reibung und können zwischen Haft-, Gleit- und Rollreibung unterscheiden.
-	\item Sie können das zweite Newtonsche Gesetz erklären und dieses in Aufgaben anwenden.
-	\item Sie können Berechnungen an der schiefen Ebene durchführen.
+Dies kann man auch schreiben als
 
-\end{enumerate}
+\begin{eqnarray*}
+	r^2 = x^2 + y^2 \qquad \text{oder} \qquad y^2=r^2-x^2\text{.}
+\end{eqnarray*}
 
-Der Test wird fünf Aufgaben zu unterschiedlichen Themen umfassen. Jede Aufgabe gibt gleich viele Punkte.
-Um eine 4 zu erreichen müssen Sie also drei Aufgaben richtig bearbeiten.
+Nun soll ein Gegenstand vom Punkt $P_0$ in $x$-Richtung bewegt werden.
+Der Gegenstand hat die Geschwindigkeit $v$.
+Wir bewegen den Gegenstand nur ein sehr kleines Stück $\Delta x$.
+\begin{eqnarray*}
+	\Delta x = v\cdot \Delta t
+\end{eqnarray*}
 
+In der Zeit $\Delta t$ fällt der Gegenstand in Richtung Kreismittelpunkt (siehe Skizze)
+\begin{eqnarray*}
+	r-y = \frac{1}{2}\cdot a\cdot (\Delta t)^2 \to y = r - \frac{1}{2}\cdot a\cdot(\Delta t)^2\text{.}
+\end{eqnarray*}
 
+\begin{eqnarray*}
+	\begin{split}
+		r^2 = & x^2 + y^2\\
+		    = & (v\cdot \Delta t)^2 + (r-\frac{1}{2}\cdot a\cdot (\Delta t)^2)^2\\
+			= & (v\cdot \Delta t)^2 + r^2 - r\cdot a\cdot (\Delta t)^2 + \frac{1}{4}\cdot a^2 \cdot (\Delta t)^4\\
+	0		= & (v\cdot \Delta t)^2 - r\cdot a\cdot (\Delta t)^2 + \frac{1}{4}\cdot a^2 \cdot (\Delta t)^4\\
+	r\cdot a\cdot (\Delta t)^2		= & (v\cdot \Delta t)^2 + \frac{1}{4}\cdot a^2 \cdot (\Delta t)^4\\
+	r\cdot a	= & v^2 + \frac{1}{4}\cdot a^2 \cdot (\Delta t)^2\\
+	\end{split}
+\end{eqnarray*}
 
+Wir schauen nach sehr kurzer Zeit. $\Delta t$ ist also fast Null. 
+Der zweite Term ist damit auch Null und es folgt
+
+\begin{eqnarray*}
+	a=\frac{v^2}{r}
+\end{eqnarray*}
+
+$a$ nennt man Zentrifugalbeschleunigung.
 
 \end{document}

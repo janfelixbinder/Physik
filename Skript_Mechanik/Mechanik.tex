@@ -541,9 +541,97 @@ Kräfte und die Summe der Drehmomente an jedem beliebigen Punkt Null sein.
 \Einbinden{\dir/statik_drehmomente_bruecke01.tex}
 
 
+\newpage
+\section*{Kreisbewegungen}
+
+\begin{center}
+	
+\begin{tikzpicture}
+	
+\def\Radius{4.5cm}
+\def\dx{2cm}
+
+\usetikzlibrary{calc,intersections,through,backgrounds}
+
+\draw [dotted] (0,\Radius+1)--(0,-\Radius-1);
+\draw [dotted] (\Radius+1, 0)--(-\Radius-1,0);
+
+\draw [name path = Kreis] (0,0) circle(\Radius);
+%\draw (0,0) --++(0,\Radius) node [midway, left] {$R$};
+
+\draw [->,force] (0,\Radius) --++(\dx,0) node [midway, above] {$x$} node [shape=coordinate] (A){};
+\path [name path = Radius] (A) --++ (0,-\Radius);
+
+\path [name intersections={of=Kreis and Radius, by={G}}];
+
+\draw [->,force] (A) -- (G) node [midway,right]{$r-y$};
+\draw (0,0) -- (G) node [midway, above] {$r$};
+
+%\draw(0,0)--(0,-\Radius)--(G)--(0,\Radius)--(0,0);
+
+%\draw (0,0) -- (G) node [midway, above] {$r$};
+
+%\draw (G)--++(-\Radius,0);
+
+\draw [fill] (0,0) circle(0.1);
+
+\end{tikzpicture}
+\end{center}
 
 
+An einem Kreis gilt
+\begin{eqnarray*}
+	r=\sqrt{x^2 + y^2}\text{.}
+\end{eqnarray*}
 
+Dies kann man auch schreiben als
+
+\begin{eqnarray*}
+	r^2 = x^2 + y^2 \qquad \text{oder} \qquad y^2=r^2-x^2\text{.}
+\end{eqnarray*}
+
+Nun soll ein Gegenstand vom Punkt $P_0$ in $x$-Richtung bewegt werden.
+Der Gegenstand hat die Geschwindigkeit $v$.
+Wir bewegen den Gegenstand nur ein sehr kleines Stück $\Delta x$.
+\begin{eqnarray*}
+	\Delta x = v\cdot \Delta t
+\end{eqnarray*}
+
+In der Zeit $\Delta t$ fällt der Gegenstand in Richtung Kreismittelpunkt (siehe Skizze)
+\begin{eqnarray*}
+	r-y = \frac{1}{2}\cdot a\cdot (\Delta t)^2 \to y = r - \frac{1}{2}\cdot a\cdot(\Delta t)^2\text{.}
+\end{eqnarray*}
+
+\begin{eqnarray*}
+	\begin{split}
+		r^2 = & x^2 + y^2\\
+		    = & (v\cdot \Delta t)^2 + (r-\frac{1}{2}\cdot a\cdot (\Delta t)^2)^2\\
+			= & (v\cdot \Delta t)^2 + r^2 - r\cdot a\cdot (\Delta t)^2 + \frac{1}{4}\cdot a^2 \cdot (\Delta t)^4\\
+	0		= & (v\cdot \Delta t)^2 - r\cdot a\cdot (\Delta t)^2 + \frac{1}{4}\cdot a^2 \cdot (\Delta t)^4\\
+	r\cdot a\cdot (\Delta t)^2		= & (v\cdot \Delta t)^2 + \frac{1}{4}\cdot a^2 \cdot (\Delta t)^4\\
+	r\cdot a	= & v^2 + \frac{1}{4}\cdot a^2 \cdot (\Delta t)^2\\
+	\end{split}
+\end{eqnarray*}
+
+Wir schauen nach sehr kurzer Zeit. $\Delta t$ ist also fast Null. 
+Der zweite Term ist damit auch Null und es folgt
+
+\begin{eqnarray*}
+	a=\frac{v^2}{r}
+\end{eqnarray*}
+
+$a$ nennt man Zentrifugalbeschleunigung.
+
+Zu jeder Beschleunigung kann auch immer eine Kraft bestimmt werden (zur Erinnerung: $F=m\cdot a$).
+Die hier vorkommende Kraft ist die Zentripetalkraft \RI{F}{Z}.
+
+
+\Einbinden{\dir/kreisbewegung01.tex}
+\Einbinden{\dir/kreisbewegung_kanone.tex}
+\Einbinden{\dir/kreisbewegung_eimer.tex}
+\Einbinden{\dir/kreisbewegung_reibung.tex}
+
+\Einbinden{\dir/hammerwurf.tex}
 
 
 \newpage
