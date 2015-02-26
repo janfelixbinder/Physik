@@ -1,3 +1,4 @@
+\newcommand\vect[1]{{\left(\begin{array}{c}#1\end{array}\right)}}
 
 \begin{aufgabe}
 	Bestimmen Sie den Schwerpunkt der folgenden Körper.
@@ -39,6 +40,7 @@
 \end{center}
 
 \begin{loesung}
+%Loesung zu a)
 	Der Schwerpunkt liegt am Schnittpunkt der zwei gepunkteten Linien.
 
 	\begin{tikzpicture}
@@ -50,10 +52,10 @@
 	\draw [dotted] (0,0)--(\DX,-\DY);
 	
 	%Umrandung der Teilflächen A1 und A2
-	\draw (1,0) rectangle (4,-1) node [above left] {$A_1$};
+	\draw (0,0) rectangle (4,-1) node [above left] {$A_1$};
 	\draw (1,-1) rectangle (0,-4) node [above right] {$A_2$};
 	%Teilschwerpunkt S1
-	\coordinate (S1) at (2.5,-0.5);
+	\coordinate (S1) at (2,-0.5);
 	\draw [fill] (S1) circle (0.05) node [above] {$S_1$};
 	%Teilschwerpunkt S2
 	\coordinate (S2) at (0.5,-2.5);
@@ -62,7 +64,55 @@
 	\draw [dotted] (S1)--(S2);
 
 	\end{tikzpicture}
-	
+
+	\vspace*{3cm}
+
+%Loesung zu b)
+	\Spalten{0.40}{
+	\begin{tikzpicture}
+	\def\DX{5}%in x richtung
+	\def\DY{6}%in y richtung
+	\def\DB{1.5}%breite
+%	\draw (0,0) node [above left] {b)};
+	\fill [color=black!30] (0,0)--++(\DX,0)--++(0,-\DB)--++(-\DX+\DB,0)--++(0,-\DY+\DB)--++(-\DB,0)--(0,0);
+
+
+	\draw [fill] (0,0) circle (0.05) node [above] {(0;0)};
+
+	%Umrandung der Teilflächen A1 und A2
+	\draw (0,0) rectangle (5,-1.5) node [above left] {$A_1$};
+	\draw (1.5,-1.5) rectangle (0,-6) node [above right] {$A_2$};
+	%Teilschwerpunkt S1
+	\coordinate (S1) at (2.5,-0.75);
+	\draw [fill] (S1) circle (0.05) node [above] {$S_1$};
+	%Teilschwerpunkt S2
+	\coordinate (S2) at (0.75,-3.75);
+	\draw [fill] (S2) circle (0.05) node [below] {$S_2$};
+
+	%Schwerpunkt liegt bei
+	\coordinate (S) at (1.77632,-2.17105);
+	\draw [fill] (S) circle (0.05) node [below] {$S$};
+
+	\end{tikzpicture}
+}{0.59}{
+	Den Urspring des Koordinatensystems lege ich an die ober linke Ecke der Gesamtfläche.
+
+	Mit dem gewählten Ursprung des Koordinatensystems liegt der Teilschwerpunkt $S_1$ bei der Koordinate $(\num{2.5};\num{-0.75})$,
+	$S_2$ liegt bei $(\num{0.75};\num{-3.75})$.
+
+	Der Schwerpunkt der Gesamtfläche liegt bei
+	\begin{eqnarray*}
+		\begin{split}
+		r_s &=\frac{r_1\cdot A_1 + r_2\cdot A_2}{A_1 + A_2} =\\
+		    &=\frac{\vect{2.5\\-0.75}\cdot\SI{7.5}{cm^2} + \vect{0.75\\-3.75}\cdot\SI{6.75}{cm^2}}{\SI{14.25}{cm^2}}=\\
+            &=\frac{\vect{20.25\\-5.625} + \vect{5.0625\\-25.3125}}{\SI{14.25}{cm^2}} =
+            =\frac{\vect{25.3125\\-30.9375}}{\SI{14.25}{cm^2}} =\\
+            &=\vect{1.77632\\-2.17105}
+		\end{split}
+	\end{eqnarray*}
+}
+%Loesung zu c)
+
 	\begin{tikzpicture}[scale=2]
 	\draw (0,0) node [above left] {c)};
 	\fill [color=black!30] (0,0) rectangle (7,-4);
@@ -187,6 +237,46 @@ in einem Abstand von $\nicefrac{1}{27}$ des Abstandes von $S_1$ zu $S_2$ hinter 
 \draw (S2)--($(S2)!2!(S1)$) node [above]{Waage im Gleichgewicht};
 	\end{tikzpicture}
 \end{center}
+
+
+%Loesung d
+
+	\begin{tikzpicture}
+	\draw (0,0) node [above left] {d)};
+	\fill [color=black!30] (0,0) rectangle (5,-6);
+	\fill [color=white] (3,-4) circle (1cm);
+	
+	%Teilschwerpunkt S1
+	\coordinate (S1) at (2.5,-3);
+	\draw [fill] (S1) circle (0.05) node [below] {$S_1$};
+	%Teilschwerpunkt S2
+	\coordinate (S2) at (3,-4);
+	\draw [fill] (S2) circle (0.05) node [below] {$S_2$};
+
+	%Schwerpunkt liegt bei
+	\coordinate (S) at (2.4415,-2.8830);
+	\draw [fill] (S) circle (0.05) node [above] {$S$};
+
+
+\end{tikzpicture}
+
+	Den Urspring des Koordinatensystems lege ich an die ober linke Ecke der Gesamtfläche.
+
+	Mit dem gewählten Ursprung des Koordinatensystems liegt der Teilschwerpunkt $S_1$ (Gesamtfläche ohne Loch) bei der Koordinate $(\num{2.5};\num{-3})$,
+	diese Fläche ist \SI{30}{cm^2} gross.
+	Der Teilschwerpunkt $S_2$ (Kreisfläche) liegt bei $(\num{3};\num{-4})$, der Radius dieser Fläche ist \SI{1}{cm} gross, damit ist diese Fläche $\SI{\pi}{cm^2}$ gross.
+
+	Der Schwerpunkt der Gesamtfläche liegt bei
+	\begin{eqnarray*}
+		\begin{split}
+		r_s &=\frac{r_1\cdot A_1 + r_2\cdot A_2}{A_1 + A_2} =\\
+		&=\frac{\vect{2.5\\-3}\cdot\SI{30}{cm^2} + \vect{3\\-4}\cdot (-\SI{3.1415}{cm^2})}{\SI{30}{cm^2}-\SI{3.1415}{cm^2}}=\\
+            &=\frac{\vect{75\\90} + \vect{-9.4248\\+12.5664}}{\SI{26.858}{cm^2}} =\\
+            &=\frac{\vect{65.575\\-77.434}}{\SI{26.858}{cm^2}} =\\
+            &=\vect{2.4415\\-2.8830}
+		\end{split}
+	\end{eqnarray*}
+
 
 
 \end{loesung}
