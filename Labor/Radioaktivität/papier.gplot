@@ -1,0 +1,9 @@
+#nach wie vielen lagen Papier wird die alpha Strahlung komplett abgeschirmt?
+#etwa 11.3 lagen
+
+d = 413#beta und gamma strahlen
+
+f(x) = a + b*x
+fit f(x) "./papier.dat" u 1:($2-d) every ::2 via a,b
+
+plot "./papier.dat" u 1:($2-d) w p, f(x) w l 

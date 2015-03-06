@@ -1,0 +1,107 @@
+\documentclass[12pt,a4paper, twosite]{article}
+\usepackage{mystyle}
+
+%oben und unten
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{St. Michael\\Fribourg}
+\rhead{Labor: Radioaktivität}
+\rfoot{Felix Binder}
+\lfoot{März 2015}
+\renewcommand\headrulewidth{1pt}
+\renewcommand\footrulewidth{1pt}
+%ende oben und unten
+
+\usepackage{hyperref}
+
+\author{}
+\date{}
+\title{Radioaktivität}
+
+\begin{document}
+\maketitle
+%\thispagestyle{empty}
+
+\section*{Sicherheitshinweise}
+Während des Labors wird mit schwach radioaktiven Stoffen gearbeitet. Diese haben richtig angewendet keinen Einfluss auf
+die Gesundheit. Das Labormaterial im Speziellen das Geiger-Müller-Zählrohr sind sehr empfindlich.
+Bei nicht Benutzung ist stets der Plastikschutz aufzustecken. Die Membran ist sehr dünn und darf niemals berührt werden.
+Die Kosten bei Neubeschaffung sind sehr hoch (800 Fr.).
+
+\section*{Material}
+Für diesen Praktikumsversuch werden folgende Materialien benötigt:
+\begin{itemize}
+	\item Experimentierkasten Radioaktivität 
+	\item Geiger-Müller-Zählrohr
+	\item Computer für die Recherche und die Erstellung eines Laborberichtes.
+\end{itemize}
+
+
+
+\section*{Abschirmung von radioaktiver Strahlung}
+Dieses Labor ist mit vielen Einzelmessungen verbunden.
+Wählen Sie eine Strahlungsquelle mit möglichst hoher Aktivität.
+Benutzen Sie unterschiedliche Materialien, um die radioaktive Strahlung der Quelle abzuschirmen. 
+
+Mögliche Fragestellungen sind:
+\begin{itemize}
+	\item Warum lassen sich radioaktive Strahlen abschirmen?
+	\item Welche Strahlung braucht welches Material zum abschirmen?
+	\item Was ist die Halbwertsdicke?
+	\item Kann man die Probe durch Abschirmung charakterisieren?
+	\item Lässt sich damit auf das Alter der Probe schliessen?
+\end{itemize}
+
+
+\begin{aufgabe}
+	Bestimmen Sie den Anteil von $\alpha$- $\beta$- und $\gamma$-Strahlung der Ra-226 Strahlungsquelle.
+	Schirmen Sie die Strahlenquelle dazu geeignet ab und messen Sie die durch das Abschirmmaterial gelangte Strahlung.
+
+	Beispiel:\\
+	Zuerst messen Sie die Radioaktive Strahlung ohne Abschirmung. 
+	Im zweiten Schritt stellen Sie eine Abschirmung aus Plastik zwischen Quelle und Geiger-Müller-Zählrohr.
+	Die Plastikschicht schirmt die $\alpha$-Strahlung ab, $\beta$- und $\gamma$-Strahlung können das Plastik aber überwinden.
+	Die Differenz zwischen nicht abgeschirmter Impulsrate und der mit der Plastikschicht abgeschirmten Impulsrate ergibt die
+	Impulsrate der $\alpha$-Strahlung.
+	Für $\beta$- und $\gamma$-Strahlung gehen Sie analog vor.
+\end{aufgabe}
+
+\begin{aufgabe}
+	Wie viele Schichten Papier schirmen die $\alpha$-Strahlung komplett ab?
+\end{aufgabe}
+
+\begin{aufgabe}
+	Wie viele Schichten Aluminiumfolie schirmen die $\beta$-Strahlung komplett ab?
+\end{aufgabe}
+
+\begin{aufgabe}
+	Wie gross muss der Abstand zwischen Quelle und Geiger-Müller-Zählrohr sein, 
+	damit die gesamte $\alpha$-Strahlung abgeschirmt wird?
+
+	Für $\alpha$-Teilchen der Emissionsenergie $E_0$ in Luft wurde das folgende Gesetz beobachtet:
+	\begin{eqnarray*}
+		R = \num{3.1} \cdot E_0^{3/2}\text{.}
+	\end{eqnarray*}
+	Dabei ist $R$ die maximale Reichweite in Millimetern. Die Emissionsenergie ist in MeV.
+
+	Wie hoch ist die Emissionsenergie bei Ihrer Probe? 
+
+	Achtung:\\
+	Rücken Sie Quelle und Zählrohr nicht zu nah zusammen. Die Zählrate ist dann zu hoch für das Geiger-Müller-Zählrohr.
+
+	Bedenken Sie auch, dass der Ausschnitt den das Geiger-Müller-Zählrohr misst mit dem Abstand kleiner Wird.
+	Bei einem angenommen Abstand von \SI{0}{cm} nehmen Sie die Hälfte der Zerfälle auf.
+	Bei einem grösseren Abstand ist die Fläche auf der sich die Strahlung gleichmässig verteilt 
+	ein Halbkreis mit dem Radius gleich dem Abstand zwischen Probe und Zählrohr.
+	Wenn Sie nun wissen, wie gross die Detektorfläche des Zählrohrs ist können Sie ihre Messergebnisse korrigieren.
+
+\end{aufgabe}
+
+\section*{Tools: Graphiken und Tabellen}
+Unter den zwei folgenden Links finden Sie Programme zum erstellen von Graphiken
+\url{http://onlinecharttool.com/} oder \url{http://raw.densitydesign.org/}
+
+Unter dieser Adresse findet sich ein Service zum Umwandeln von Tabellen im Textformat (csv) in das Wiki-Format von Tabellen.
+\url{http://mlei.net/shared/tool/csv-wiki.htm}
+
+\end{document}
