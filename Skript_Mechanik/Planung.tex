@@ -1,5 +1,5 @@
 %\documentclass[11pt,a4paper,titlepage,twoside]{article}
-\documentclass[12pt,a4paper,twoside]{article}
+\documentclass[11pt,a4paper,twoside]{article}
 %\documentclass[12pt,a4paper,twoside]{scrartcl}
 \usepackage{mystyle}
 \usepackage{gplot}
@@ -14,7 +14,7 @@
 \pgfplotsset{compat=1.9}
 
 
-\newcommand{\Oberthema}[1]{\section{#1}}
+\newcommand{\Oberthema}[1]{\newpage\section{#1}}
 \newcommand{\Unterthema}[1]{\subsection{#1}}
 \newcommand{\Ziele}[1]{\subsubsection*{Ziele: #1}}
 \newcommand{\Teilziele}[1]{\subsubsubsection*{Teiliel: #1}}
@@ -82,8 +82,22 @@
 	
 \Oberthema{Dynamik der Rotationen}
 	\Unterthema{Hebelgesetz}
+	\Ziele{Sie können das Hebelgesetz erklären und in Aufgaben anwenden.}
+	
 	\Unterthema{Das Drehmoment}
+	\Ziele{Sie können erklären wie man ein Drehmoment zu einer bestimmten Drehachse bestimmt und diese dann berechnen.}
+	
+	\Unterthema{Schwerpunktbestimmung}
+	\Ziele{Sie können den Flächenschwerpunkt von einfachen Flächen (Dreiecke, Rechtecke, Kreise) bestimmen.}
+	\Ziele{Sie können den gemeinsamen Schwerpunkt von Teilschwerpunkten bestimmen.}
+	
 	\Unterthema{Statik mit Drehmomenten}
+	\Ziele{Sie können das Drehmoment benutzen um Statikprobleme zu lösen.}
+
+	\Unterthema{Kreisbewegungen}
+	\Ziele{Sie können erklären warum sich ein Gegenstand auf einer Kreisbahn bewegt.}
+	\Ziele{Sie kennen die Zentripetalbeschleunigung und die Zentripetalkraft und können Sie erklären.}
+	\Ziele{Sie können Aufgaben lösen bei denen sich Gegenstände auf einer Kreisbahn bewegen.}
 
 \Oberthema{Arbeit und Energie}
 	\Unterthema{Einfache Maschinen}
