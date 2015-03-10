@@ -34,3 +34,11 @@ git log --oneline
 
 #mit dem hash tag aus der logdatei die datei verloren.tex wieder herstellen
 git checkout 746f92c -- verloren.txt
+
+
+#neues in das skript einbauen, ohne das die schon verteilte Version des Skripts geändert wird
+#1. Anlegen eines neuen Branch (z.B. Kreisbewegung)
+git branch kreisbewegung
+2. Wechseln in den neuen Branch
+git checkout kreisbewegung
+

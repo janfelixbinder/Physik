@@ -823,61 +823,135 @@ wobei $A_0= \lambda\cdot N_0$ ist.
 %
 %Abbildung 2.6: Feinbestimmung des Aktivitätsverlaufs einer Pa\nobreakdash-234 Probe
 %
-%\subsection[2.4 Halbwertszeit T1/2]{2.4 Halbwertszeit T1/2}
-%
-%\bigskip
-%
-%Die Zerfallskonstante ist eine unanschauliche Grösse. Deshalb führen wir die Halbwertszeit T1/2 ein.
-%
-%Die Halbwertszeit besagt, nach welcher Zeit sich die Zahl der Nuklide und damit die Aktivität halbiert haben wird.
-%
-%Nach Ablauf einer zweiten Halbwertszeit hat sich die Zahl der Nuklide erneut halbiert. Sie ist nun die Hälfte der Hälfte, also ein Viertel. Nach dem Verstreichen einer weiteren Halbwertszeit beträgt die Nuklidzahl ein Achtel, dann ein Sechzehntel usw. Mathematisch zusammengefasst lässt sich schreiben:
-%
-%\ \   [Warning: Image ignored] % Unhandled or unsupported graphics:
-%%\includegraphics[width=3.598cm,height=1.058cm]{radio-img/radio-img046.wmf}
-% \ \ ( 2.4 )
-%
-%beziehungsweise für die Aktivität
-%
-%\ \   [Warning: Image ignored] % Unhandled or unsupported graphics:
-%%\includegraphics[width=3.704cm,height=1.058cm]{radio-img/radio-img047.wmf}
-% \ \ ( 2.5 )
-%
-%Aufgabe 2.6
+\begin{aufgabe}
+	C-11 ist ein $\beta^{+}$-Strahler. In welches Element wandelt sich das Kohlenstoff durch den Zerfall?
+\end{aufgabe}
+
+\begin{aufgabe}
+	Das Bild zeigt einen Ausschnitt aus einer Nuklidkarte. 
+	Zeigen Sie durch Pfeile, wohin das Mutternuklid durch $\alpha$-, $\beta^{-}$- und $\beta^{+}$-Zerfall zerfällt?
+
+	\begin{center}
+		
+	\begin{tikzpicture}
+\matrix (N)[every node/.style={draw, text width=1.5cm, align=flush center, minimum height=2cm}]
+{
+& \node (){}; & \node {}; & \node {}; \\
+& \node (){}; & \node {Mutter-nuklid}; & \node {}; \\
+\node {}; &\node (){}; & \node {}; & \node {}; \\
+\node (UL) []{}; &\node (){}; & \node {}; & \node {}; \\};
+\draw [->](-4,-4.5) --++(0:3cm) node [right] {Neutronenzahl $N$};
+\draw [->](-4,-4.5) --++(90:3cm) node [rotate=90, above] {Ordnungszahl $Z$};
+	\end{tikzpicture}
+	\end{center}
+
+\end{aufgabe}
+
+\begin{aufgabe}
+	Die Isotope, die in der Isotopenkarte links von den stabilen Isotope stehen, sind oft $\beta^{+}$-Strahler.
+	Die Isotope rechts der stabilen Isotope sind oft $\beta^{-}$-Strahler. Wie können Sie sich das erklären?
+\end{aufgabe}
+
+\begin{aufgabe}
+	Beim Zerfall eines Radium-222 Kerns in einen Radon-118 Kern 
+	wird ein Heliumkern frei ($\alpha$-Strahler).
+	\begin{enumerate}[a)]
+		\item Welche kinetische Energie hat der Heliumkern?
+		\item Welcher Geschwindigkeit entspricht das?
+	\end{enumerate}
+	Tipp: Es gilt Energieerhaltung.
+
+	\Kern{222}{88}{Ra}: \SI{222.0153618}{u} 
+	mit einer Bindungsenergie von \SI{1708677.123}{keV}.
+
+	\Kern{218}{86}{Rn}: \SI{218.0055863}{u}
+	mit einer Bindungsenergie von \SI{1687062.361}{keV}.
+
+	$^4_2\text{He}$: \SI{4.0026032}{u}
+	mit einer Bindungsenergie von \SI{28295.673}{keV}
+
+	\kloesung{a) \SI{6.681}{MeV}, b) \SI{17.9E6}{m/s}}
+
+\end{aufgabe}
+
+\newpage
+\begin{aufgabe}\label{ZerfallendeSchüler}
+	Stellen Sie sich vor alle Schüler in der Klasse sind radioaktive Kerne, die mit der Zeit zerfallen können.
+	Ob ein Schüler zerfällt oder nicht wird beim Würfeln entschieden. Würfelt ein Schüler eine 6, so zerfällt er und setzt sich hin.
+    In jeder Runde würfeln alle noch aktiven Kerne.
+
+Bestimmen Sie die Anzahl der stehenden Schüler für die ersten fünf Würfelrunden.
+\end{aufgabe}
+
+\subsection*{Halbwertszeit \RI{T}{1/2}}
+
+Die Zerfallskonstante ist eine unanschauliche Grösse. Deshalb führen wir die Halbwertszeit \RI{T}{1/2} ein.
+
+Die Halbwertszeit besagt, nach welcher Zeit sich die Zahl der Nuklide und damit die Aktivität halbiert haben wird.
+
+Nach Ablauf einer zweiten Halbwertszeit hat sich die Zahl der Nuklide erneut halbiert. 
+Sie ist nun die Hälfte der Hälfte, also ein Viertel. Nach dem Verstreichen einer weiteren Halbwertszeit
+beträgt die Nuklidzahl ein Achtel, dann ein Sechzehntel usw. Mathematisch zusammengefasst lässt sich schreiben:
+
+\begin{eqnarray*}
+	N(t) = N_0\cdot 2^{\nicefrac{t}{\RI{T}{1/2}}}
+\end{eqnarray*}
+
+beziehungsweise für die Aktivität
+
+\begin{eqnarray*}
+	A(t) = A_0\cdot 2^{\nicefrac{t}{\RI{T}{1/2}}}
+\end{eqnarray*}
+
 %
 %Nochmals zu Ihrem Experiment (Experiment 2.1) zurück. Bestimmen Sie die Halbwertszeit des dort verwendeten radioaktiven Präparats. Beschreiben Sie Ihr Vorgehen zur Bestimmung der Halbwertszeit in wenigen Worten. Schreiben Sie höchstens 3 kurze Sätze.
 %
-%Aufgabe 2.7
-%
-%Um das in Abschnitt 2.1.3 beschriebene Aussterben der künstlich erzeugten Elemente zu verstehen, sollten Sie diese Aufgabe lösen.
-%
-%Fiktive Annahme:
-%
-%Vor 10 Milliarden Jahren hätten 1013 kg (10 Milliarden Tonnen) Pu\nobreakdash-244 existiert. In der Zwischenzeit wäre jedoch dieses Plutonium ständig zerfallen. Pu\nobreakdash-244 ist eines der langlebigsten künstlichen Elemente. Seine Halbwertszeit beträgt 8.3 {\textperiodcentered}107 Jahre.
-%
-%Welche Masse wäre von diesen ursprünglichen 1013 kg Pu\nobreakdash-244 heute noch vorhanden?
-%
-%
-%\bigskip
-%
+\begin{aufgabe}
+	
+Fiktive Annahme:
+Vor 10 Milliarden Jahren hätten \SI{1E13}{kg} (10 Milliarden Tonnen) Pu-244 existiert. 
+In der Zwischenzeit wäre jedoch dieses Plutonium ständig zerfallen. 
+Pu-244 ist eines der langlebigsten künstlichen Elemente. Seine Halbwertszeit beträgt \num{8.3E7} Jahre.
+
+Welche Masse wäre von diesen ursprünglichen \SI{1E13}{kg} Pu-244 heute noch vorhanden?
+\end{aufgabe}
+
 %\subsubsection*{Lernaufgabe}
-%\subsubsection*{Beziehung zwischen der Halbwertszeit und der Zerfallskonstanten}
-%Zwischen der Halbwertszeit und der Zerfallskonstanten gilt eine einfache Beziehung. Diese herauszufinden ist Ihre Aufgabe. Dazu eine kleine Hilfe: Nach Verstreichen einer Halbwertszeit wird die ursprüngliche Anzahl Radionuklide auf die Hälfte geschrumpft sein. Es gilt:
-%
-%  [Warning: Image ignored] % Unhandled or unsupported graphics:
-%%\includegraphics[width=1.623cm,height=0.706cm]{radio-img/radio-img048.wmf}
-%  und   [Warning: Image ignored] % Unhandled or unsupported graphics:
-%%\includegraphics[width=2.258cm,height=1.164cm]{radio-img/radio-img049.wmf}
-% 
-%
-%In Gleichung (2.2) eingesetzt erhalten Sie
-%
-%\ \   [Warning: Image ignored] % Unhandled or unsupported graphics:
-%%\includegraphics[width=3.493cm,height=1.164cm]{radio-img/radio-img050.wmf}
-% \ \ ( 2.6 )
-%
-%Ermitteln Sie nun daraus den Zusammenhang zwischen der Halbwertszeit und der Zerfallskonstanten. Lösen Sie dazu diese Gleichung nach l auf.
-%
+\subsubsection*{Beziehung zwischen der Halbwertszeit und der Zerfallskonstanten}
+Zwischen der Halbwertszeit und der Zerfallskonstanten gilt eine einfache Beziehung. 
+Diese herauszufinden ist Ihre Aufgabe. Dazu eine kleine Hilfe: 
+Nach Verstreichen einer Halbwertszeit wird die ursprüngliche Anzahl Radionuklide auf die Hälfte geschrumpft sein. Es gilt:
+
+\begin{eqnarray*}
+	t=\RI{T}{1/2}\qquad\text{und}\qquad N(\RI{T}{1/2}) =\frac{N_0}{2}\text{.}
+\end{eqnarray*}
+
+
+
+Durch einsetzen erhalten Sie
+
+\begin{eqnarray*}
+	\frac{N_0}{2}=N_0\cdot \exp{(-\lambda\cdot\RI{T}{1/2})}\text{.}
+\end{eqnarray*}
+
+\begin{aufgabe}
+Ermitteln Sie nun daraus den Zusammenhang zwischen der Halbwertszeit und der Zerfallskonstanten. 
+Lösen Sie dazu diese Gleichung nach $\lambda$ auf.
+\end{aufgabe}
+
+
+
+\begin{aufgabe}
+	Wie gross ist Halbwertszeit in Aufgabe \ref{ZerfallendeSchüler}.
+\end{aufgabe}
+
+
+\begin{aufgabe}
+	In Physiklabor haben wir also radioaktive Proben Ra-226.
+	Bestimmen Sie mit der Nuklidkarte die vollständige Zerfallsreihe dieses Elements.
+\end{aufgabe}
+
+
 %Den Lösungsvorschlag zu dieser Aufgabe finden Sie auf der nächsten Seite.
 %
 %\subsubsection*{Lösungsvorschlag}
@@ -1093,57 +1167,6 @@ wobei $A_0= \lambda\cdot N_0$ ist.
 %
 %
 %
-\begin{aufgabe}
-	C-11 ist ein $\beta^{+}$-Strahler. In welches Element wandelt sich das Kohlenstoff durch den Zerfall?
-\end{aufgabe}
-
-\begin{aufgabe}
-	Das Bild zeigt einen Ausschnitt aus einer Nuklidkarte. 
-	Zeigen Sie durch Pfeile, wohin das Mutternuklid durch $\alpha$-, $\beta^{-}$- und $\beta^{+}$-Zerfall zerfällt?
-
-	\begin{center}
-		
-	\begin{tikzpicture}
-\matrix (N)[every node/.style={draw, text width=1.5cm, align=flush center, minimum height=2cm}]
-{
-& \node (){}; & \node {}; & \node {}; \\
-& \node (){}; & \node {Mutter-nuklid}; & \node {}; \\
-\node {}; &\node (){}; & \node {}; & \node {}; \\
-\node (UL) []{}; &\node (){}; & \node {}; & \node {}; \\};
-\draw [->](-4,-4.5) --++(0:3cm) node [right] {Neutronenzahl $N$};
-\draw [->](-4,-4.5) --++(90:3cm) node [rotate=90, above] {Ordnungszahl $Z$};
-	\end{tikzpicture}
-	\end{center}
-
-\end{aufgabe}
-
-\begin{aufgabe}
-	Die Isotope, die in der Isotopenkarte links von den stabilen Isotope stehen, sind oft $\beta^{+}$-Strahler.
-	Die Isotope rechts der stabilen Isotope sind oft $\beta^{-}$-Strahler. Wie können Sie sich das erklären?
-\end{aufgabe}
-
-\begin{aufgabe}
-	Beim Zerfall eines Radium-222 Kerns in einen Radon-118 Kern 
-	wird ein Heliumkern frei ($\alpha$-Strahler).
-	\begin{enumerate}[a)]
-		\item Welche kinetische Energie hat der Heliumkern?
-		\item Welcher Geschwindigkeit entspricht das?
-	\end{enumerate}
-	Tipp: Es gilt Energieerhaltung.
-
-	\Kern{222}{88}{Ra}: \SI{222.0153618}{u} 
-	mit einer Bindungsenergie von \SI{1708677.123}{keV}.
-
-	\Kern{218}{86}{Rn}: \SI{218.0055863}{u}
-	mit einer Bindungsenergie von \SI{1687062.361}{keV}.
-
-	$^4_2\text{He}$: \SI{4.0026032}{u}
-	mit einer Bindungsenergie von \SI{28295.673}{keV}
-
-	\kloesung{a) \SI{6.681}{MeV}, b) \SI{17.9E6}{m/s}}
-
-\end{aufgabe}
-
 %Periodensystem und Nuklidkarte
 %\begin{landscape}
 %\includepdf[pages={1}]{./periodic-table-of-chemical-elements.pdf}
