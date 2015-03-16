@@ -8,3 +8,4 @@
 *.toc
 *-book.pdf
 temp.*
+.directory
