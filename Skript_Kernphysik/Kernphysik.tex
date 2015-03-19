@@ -15,6 +15,29 @@
 \date{}
 
 \newcommand{\Kern}[3]{$^{#1}_{\phantom{1}#2}\text{#3}$}
+
+%1 neutronen zahl
+%2 protonenzahl
+%3 ausgangselement
+%4 wird zu element
+	\newcommand{\alphaS}[4]{%
+		\pgfmathsetmacro{\SUMM}{#1+#2}%summe aus Neutronen und Protonenzahl
+		\pgfmathsetmacro{\SUMMI}{#1+#2-4}%summe aus Neutronen und Protonenzahl
+		%\draw[->](#1,#2) node [anchor=south west,text width=1cm,align=center] {#3\num[dp=0]{\SUMM}}--++(-2,-2)  node [midway,above,rotate=45]{$\alpha$} node [anchor=north east] {#4\num[dp=0]{\SUMMI}};
+		\draw[->](#1,#2) node [] {#3\num[dp=0]{\SUMM}}--++(-2,-2)  node [midway,above,rotate=45]{$\alpha$} node [] {#4\num[dp=0]{\SUMMI}};
+}
+	\newcommand{\betaM}[4]{%
+		\pgfmathsetmacro{\SUMM}{#1+#2}%summe aus Neutronen und Protonenzahl
+		\draw[->](#1,#2) node [] {#3\num[dp=0]{\SUMM}}--++(-1,1)  node [midway,above,rotate=-45]{$\beta^{-1}$} node [] {#4\num[dp=0]{\SUMMI}};
+}
+
+
+
+
+
+
+
+
 \begin{document}
 \maketitle
 
@@ -916,7 +939,6 @@ Pu-244 ist eines der langlebigsten künstlichen Elemente. Seine Halbwertszeit be
 Welche Masse wäre von diesen ursprünglichen \SI{1E13}{kg} Pu-244 heute noch vorhanden?
 \end{aufgabe}
 
-%\subsubsection*{Lernaufgabe}
 \subsubsection*{Beziehung zwischen der Halbwertszeit und der Zerfallskonstanten}
 Zwischen der Halbwertszeit und der Zerfallskonstanten gilt eine einfache Beziehung. 
 Diese herauszufinden ist Ihre Aufgabe. Dazu eine kleine Hilfe: 
@@ -949,7 +971,32 @@ Lösen Sie dazu diese Gleichung nach $\lambda$ auf.
 \begin{aufgabe}
 	In Physiklabor haben wir also radioaktive Proben Ra-226.
 	Bestimmen Sie mit der Nuklidkarte die vollständige Zerfallsreihe dieses Elements.
+
+	\begin{loesung}
+
+		\begin{tikzpicture}
+			\alphaS{138}{88}{Ra}{Rn}
+			\alphaS{136}{86}{Rn}{Po}
+			\alphaS{134}{84}{Po}{Pb}
+			\betaM{134}{84}{Po}{At}
+			\alphaS{133}{85}{At}{Bi}
+			\betaM{132}{82}{Pb}{Bi}
+			\betaM{131}{83}{Bi}{Po}
+		\alphaS{130}{84}{Po}{Pb}
+			\betaM{128}{82}{Pb}{Bi}
+			\betaM{127}{83}{Bi}{Po}
+			\alphaS{126}{84}{Po}{Pb}
+		\end{tikzpicture}
+	\end{loesung}
+
+
 \end{aufgabe}
+
+
+
+\clearpage
+\includesolutions
+
 
 
 %Den Lösungsvorschlag zu dieser Aufgabe finden Sie auf der nächsten Seite.
@@ -1173,6 +1220,46 @@ Lösen Sie dazu diese Gleichung nach $\lambda$ auf.
 %\end{landscape}
 
 %\includepdf[pages={1-2}]{./Nuklidkarte.pdf}
+
+
+
+
+
+%1. 	Wie viele Zerfallsakte finden pro Sekunde in 1 g reinem Radiokobalt [Co-60] statt? 
+%   
+%2. 	Wie viele Gramm stellen 3 mCi reines Radiojod [J-131] dar? 
+%
+%3. 	Die Aktivität einer strahlenden Substanz sinkt innerhalb zweier Tage von 4 mCi auf 2,4 mCi ab. Wie gross ist die Aktivität nach weiteren 8 Tagen? 
+%
+%4. 	Die Aktivität einer strahlenden Substanz sinkt innerhalb von drei Stunden von 3,5 mCi auf 3,1 mCi ab. Wie gross ist die Halbwertszeit? 
+%
+%5. 	Wie viele Gramm P-32 sind von 1 g Anfangsmenge nach 35 Tagen noch aktiv? 
+%
+%  6. Innerhalb welcher Zeit sinkt die Aktivität des Radionuklids Na-24 auf 10 % des
+%      Anfangs­ wertes ab? 
+%
+%  7.  Wie viele Curie stellen 2 mg reiner Radiokohlenstoff C-14 dar? 
+%
+%  8.  Wie gross ist die Halbwertszeit eines Radionuklids, wenn seine Aktivität innerhalb einer bestimmten Zeit auf 90 % und nach weiteren 5 Stunden auf 70 % des Anfangswertes abnimmt? 
+%
+%  9.  Bei einer Temperatur von 17°C wird im Inneren von 1 Kubikzentimeter Blei ein radioaktives Po-Präparat der (Anfangs-) Aktivität 5 1010 Bq eingeschlossen, dessen -Teilchen eine Energie von 5,30 MeV aufweisen. a) Welche Leistung entwickelt das Präparat? b) In wel­cher Zeit würde die Blei-Umhüllung unter der Voraussetzung vollständiger Wärme-Isolation auf ihren Schmelzpunkt erhitzt? (Annahme: In dieser Zeit nimmt die Aktivität nicht ab.) 
+%
+%10. Die Halbwertszeit von Ra-226 beträgt 1600 a. Um welchen Bruchteil nimmt also die Aktivität eines Ra-226-Präparats in einem Jahrzehnt ab? 
+%
+%11. Das in der Krebstherapie häufig verwendete Co-60 verliert innert 290 Tagen 10 % seiner Aktivität. Wie gross ist also (näherungsweise) seine Halbwertszeit? (nicht in Tabelle nach­schlagen; berechnen!) 
+%
+%12. 	Man berechne mit der tabellierten Halbwertszeit und der Atommasse die Aktivität von 2 mg des C-14.
+%
+%
+
+
+
+
+
+
+
+
+
 
 
 \end{document}
