@@ -1,0 +1,27 @@
+
+\begin{aufgabe}
+	\begin{center}
+		
+	\begin{tikzpicture}
+		\draw (-5,0)--(1,0)--(1,-1);%Gestell
+		\draw [fill] (0,0) circle (0.1);%drehachse
+		\draw (0,0)--(0,1) node [above] {Aufhängung};
+		%Masse mit Beschriftung
+		\Masse{(1,-1)}{.5}{m}
+		\draw (m O) node [right]  {$m=?$};
+
+		%Schiebegewicht mit Beschriftung
+		\draw [fill] (-3,0.1) rectangle(-2.5,-0.1);
+		\draw (-2.75,0.1)node [above] {Schiebegewicht};
+		\draw (-2.75,-0.1)node [below] {\SI{0.2}{kg}};
+	\end{tikzpicture}
+	\end{center}
+
+	\begin{enumerate}[a)]
+		\item Wie viel wiegt das Gesicht $m$, das an der Schiebewaage hängt.
+		\item Erklären Sie das Funktionsprinzip dieser Waage.
+	\end{enumerate}
+
+\end{aufgabe}
+
+
