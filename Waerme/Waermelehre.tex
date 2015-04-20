@@ -1,0 +1,134 @@
+%\documentclass[11pt,a4paper,titlepage,twoside]{article}
+\documentclass[12pt,a4paper,twoside]{article}
+%\documentclass[12pt,a4paper,twoside]{scrartcl}
+\usepackage{mystyle}
+\usepackage{gplot}
+\usepackage{mechanik_v001}
+\usepackage{foto_v001}
+
+
+\usepackage[shell]{gnuplottex}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usepackage{gnuplot-lua-tikz}
+\pgfplotsset{compat=1.9}
+
+
+
+
+%\author{Felix Binder}
+\title{Wärmelehre}
+\date{}
+
+
+
+\def\dir{./Aufgaben/}
+\newcommand{\Einbinden}[1]{\input{#1}}
+
+
+\begin{document}
+\maketitle
+
+%Aufgabe
+%Bauen Sie einen Heissluftballon.
+
+
+%Skizzieren Sie den Aufbau
+
+\section*{Temperatur}
+
+\StartLueckentext
+
+Die Temperatur kennen Sie schon sehr lange.
+Im Sommer ist es wärmer als im Winter, dies bedeutet die Temperatur ist im Sommer \gl{höher} als im Winter.
+Haben Sie \gl{Fieber} ist Ihre Körpertemperatur um ein paar \gl{Grad Celsius} höher als normal.
+
+Um die Temperatur eines Stoffs zu messen benutzt man ein \gl{Thermometer}.
+Zum Messen bringt man das Thermometer und den Stoff dessen \gl{Temperatur} man messen möchte in thermischen \gl{Kontakt}.
+Die Temperatur des Thermometers ändert sich dadurch so lange, bis die \gl{Temperatur} des Stoffs erreicht ist.
+Nun kann man die Temperatur am Thermometer ablesen.
+
+Es gibt verschiedene Temperaturskalen, Sie kennen \gl{Grad Celsius}, \gl{Grad Fahrenheit} und \gl{Kelvin}.
+Diese \gl{Skalen} unterscheiden sich durch unterschiedliche Temperaturfixpunkte.
+Um eine Temperaturskala zu definieren, braucht man zwei \gl{Fixpunkte}. 
+Bei der Celsius Skala benutzt man den \gl{Gefrierpunkt} und den \gl{Siedepunkt} von Wasser als Fixpunkte und setzt diese auf \SI{0}{\celsius} und \SI{100}{\celsius}.
+
+Eine modernere Temperaturskala ist die \gl{Kelvinskala}. 
+Diese orientiert sich am absoluten \gl{Nullpunkt} der Temperatur.
+Durch diese \gl{Definition} sind nur positive Temperaturen möglich.
+Die Kelvinskala hat die selbe Schrittweite wie die \gl{Celsiusskala}.
+\SI{0}{K} entspricht einer \gl{Temperatur} von \SI{-273.15}{\celsius}.
+
+\StoppLueckentext
+
+\newpage
+
+%Auf dem Pult stehen drei Schalen mit Wasser. Jede hat eine andere Temperatur.
+%Halten Sie eine Hand in das kalte Wasser und eine ins lauwarme Wasser. Was spüren Sie?
+%muss ich noch ausbauen
+
+\section*{Messung der Temperatur}
+Für technische und physikalische Fragestellungen braucht man eine Möglichkeit die Temperatur
+reproduzierbar und in einem grossen Spektrum zu messen. Die Sinneszellen der Haut können diese Aufgabe nicht erfüllen.
+Um die Temperatur technisch zu messen werden Thermometer benutzt.
+
+
+
+\section*{Thermische Ausdehnung}
+\subsection*{Feste Körper}
+\subsection*{Gase}
+\section{Das ideale Gas}
+Das ideale Gas ist ein Modellsystem das eingeführt wird, um das verhalten von Gasen zu erklären.
+Viele reale Gase verhalten sich bei niedrigen Drücken wie das ideale Gas.
+Eigenschaften des idealen Gases sind:
+\begin{itemize}
+	\item Das ideale Gas besteht aus punktförmigen ``Atomen'' ohne Volumen.
+	\item Die ``Atome'' des idealen Gases Wechselwirken nicht miteinander. 
+		Das heisst es gibt weder Anziehung noch Abstossung zwischen den ``Atomen''.
+	\item Die ``Atome'' sind ständig in Bewegung. Wenn sie mit der begrenzenden Gefässwand kollidieren, 
+		geschieht dies ohne Energieverlust.
+\end{itemize}
+
+Im folgenden wollen wir die Eigenschaften des idealen Gases untersuchen.
+
+\subsection{Zusammenhang von Druck und Temperatur beim idealen Gas}
+In einem Experiment wird ein verdünntes Gas in einem Glaskolben erwärmt.
+Für einige festgelegte Temperaturen wird der Druck des Gases gemessen.
+In einem zweiten Durchgang des Experiments wird die Gasmenge leicht erhöht.
+Das Volumen und die Gasmenge sind während des gesamten Experiments konstant.
+In der nachfolgenden Tabelle sind Temperatur und Druck für die zwei Durchgänge des Experiments angegeben.
+
+\begin{center}
+\begin{tabular}{lcccccc}
+Temperatur &		\SI{0}{\celsius} & \SI{20}{\celsius} & \SI{40}{\celsius} & \SI{60}{\celsius} & \SI{80}{\celsius} & \SI{100}{\celsius}\\
+Durchgang 1 &  \SI{100.2}{hPa}         & \SI{106.6}{hPa}   & \SI{114.7}{hPa}   & \SI{122.3}{hPa}   & \SI{130.0}{hPa}   & \SI{136.3}{hPa}\\
+Durchgang 2 &  \SI{149.9}{hPa}	     & \SI{161.0}{hPa}   & \SI{172.5}{hPa}   & \SI{182.4}{hPa}   & \SI{194.0}{hPa}   & \SI{205.5}{hPa}\\
+\end{tabular}
+\end{center}
+
+\begin{aufgabe}
+\begin{itemize}
+\item Zeichnen Sie die Messwerte aus der Tabelle in ein $Tp$-Diagramm ein.
+\item Beschreiben Sie wie sich der Druck in Abhängigkeit zur Temperatur verändert.
+\item Was passiert, wenn Sie die Messwerte des Diagramms auf den Druck von \SI{0}{hPa} extrapolieren?
+\end{itemize}
+\begin{loesung}
+	\begin{itemize}
+		\item [a)] Hier das $p$-$T$-Diagramm.\par
+	\input{./Waermelehre/Tp.tex}
+\item [b)] Druck und Temperatur sind proportional.
+\item [c)] Beim Druck von \SI{0}{Pa} sollten sich beide Kurven schneiden. Der Schnittpunkt ist bei Kurven ist im 
+	Idealfall bei $\vartheta=\SI{-273.15}{\celsius}$. Das ist der absolute Nullpunkt der Temperatur. Dieser bekommt den Wert Null (\SI{0}{K}).
+	Null Kelvin.
+	\end{itemize}
+\end{loesung}
+\end{aufgabe}
+
+
+%\input{./idealeGas.tex}
+
+
+
+
+
+\end{document}

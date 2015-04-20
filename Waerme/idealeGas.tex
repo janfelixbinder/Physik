@@ -1,0 +1,290 @@
+\section{Das ideale Gas}
+Das ideale Gas ist ein Modellsystem das eingeführt wird, um das verhalten von Gasen zu erklären.
+Viele reale Gase verhalten sich bei niedrigen Drücken wie das ideale Gas.
+Eigenschaften des idealen Gases sind:
+\begin{itemize}
+	\item Das ideale Gas besteht aus punktförmigen ``Atomen'' ohne Volumen.
+	\item Die ``Atome'' des idealen Gases Wechselwirken nicht miteinander. 
+		Das heisst es gibt weder Anziehung noch Abstossung zwischen den ``Atomen''.
+	\item Die ``Atome'' sind ständig in Bewegung. Wenn sie mit der begrenzenden Gefässwand kollidieren, 
+		geschieht dies ohne Energieverlust.
+\end{itemize}
+
+Im folgenden wollen wir die Eigenschaften des idealen Gases untersuchen.
+
+\subsection{Druck und Temperatur}
+In einem Experiment wird ein verdünntes Gas in einem Glaskolben erwärmt.
+Für einige festgelegte Temperaturen wird der Druck des Gases gemessen.
+In einem zweiten Durchgang des Experiments wird die Gasmenge leicht erhöht.
+Das Volumen und die Gasmenge sind während des gesamten Experiments konstant.
+In der nachfolgenden Tabelle sind Temperatur und Druck für die zwei Durchgänge des Experiments angegeben.
+
+\begin{center}
+\begin{tabular}{lcccccc}
+Temperatur &		\SI{0}{\celsius} & \SI{20}{\celsius} & \SI{40}{\celsius} & \SI{60}{\celsius} & \SI{80}{\celsius} & \SI{100}{\celsius}\\
+Durchgang 1 &  \SI{100.2}{hPa}         & \SI{106.6}{hPa}   & \SI{114.7}{hPa}   & \SI{122.3}{hPa}   & \SI{130.0}{hPa}   & \SI{136.3}{hPa}\\
+Durchgang 2 &  \SI{149.9}{hPa}	     & \SI{161.0}{hPa}   & \SI{172.5}{hPa}   & \SI{182.4}{hPa}   & \SI{194.0}{hPa}   & \SI{205.5}{hPa}\\
+\end{tabular}
+\end{center}
+
+\begin{aufgabe}
+\begin{itemize}
+\item Zeichnen Sie die Messwerte aus der Tabelle in ein $Tp$-Diagramm ein.
+\item Beschreiben Sie wie sich der Druck in Abhängigkeit zur Temperatur verändert.
+\item Was passiert, wenn Sie die Messwerte des Diagramms auf den Druck von \SI{0}{hPa} extrapolieren?
+\end{itemize}
+\begin{loesung}
+	\begin{itemize}
+		\item [a)] Hier das $p$-$T$-Diagramm.\par
+	\input{./Waermelehre/Tp.tex}
+\item [b)] Druck und Temperatur sind proportional.
+\item [c)] Beim Druck von \SI{0}{Pa} sollten sich beide Kurven schneiden. Der Schnittpunkt ist bei Kurven ist im 
+	Idealfall bei $\vartheta=\SI{-273.15}{\celsius}$. Das ist der absolute Nullpunkt der Temperatur. Dieser bekommt den Wert Null (\SI{0}{K}).
+	Null Kelvin.
+	\end{itemize}
+\end{loesung}
+\end{aufgabe}
+
+
+\subsection{Gesetz von Boyle-Mariotte}
+Im folgenden wollen wir untersuchen wie Druck und Volumen eines Gases miteinander zusammenhängen.
+Dabei soll die Gasmenge, also die Anzahl von Gasatomen (Gasmolekülen) konstant sein.
+Ausserdem wollen wir die Temperatur konstant halten.
+
+\begin{aufgabe}
+	\begin{itemize}
+		\item Tragen Sie die Messwerte des Experiments in die Tabelle ein.
+		\item Vervollständigen sie die letzten zwei Spalten. 
+		\item Zeichnen Sie die Messpunkte des Experiments in ein $pV$-Diagramm ein.
+		\item Was gilt für das Produkt von Druck und Volumen wenn die Gasmenge und die Temperatur konstant gehalten werden?
+	\end{itemize}
+	\begin{loesung}
+		Das Produkt aus Druck und Temperatur ist konstant.
+	\end{loesung}
+\end{aufgabe}
+
+\subsubsection*{Messwerte des Experiments}
+
+\begin{center}
+\begin{tabular}{p{3cm}|p{3cm}||p{3cm}|p{3cm}}
+	\large{Druck} & \large{Kolbenstellung}  & \large{Volumen}  & $p\cdot V$\\\hline
+	              &                         &                  & \\
+	              &                         &                  & \\\hline
+	              &                         &                  & \\
+	              &                         &                  & \\\hline
+	              &                         &                  & \\
+	              &                         &                  & \\\hline
+	              &                         &                  & \\
+	              &                         &                  & \\\hline
+	              &                         &                  & \\
+	              &                         &                  & \\\hline
+	              &                         &                  & \\
+	              &                         &                  & \\\hline
+	              &                         &                  & \\
+	              &                         &                  & \\\hline
+	              &                         &                  & \\
+	              &                         &                  & \\\hline
+\end{tabular}
+\end{center}
+
+
+
+
+\begin{aufgabe}
+	Ein Gas bei Normaldruck (\SI{1013}{hPa}) füllt ein Volumen von \SI{1.5}{m^3}. Wie hoch ist der Druck,
+	nachdem das Volumen auf \SI{1}{m^3} reduziert wurde?
+	\begin{loesung}
+		\begin{eqnarray*}
+			p\cdot V = \text{konstant} \to p_1\cdot V_1 = p_2\cdot V_2 \to p_2 =\frac{V_1}{V_2}\cdot p_1=\frac{\SI{1.5}{m^3}}{\SI{1}{m^3}}\cdot \SI{101300}{Pa}=\SI{151950}{Pa}
+		\end{eqnarray*}
+	\end{loesung}
+\end{aufgabe}
+
+Durch die letzten zwei Experimente haben wir zwei Eigenschaften des idealen Gases kennengelernt.
+Im ersten Teil haben wir gesehen, dass das Verhältnis von Druck und Temperatur konstant ist ($p/T =\text{konst.}$).
+Das Gesetz von Boyle-Mariotte besagt, dass das Produkt von Druck und Volumen konstant ist ($p\cdot V =\text{konst.}$).
+
+Diese zwei Zusammenhänge lassen sich durch einen ersetzten.
+\begin{eqnarray*}
+	\frac{p\cdot V}{T} = \text{konstant}
+\end{eqnarray*}
+
+\begin{aufgabe}
+	Das Volumen eines Gases von \SI{5}{l} und einem Druck von \SI{1013}{hPa} wird durch Kompression halbiert. 
+	Gleichzeitig wird das Gas von \SI{15}{\celsius} auf \SI{95}{\celsius} erwärmt. 
+	Wie hoch ist der Enddruck?
+	\begin{loesung}
+		\begin{eqnarray*}
+			\frac{p\cdot V}{T}=\text{konstant}\to \frac{p_1\cdot V_1}{T_1}=\frac{p_2\cdot V_2}{T_2}\to p_2 =\frac{V_1}{V_2}\cdot\frac{T_2}{T_1}\cdot p_1=\num{2}\cdot\frac{\SI{368}{K}}{\SI{288}{K}}\cdot\SI{101300}{Pa}=\SI{258880}{Pa}
+		\end{eqnarray*}
+	\end{loesung}
+\end{aufgabe}
+
+\begin{aufgabe}
+	Der Gasdruck in einem Gasthermometer mit konstantem Volumen betrage \SI{0.4}{bar} am Gefrierpunkt
+	und \SI{0.546}{bar} am Siedepunkt des Wassers.
+	\begin{itemize}
+		\item [a)] Bei welcher Temperatur beträgt der Druck \SI{0.1}{bar}?
+		\item [b)] Wie hoch ist der Druck bei der Temperatur bei der Schwefel siedet? ($\vartheta=\SI{444.6}{\celsius}$)
+	\end{itemize}
+	\begin{loesung}
+		\begin{itemize}
+			\item [a)]
+				\begin{eqnarray*}
+					\frac{p\cdot V}{T}=\text{konstant}\to\frac{p_1\cdot V_1}{T_1}=\frac{p_2\cdot V_2}{T_2}\to T_2=\frac{p_2}{p_1}\cdot\frac{V_2}{V_1}\cdot T_1 =\frac{1}{4}\cdot 1\cdot \SI{273}{K}=\SI{68.25}{K} 
+				\end{eqnarray*}
+			\item[b)]
+				\begin{eqnarray*}
+					\frac{p\cdot V}{T}=\text{konstant}\to\frac{p_1\cdot V_1}{T_1}=\frac{p_2\cdot V_2}{T_2}\to p_2=\frac{V_1}{V_2}\cdot\frac{T_2}{T_1}\cdot p_1=1\cdot\frac{\SI{717.75}{K}}{\SI{273.15}{K}}\cdot\SI{400}{hPa}=\SI{1051.1}{hPa} 
+				\end{eqnarray*}
+		\end{itemize}
+	\end{loesung}
+\end{aufgabe}
+
+%\newpage
+
+\subsection{Gasdruck und Gasmasse}
+In einem Experiment wird wird das Gewicht von \SI{1}{L} Neon bei \SI{0}{\celsius} und \SI{1013}{hPa} bestimmt.
+Dann pumpt man Neonatome aus dem Gefäss und misst Druck und Gewicht.
+Die folgende Tabelle zeigt die Messwerte des Experiments.
+
+\begin{center}
+\begin{tabular}{lcccc}
+	Druck (hPa)      & 1013      & 750        & 500        & 250 \\
+	Gewicht (g)      & \num{0.9} & \num{0.67} & \num{0.44} & \num{0.22} \\
+\end{tabular}
+\end{center}
+
+\begin{aufgabe}
+	\begin{itemize}
+		\item Zeichnen Sie die Messwerte aus der Tabelle in ein $m-p$-Diagramm ein.
+		\item Wie ändert sich die Masse mit dem Druck?
+	\end{itemize}
+	\begin{loesung}
+	Masse und Druck des Gases sind bei konstantem Volumen proportional.	
+	\end{loesung}
+
+\end{aufgabe}
+
+Das Gewicht des Gases ist proportional zur Anzahl der Atome in dem Gas.
+
+
+Die Menge eines Gases, das aus $N$ Atomen oder Molekülen besteht, kann durch seine Masse $m$
+oder durch seine Stoffmenge $n$ beschrieben werden.
+Es gilt:
+\begin{eqnarray*}
+	n=\frac{N}{N_A}=\frac{m}{M}\text{,} 
+\end{eqnarray*}
+dabei ist $N_A=\SI{6.02E23}{Teilchen/mol}$ die Avogadro'sche Zahl und $M$ die molare Masse.
+
+\begin{aufgabe}
+	Die molare Masse von Sauerstoff O$_2$ beträgt ca.~\SI{32}{g/mol}.
+	Wie viele Mol Sauerstoff sind dann in einem Kilogramm?
+	\begin{loesung}
+		\begin{eqnarray*}
+		n=\frac{m}{M}=\frac{\SI{1000}{g}}{\SI{32}{g/mol}}=\SI{31.25}{mol}
+		\end{eqnarray*}
+	\end{loesung}
+\end{aufgabe}
+
+
+\subsection{Gasmasse und Gassorte}
+
+In einem Experiment wird das Gewicht von verschiedenen Gasen bei konstantem Volumen von \SI{1}{l},
+konstantem Druck von \SI{1}{bar} und konstanter Temperatur von \SI{22}{\celsius} gemessen.
+
+Vervollständigen Sie die Tabelle.
+\begin{center}
+\begin{tabular}{lccc}
+	Gassorte  & Masse $m$ (g) & Molare Masse $M$ (g/mol)  & Stoffmenge $n$ (mol)\\\hline
+	H$_2$     & \num{0.082}   & &\\
+	He        & \num{0.163}   & &\\
+	N$_2$     & \num{1.143}   & &\\
+	CO$_2$    & \num{1.795}   & &\\
+	SF$_6$    & \num{5.958}   & &\\
+\end{tabular}
+\end{center}
+
+\subsection{Zustandsgleichung idealer Gase}
+Nun werden wir die drei Gasgesetze zu einem Zusammenfassen.
+
+Wir haben gesehen, dass für ein ideales Gas die Beziehung
+\begin{eqnarray*}
+	\frac{p\cdot V}{T} = \text{konstant}
+\end{eqnarray*}
+gilt.
+
+Ausserdem ist für ein ideales Gas Druck $p$ und Masse $m$ verknüpft:
+\begin{eqnarray*}
+	\frac{p}{m}=\text{konstant}\text{.}
+\end{eqnarray*}
+
+Im letzten Abschnitt haben wir gesehen, dass
+\begin{eqnarray*}
+	\frac{m}{M}= \text{konstant}
+\end{eqnarray*}
+ist.
+
+Daraus können wir
+\begin{eqnarray*}
+	\frac{p\cdot V \cdot M}{T\cdot m} = \text{konstant} = R
+\end{eqnarray*}
+schreiben. 
+Das gibt die Zustandsgleichung des idealen Gases
+\begin{eqnarray*}
+	p\cdot V=n\cdot R\cdot T\text{.}
+\end{eqnarray*}
+Die Formel enthält nun alle Zustandsgrössen eines Gases. Die Konstante nennen wir $R$.
+Sie heisst auch Gaskonstante und hat den Wert $R=\SI{8.314}{J/mol K}$.
+Die Gaskonstante $R$ ist das Produkt aus Boltzmann-Konstante $k_B$ und Avogadro-Zahl $N_A$. 
+
+Alternativ kann man die Zustandsgleichung des idealen Gases auch mit der Boltzmann-Konstanten $k_B$ schreiben.
+Es gilt:
+\begin{eqnarray*}
+	p\cdot V = N\cdot k_B\cdot T\text{.}
+\end{eqnarray*}
+
+Die Boltzmann-Konstante hat einen Wert von $k_B=\SI{1.3806504E-23}{J/K}$.
+
+\begin{aufgabe}
+	Welches Volumen nimmt \SI{1}{mol} eines Gases bei \SI{0}{\celsius} und \SI{1}{bar} ein?
+	\begin{loesung}
+		\begin{eqnarray*}
+			p\cdot V=n\cdot R\cdot T \to V=\frac{n\cdot R\cdot T}{p}=\frac{\SI{1}{mol}\cdot\SI{8.314}{J/mol K}\cdot\SI{273}{K}}{\SI{100000}{Pa}}=\SI{0.022697}{m^3}=\SI{22.7}{l}
+		\end{eqnarray*}
+	\end{loesung}
+\end{aufgabe}
+
+\begin{aufgabe}
+	\SI{1}{mol} eines Gases nimmt ein Volumen von \SI{10}{l} bei einem Druck von \SI{1}{bar} ein.
+	Wie hoch ist seine Temperatur in Kelvin?
+	\begin{loesung}
+		\begin{eqnarray*}
+			p\cdot V=n\cdot R\cdot T \to T=\frac{p\cdot V}{n\cdot R}=\frac{\SI{100000}{Pa}\cdot\SI{0.01}{m^3}}{\SI{1}{mol}\cdot\SI{8.314}{J/mol K}}=\frac{\SI{1000}{Pa m^3}}{\SI{8.314}{J/ K}}=\SI{120.28}{K}
+		\end{eqnarray*}
+	\end{loesung}
+\end{aufgabe}
+
+\begin{aufgabe}
+	Eine bestimmte Gasmenge werde bei konstantem Druck gehalten. Um welchen Faktor ändert sich
+	ihr Volumen, wenn die Temperatur von \SI{50}{\celsius} auf \SI{100}{\celsius} erhöht wird.
+	\begin{loesung}
+		\begin{eqnarray*}
+			\frac{p\cdot V}{T}=\text{konstant}\to\frac{p_1\cdot V_1}{T_1}=\frac{p_2\cdot V_2}{T_2}\to\frac{V_2}{V_1}=\frac{p_1}{p_2}\cdot\frac{T_2}{T_1}=1\cdot\frac{\SI{373}{K}}{\SI{323}{K}}=\num{1.15}
+		\end{eqnarray*}
+	\end{loesung}
+
+\end{aufgabe}
+
+\begin{aufgabe}
+	Wie viele Mol Neon sind in einem Volumen von \SI{1}{cm^3} bei einer Temperatur von \SI{0}{\celsius} und \SI{1}{bar}?
+	Wie viele Atome Neon sind das?
+	\begin{loesung}
+		\begin{eqnarray*}
+			p\cdot V=n\cdot R\cdot T \to n=\frac{p\cdot V}{R\cdot T}=\frac{\SI{1E5}{Pa}\cdot\SI{1E-6}{m^3}}{R\cdot\SI{273}{K}}=\frac{\SI{1E-1}{Pa m^3}}{\SI{2269.7}{J/mol}}=\SI{4.4058e-5}{mol}
+		\end{eqnarray*}
+		\begin{eqnarray*}
+			n=\frac{N}{N_A}\to N=n\cdot N_A=\SI{4.4058e-5}{mol}\cdot\SI{6.02E23}{1/mol}=\num{2.6523e+19}
+		\end{eqnarray*}
+	\end{loesung}
+\end{aufgabe}
