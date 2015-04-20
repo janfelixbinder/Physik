@@ -13,12 +13,12 @@
 \contentsline {section}{\numberline {10}Drehmomente}{41}
 \contentsline {section}{\numberline {11}Schwerpunkt}{47}
 \contentsline {section}{\numberline {12}L\IeC {\"o}sen von Statikproblemen mit Hilfe des Drehmomentes}{55}
-\contentsline {section}{\numberline {13}Reibung}{60}
-\contentsline {section}{\numberline {14}Schiefe Ebene}{67}
-\contentsline {section}{\numberline {15}Newton'sche Axiome}{68}
-\contentsline {section}{\numberline {16}Kreisbewegungen}{72}
-\contentsline {section}{\numberline {17}Wechselwirkungsgesetz}{77}
-\contentsline {section}{\numberline {18}Impuls}{78}
-\contentsline {section}{\numberline {19}Arbeit und Energie}{79}
-\contentsline {section}{\numberline {20}Energieerhaltung}{86}
-\contentsline {section}{\numberline {21}Leistung}{90}
+\contentsline {section}{\numberline {13}Reibung}{61}
+\contentsline {section}{\numberline {14}Schiefe Ebene}{68}
+\contentsline {section}{\numberline {15}Newton'sche Axiome}{69}
+\contentsline {section}{\numberline {16}Kreisbewegungen}{73}
+\contentsline {section}{\numberline {17}Wechselwirkungsgesetz}{78}
+\contentsline {section}{\numberline {18}Impuls}{79}
+\contentsline {section}{\numberline {19}Arbeit und Energie}{80}
+\contentsline {section}{\numberline {20}Energieerhaltung}{87}
+\contentsline {section}{\numberline {21}Leistung}{91}
