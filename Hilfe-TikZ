@@ -15,3 +15,7 @@ Intersections
 
 \path [name intersections={of=Kreis and Radius, by=G}];
 
+
+
+von einem Punkt a aus eine senkrechte auf eine gerade b--c zeichnen (13.5.5 The Syntax of Projection Modifiers)
+\draw (a) -- ($(b)!(a)!(c)$);
