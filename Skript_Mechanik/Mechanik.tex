@@ -614,6 +614,145 @@ Die hier vorkommende Kraft ist die Zentripetalkraft \RI{F}{Z}.
 
 \Einbinden{\dir/hammerwurf.tex}
 
+\newpage
+
+
+\section*{Arbeit}
+
+\begin{aufgabe}
+	Den Begriff Arbeit hört man sehr häufig.
+	Gleichzeitig ist der Begriff in der Alltagswelt nicht eindeutig definiert.
+
+Überlegen Sie sich die folgenden Fragen schriftlich.
+\begin{enumerate}[a)]
+	\item	Was verstehen Sie unter Arbeit?
+	\item 	Wann arbeiten (Verb) Sie?
+\end{enumerate}
+
+\end{aufgabe}
+
+In der Physik ist die \emph{Arbeit} klar definiert.
+\emph{Arbeit} ist das Skalarprodukt aus \emph{Kraft} und \emph{Weg}.
+Die Einheit der Arbeit ist das {\bf Joule}.
+
+Um die Arbeit zu berechnen multipliziert man also die Kraftkomponente die parallel zum Weg verläuft mit dem zurückgelegten Weg.
+
+
+\begin{cbox}
+\begin{gather*}
+    \text{Arbeit} = \text{Kraft}\cdot{\text{Weg}}\quad\text{oder}\quad W=F\cdot s\cdot \cos \alpha\\
+	\text{Einheit}: [W] = \text{Newton}\cdot\text{Meter}=\si{N}\cdot\si{m}=\frac{\si{kg}\cdot\si{m}}{\si{s^2}}\cdot \si{m}=\text{Joule}=\si{J}
+\end{gather*}
+\end{cbox}
+
+
+
+
+
+So wie es unterschiedliche Kräfte gibt, unterscheidet man in der Physik auch unterschiedliche Formen von Arbeit.
+
+\subsection*{Hubarbeit}
+Um einen Körper der Masse $m$ um eine Höhe $h$ anzuheben, ist eine \emph{Hubarbeit} erforderlich.
+\begin{equation*}
+	W_{\text{Hub}} = F \cdot h = F_{\text{G}}\cdot h = m\cdot g\cdot h
+\end{equation*}
+
+%Im Vergleich zu seiner ursprünglichen Lage hat der Körper eine höhere potentielle Energie.
+
+%\begin{cbox}
+%\begin{equation*}
+%	E_{\text{pot}} = m\cdot g\cdot h
+%\end{equation*}
+%\end{cbox}
+
+\begin{aufgabe}
+	Eine Masse von \SI{5}{kg} wird um \SI{3}{m} angehoben.
+	Berechnen Sie die erforderliche Hubarbeit?
+	\begin{loesung}
+		\begin{eqnarray*}
+			\RI{W}{Hub} = \RI{F}{G}\cdot s=m\cdot g\cdot s= \SI{5}{kg}\cdot\SI{9.81}{m/s^2}\SI{3}{m}=\SI{147.15}{J}
+		\end{eqnarray*}
+	\end{loesung}
+\end{aufgabe}
+
+
+
+
+
+\subsection*{Beschleunigungsarbeit}
+Um einen Körper zu beschleunigen ist eine Kraft nötig. 
+Es gilt das zweite Newtonsche Gesetz $F=m\cdot a$.
+Damit ist klar, dass es auch eine Beschleunigungsarbeit gibt.
+\begin{eqnarray*}
+	\RI{W}{Bew}=F\cdot s=m\cdot a\cdot s=\frac{1}{2}\cdot m\cdot\left(v^2-v_0^2\right)
+\end{eqnarray*}
+
+Dabei ist $m$ die Masse, $a$ die Beschleunigung, $s$ der Weg und $v$ die Geschwindigkeit.
+Im letzten Schritt haben wir für $a\cdot s$ einen Ausdruck eingesetzt, den wir durch umstellen aus der Formel
+$v^2=v_0^2+2\cdot a\cdot s$ bekommen haben.
+
+%Hat der Körper die Geschwindigkeit $v$ erreicht, so besitzt er eine \emph{kinetische Energie}.
+
+%\begin{cbox}
+%\begin{equation*}
+%	\RI{E}{kin} = \frac{1}{2}\cdot m\cdot v^2
+%\end{equation*}
+%\end{cbox}
+
+\begin{aufgabe}
+	Ein Auto mit der Masse von \SI{1500}{kg} beschleunigt nach der roten Ampel auf \SI{50}{km/h}.
+	Welche Arbeit muss der Motor dafür leisten?
+	\begin{loesung}
+		Zuerst sollten alle Grössen in den Grundeinheiten vorliegen.
+		\begin{eqnarray*}
+			v=\SI{50}{km/h}=\SI{13.89}{m/s}
+		\end{eqnarray*}
+		\begin{eqnarray*}
+			W=\frac{1}{2}\cdot m\cdot v^2=\num{0.5}\cdot\SI{1500}{kg}\cdot(\SI{13.89}{m/s})^2=\SI{144.68}{kJ}
+		\end{eqnarray*}
+	\end{loesung}
+\end{aufgabe}
+
+\subsection*{Verformungsarbeit}
+In diesem Abschnitt werden wir lernen, wie man die Arbeit für eine nicht konstante Kraft bestimmen kann.
+Arbeit ist Kraft mal Weg. Ändert sich die Kraft über den Weg, muss man dies berücksichtigen.
+
+\begin{figure}[h!]
+\begin{center}
+\input{./arbeitsdiagramm.tex}
+\end{center}
+\caption{\label{fig:arbeitsdiagramm} Arbeitsdiagramm für eine ideale Feder und für eine reale Feder.
+}
+\end{figure}
+
+In Abbildung~\ref{fig:arbeitsdiagramm} sehen wir zwei verschiedene Arbeitsdiagramme. 
+Das erste Arbeitsdiagramm zeigt die Arbeit zum spannen einer idealen Feder.
+Die Federkraft ist ein Beispiel für eine nicht konstante Kraft. Wie wir früher schon
+gesehen haben, gilt für die Federkraft $\RI{F}{F} = -D\cdot (\Delta x)$. Dabei ist $D$ die Federkonstante
+und $\Delta x$ ist die Auslenkung aus der Ruhelage der Feder.
+Die Federkraft nimmt linear mit der Auslenkung der Feder zu. Das heisst, am Anfang ist relativ wenig
+Arbeit nötig um die Feder auszulenken. Die Arbeit die nötig ist, um die Feder auszulenken ist
+die Fläche unter dem Arbeitsdiagramm. Im Fall der idealen Feder, können wir eine Formel dafür angeben.
+
+
+\begin{eqnarray*}
+	\RI{W}{Feder}= \frac{1}{2}\cdot\RI{F}{F}\cdot(\Delta x)=\frac{1}{2}\cdot D\cdot(\Delta x)^2
+\end{eqnarray*}
+
+Um die Arbeit für das zweite Diagramm zu bestimmen gibt es keine Formel. Es gilt aber immer, dass die Fläche
+im Arbeitsdiagramm die verrichtete Arbeit repräsentiert. Die Fläche im zweiten Diagramm lässt sich näherungsweise
+durch auszählen der Kästchen bestimmen.
+
+%Wie schon für die potentielle und für die kinetische Energie gesehen,
+%kann man auch hier nun die Energie angeben, die sich in einer Feder speichern lässt.
+%
+%\begin{cbox}
+%\begin{eqnarray*}
+%	\RI{E}{Feder}=\frac{1}{2}\cdot D\cdot(\Delta x)^2
+%\end{eqnarray*}
+%\end{cbox}
+
+\Einbinden{\dir/arbeit_feder01.tex}
 
 \newpage
 \includesolutions
