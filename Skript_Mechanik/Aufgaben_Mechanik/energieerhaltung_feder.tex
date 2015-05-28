@@ -1,0 +1,49 @@
+
+\begin{aufgabe}
+	Eine Feder mit einer Federkonstanten von \SI{200}{N/m} wird gestaucht.
+	\begin{itemize}
+		\item [a)] Wie viel Arbeit ist nötig um die Feder um \SI{15}{cm} zu stauchen?
+		\item [b)] Wie viel Energie ist nun in der Feder gespeichert?
+		\item [c)] Nun wird ein Schlitten ($m=\SI{1.7}{kg}$) vor die gespannte Feder gesetzt, und die Feder entspannt.
+			Auf welche Geschwindigkeit wird der Schlitten beschleunigt, wenn Reibung vernachlässigt wird?
+		\item [d)] Der Schlitten hat Stahlkufen und gleitet auf einer Stahloberfläche. Wie weit kommt der Schlitten, wenn
+			die Reibung nach entspannen der Feder einsetzt?
+	\end{itemize}
+	\begin{loesung}
+		\begin{itemize}
+			\item [a)] Die Federkraft ist nicht konstant, sondern steigt linear mit der Auslenkung.
+				Die Fläche unter dem Arbeitsdiagramm ist 
+				\begin{eqnarray*}
+				W=\frac{1}{2}\cdot\RI{F}{F}\cdot(\Delta x)=\frac{1}{2}\cdot D\cdot (\Delta x)^2=\num{0.5}\cdot\SI{200}{N/m}\cdot(\SI{0.15}{m})^2=\SI{2.25}{J}
+				\end{eqnarray*}
+			\item[b)] Das spannen der Feder hat \SI{2.25}{J} gekostet, damit ist die Federenergie $\RI{E}{Feder}=\SI{2.25}{J}$.
+			\item[c)] Es gilt Energieerhaltung. Die Federenergie wird vollständig in kinetische Energie umgewandelt.
+				\begin{eqnarray*}
+					\RI{E}{kin}=\frac{1}{2}\cdot m\cdot v^2 \to v=\sqrt{\frac{2\cdot \RI{E}{kin}}{m}} =\sqrt{\frac{2\cdot\SI{2.25}{J}}{\SI{1.7}{kg}}}=\SI[dp=2]{1.6270}{m/s}
+				\end{eqnarray*}
+			\item[d)] Wir rechnen zuerst die Reibungskraft aus. Aus der Tabelle finden wir die Reibungszahl $\mu$ für Gleitreibung Stahl auf Stahl.
+				Es wirkt nur die Gewichtskraft und die Normalkraft in vertikaler Richtung auf den Schlitten, 
+				daraus folgt, dass die Normalkraft gleich
+				der Gewichtskraft ist.
+				\begin{eqnarray*}
+					\RI{F}{R}=\mu\cdot\RI{F}{N}=\mu\cdot m\cdot g=\num{0.1}\cdot\SI{1.7}{kg}\cdot\SI{9.81}{m/s^2}=\SI{1.67}{N}
+				\end{eqnarray*}
+	Es gibt nun zwei Möglichkeiten um zu berechnen, wie weit der Schlitten noch kommt.
+	\begin{itemize}
+		\item [(1)] Im ersten Fall berechnen wir die Arbeit, die die Oberfläche gegen den Schlitten verrichtet.
+			Wenn die kinetische Energie des Wagens vollständig in innere Energie $U$ umgewandelt wurde, kommt dieser zum Stehen.
+			\begin{eqnarray*}
+				W=F\cdot s =\RI{F}{R}\cdot s \to s =\frac{W}{\RI{F}{R}}=\frac{\SI{2.25}{J}}{\SI{1.67}{N}}=\SI[dp=2]{1.3473}{m}
+			\end{eqnarray*}
+		\item[(2)]			
+				Mit $F=m\cdot a$ kann man nun die Beschleunigung ausrechnen. \RI{F}{R} wirkt entgegen der Bewegungsrichtung, also $-\RI{F}{R}$.
+\begin{gather*}
+	a=\frac{F}{m} =\frac{\RI{F}{R}}{m}=\frac{\SI{-1.67}{N}}{\SI{1.7}{kg}}=\SI{-0.981}{m/s^2}\\
+	v^2=v_0^2+2\cdot a\cdot s \to s=\frac{v^2-v_0^2}{2\cdot a}=\frac{(\SI{0}{m/s})^2-(\SI[dp=2]{1.6270}{m/s})^2}{2\cdot(\SI{-0.981}{m/s^2})}=\SI[dp=2]{1.3492}{m}
+\end{gather*}
+
+	\end{itemize}
+		\end{itemize}
+	\end{loesung}
+
+\end{aufgabe}

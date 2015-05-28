@@ -25,6 +25,7 @@
 \def\dir{./Aufgaben_Mechanik/}
 \newcommand{\Einbinden}[1]{\input{#1}}
 
+\newcommand{\TAX}[1]{}
 
 \begin{document}
 \maketitle
@@ -754,50 +755,79 @@ durch auszählen der Kästchen bestimmen.
 
 \Einbinden{\dir/arbeit_feder01.tex}
 
-
-\begin{aufgabe}
-	Das Federpendel ist in der Ruhelage.
-	\begin{enumerate}[a)]
-		\item	Welchen Weg würden Sie wählen um es in die Startposition zu bringen?
-		\item	Wie viel müssen Sie arbeiten um es auf diesem Weg in die Startposition zu bekommen? Begründen Sie Ihre Rechnung.
-	\end{enumerate}
-\end{aufgabe}
-
-\begin{aufgabe}
-	Das Pendel befindet sich nun an einem höheren Punkt.
-	Beschreiben Sie schriftlich, was mit dem Pendel passiert, wenn Sie es am Startpunkt loslassen.
-%	Welche Geschwindigkeit hat das Pendel? Wie tief ist es schon gefallen?
-\end{aufgabe}
-
-\begin{aufgabe}
-	Von der Startposition bis zur Ruhelage arbeitet das Pendel.
-	Von der Ruhelage bis zum Punkt der Umkehrpunkt wird am Pendel gearbeitet.arbeit
-\end{aufgabe}<++>
+\section*{Energieerhaltung}
+\Einbinden{\dir/energieerhaltung_pendel.tex}
+\Einbinden{\dir/energieerhaltung_bruecke.tex}
+\Einbinden{\dir/energieerhaltung_feder.tex}
+\Einbinden{\dir/energieerhaltung_wagen_feder.tex}
 
 
-\begin{aufgabe}
-	Nehmen Sie an, Sie stören die Schwingung des Pendel, indem Sie an einer beliebigen Stelle die Schnur umlenken.
-	Wie erklären Sie sich dieses?
-\end{aufgabe}
+%\begin{aufgabe}
+%	Das Federpendel ist in der Ruhelage.
+%	\begin{enumerate}[a)]
+%		\item	Welchen Weg würden Sie wählen um es in die Startposition zu bringen?
+%		\item	Wie viel müssen Sie arbeiten um es auf diesem Weg in die Startposition zu bekommen? Begründen Sie Ihre Rechnung.
+%	\end{enumerate}
+%\end{aufgabe}
+%
+%\begin{aufgabe}
+%	Das Pendel befindet sich nun an einem höheren Punkt.
+%	Beschreiben Sie schriftlich, was mit dem Pendel passiert, wenn Sie es am Startpunkt loslassen.
+%%	Welche Geschwindigkeit hat das Pendel? Wie tief ist es schon gefallen?
+%\end{aufgabe}
+%
+%\begin{aufgabe}
+%	Von der Startposition bis zur Ruhelage arbeitet das Pendel.
+%	Von der Ruhelage bis zum Punkt der Umkehrpunkt wird am Pendel gearbeitet.arbeit
+%\end{aufgabe}<++>
+%
+%
+%\begin{aufgabe}
+%	Nehmen Sie an, Sie stören die Schwingung des Pendel, indem Sie an einer beliebigen Stelle die Schnur umlenken.
+%	Wie erklären Sie sich dieses?
+%\end{aufgabe}
+%
+%
+%
+%\begin{aufgabe}
+%	Um eine schwere Skulptur aus Stein (\SI{500}{Kg}) auf einen Sockel (\SI{50}{cm}) zu heben stehen zwei verschieden Möglichkeit zur Verfügung:
+%	1) senkrecht anheben oder 2) über eine schiefe Ebene ($\SI{30}{\degree}$) hochzuschieben.
+%
+%	\begin{enumerate}[a)]
+%		\item Für welche Methode würden Sie sich entscheiden. Begründen Sie schriftlich.
+%		\item Brauchen Sie für beide Methoden die gleiche Kraft?
+%		\item Wie viel Arbeit müssen Sie beim senkrechten Anheben leisten?
+%		\item Wie viel Arbeit müssen Sie mit der schiefen Ebene leisten.
+%	\end{enumerate}
+%\end{aufgabe}
+%
+%
+%
+
+\newpage
+\section*{Leistung}
+Die \emph{Leistung} gibt den Energieverbrauch pro Zeiteinheit an. Das Formelzeichen 
+für die Leistung ist $P$ (engl. power). Die Grundeinheit der Leistung ist das {\bf Watt}.
+Die Einheit ist zu Ehren von James Watt (1736 - 1819), dem Erfinder der ersten Dampfmaschine benannt.
+An nahezu allen technischen Geräten ist angegeben, wie viel Watt sie verbrauchen.
+Im Sprachgebrauch wird die Leistung von Autos oft in PS angegeben (\(\SI{1}{PS}= \SI{735.5}{W}\)).
 
 
-
-\begin{aufgabe}
-	Um eine schwere Skulptur aus Stein (\SI{500}{Kg}) auf einen Sockel (\SI{50}{cm}) zu heben stehen zwei verschieden Möglichkeit zur Verfügung:
-	1) senkrecht anheben oder 2) über eine schiefe Ebene ($\SI{30}{\degree}$) hochzuschieben.
-
-	\begin{enumerate}[a)]
-		\item Für welche Methode würden Sie sich entscheiden. Begründen Sie schriftlich.
-		\item Brauchen Sie für beide Methoden die gleiche Kraft?
-		\item Wie viel Arbeit müssen Sie beim senkrechten Anheben leisten?
-		\item Wie viel Arbeit müssen Sie mit der schiefen Ebene leisten.
-	\end{enumerate}
-\end{aufgabe}
-
-\section{What is energy}
+\begin{cbox}
+\begin{gather*}
+	\text{Leistung} = \frac{\text{verrichtete Arbeit}}{\text{erforderliche Zeit}}\quad\text{oder}\quad P=\frac{\Delta W}{\Delta t}\\
+	\text{Einheit}: [P] = \frac{\text{Joule}}{\text{Sekunde}}=\frac{\si{J}}{\si{s}}=\frac{\si{kg}\cdot\si{m^2}}{\si{s^2}}\cdot \frac{1}{\si{s}}=\text{Watt}=\si{W}
+\end{gather*}
+\end{cbox}
 
 
-
+\Einbinden{\dir/leistung01.tex}
+\Einbinden{\dir/leistung02.tex}
+\Einbinden{\dir/leistung03.tex}
+\Einbinden{\dir/leistung04.tex}
+\Einbinden{\dir/leistung05.tex}
+\Einbinden{\dir/arbeit05.tex}
+\Einbinden{\dir/leistung_velo.tex}
 
 \newpage
 \includesolutions

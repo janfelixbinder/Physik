@@ -1,0 +1,177 @@
+\documentclass[12pt,a4paper,twoside]{article}
+%\documentclass[12pt,a4paper,twoside]{scrartcl}
+\usepackage{mystyle}
+\usepackage{gplot}
+\usepackage{mechanik_v001}
+\usepackage{foto_v001}
+
+
+\usepackage[shell]{gnuplottex}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usepackage{gnuplot-lua-tikz}
+\pgfplotsset{compat=1.9}
+
+
+
+
+%\author{Felix Binder}
+\title{Mechanik}
+\date{}
+
+
+
+\def\dir{./Aufgaben_Mechanik/}
+\newcommand{\Einbinden}[1]{\input{#1}}
+
+
+\begin{document}
+\begin{ex@loesung}{75}
+\begin{enumerate}[a)]
+\item Sie müssen Hubarbeit an der Masse des Fadenpendels verrichten.
+Der genaue Weg, den die Masse zum Auslenkpunkt nimmt ist nicht entscheidend für die zu verrichtende Arbeit.
+Sie müssen nur wissen, um welche Höhe Sie die Masse anheben.
+\item Um die Höhe zu bestimmen um die Sie das Pendel auslenken, können Sie eine massstabsgetreue Zeichnung anfertigen und abmessen,
+oder Sie berechnen die Höhe mit
+\begin{eqnarray*}
+h=\SI{1}{m} - \cos(\SI{30}{\degree}) = \SI{0.134}{m}\text{.}
+\end{eqnarray*}
+
+Die zu verrichtende Hubarbeit ist damit
+\begin{eqnarray*}
+\RI{W}{Hub} = m\cdot g\cdot h =\SI{0.1}{kg}\cdot\SI{9.81}{m/s^2}\cdot\SI{0.134}{m} =\SI{0.13}{J}\text{.}
+\end{eqnarray*}
+\item Das Pendel hat nun eine zusätzliche potentielle Energie von
+\begin{eqnarray*}
+\RI{E}{pot} = m\cdot g\cdot h =\SI{0.1}{kg}\cdot\SI{9.81}{m/s^2}\cdot\SI{0.134}{m} =\SI{0.13}{J}\text{.}
+\end{eqnarray*}
+Das ist genau die Menge Energie, die vorher in Form von Hubarbeit erbracht wurde.
+\item Während der Schwingung des Pendels wird potentielle Energie in kinetische Energie und umgekehrt umgewandelt.
+Durch den Energieerhaltungssatz wissen Sie, dass die Summe aus potentieller und kinetischer Energie gleich
+bleibt. Damit können Sie die Geschwindigkeit für jeden beliebigen Punkt des Pendels berechnen.
+Zum Beispiel ist an den Wendepunkten die Geschwindigkeit Null. Damit ist die kinetische Energie Null. Die Gesamtenergie ist
+\begin{eqnarray*}
+E =\RI{E}{pot} + \RI{E}{kin} = m\cdot g\cdot h + \frac{1}{2} m\cdot v^2 = \SI{0.13}{J}\text{.}
+\end{eqnarray*}
+
+Am tiefsten Punkt ist die potentielle Energie Null. Damit muss die kinetische Energie gleich der Gesamtenergie sein.
+\begin{eqnarray*}
+E =\RI{E}{pot} + \RI{E}{kin} \to \RI{E}{kin} = E - \RI{E}{pot}= \SI{0.13}{J}\text{.}
+\end{eqnarray*}
+Damit können wir jetzt die Geschwindigkeit berechnen.
+\begin{eqnarray*}
+\RI{E}{kin} =\frac{1}{2} m\cdot v^2 \to v^2 =\frac{2 \cdot\RI{E}{kin}}{m}=\frac{2\cdot\SI{0.13}{J}}{\SI{0.1}{kg}} = \SI{2.6}{m^2/s^2}
+\end{eqnarray*}
+Die Geschwindigkeit erhalten Sie nun, indem Sie die Wurzel ziehen $v=\SI{1.61}{m/s}$.
+
+
+\end{enumerate}
+\hrule \end{ex@loesung}
+\begin{ex@loesung}{76}
+\begin{itemize}
+\item[a)]
+\begin{eqnarray*}
+\RI{E}{pot}=m\cdot g\cdot h=\SI{1.5}{kg}\cdot\SI{9.81}{m/s^2}\cdot\SI{40}{m}=\SI{588.6}{J}
+\end{eqnarray*}
+\item[b)]
+\begin{eqnarray*}
+\RI{E}{kin}=\frac{1}{2}\cdot m\cdot v^2=\SI{0.5}\cdot\SI{1.5}{kg}\cdot{0}{m/s}=\SI{0}{J}
+\end{eqnarray*}
+\item[c)] Die Gesamtenergie ist konstant.
+\begin{eqnarray*}
+\RI{E}{tot}=\RI{E}{pot} + \RI{E}{kin}=\SI{588.6}{J} + \SI{0}{J}=\SI{588.6}{J}
+\end{eqnarray*}
+\item[d)] Am Boden ist die Gesamtenergie genauso gross wie auf der Brücke (Energieerhaltung).
+\begin{gather*}
+\RI{E}{pot}=m\cdot g\cdot h=\SI{1.5}{kg}\cdot\SI{9.81}{m/s^2}\cdot\SI{0}{m}=\SI{0}{J}\\
+\RI{E}{tot}=\RI{E}{pot} + \RI{E}{kin} \to \RI{E}{kin}=\RI{E}{tot}-\RI{E}{pot}=\SI{588.6}{J}-\SI{0}{J}=\SI{588.6}{J}\\
+\RI{E}{kin}=\frac{1}{2}\cdot m\cdot v^2 \to v=\sqrt{\frac{2\cdot \RI{E}{kin}}{m}} =\SI{28.0}{m/s}
+\end{gather*}
+\end{itemize}
+\hrule \end{ex@loesung}
+\begin{ex@loesung}{77}
+\begin{itemize}
+\item [a)] Die Federkraft ist nicht konstant, sondern steigt linear mit der Auslenkung.
+Die Fläche unter dem Arbeitsdiagramm ist
+\begin{eqnarray*}
+W=\frac{1}{2}\cdot\RI{F}{F}\cdot(\Delta x)=\frac{1}{2}\cdot D\cdot (\Delta x)^2=\num{0.5}\cdot\SI{200}{N/m}\cdot(\SI{0.15}{m})^2=\SI{2.25}{J}
+\end{eqnarray*}
+\item[b)] Das spannen der Feder hat \SI{2.25}{J} gekostet, damit ist die Federenergie $\RI{E}{Feder}=\SI{2.25}{J}$.
+\item[c)] Es gilt Energieerhaltung. Die Federenergie wird vollständig in kinetische Energie umgewandelt.
+\begin{eqnarray*}
+\RI{E}{kin}=\frac{1}{2}\cdot m\cdot v^2 \to v=\sqrt{\frac{2\cdot \RI{E}{kin}}{m}} =\sqrt{\frac{2\cdot\SI{2.25}{J}}{\SI{1.7}{kg}}}=\SI[dp=2]{1.6270}{m/s}
+\end{eqnarray*}
+\item[d)] Wir rechnen zuerst die Reibungskraft aus. Aus der Tabelle finden wir die Reibungszahl $\mu$ für Gleitreibung Stahl auf Stahl.
+Es wirkt nur die Gewichtskraft und die Normalkraft in vertikaler Richtung auf den Schlitten,
+daraus folgt, dass die Normalkraft gleich
+der Gewichtskraft ist.
+\begin{eqnarray*}
+\RI{F}{R}=\mu\cdot\RI{F}{N}=\mu\cdot m\cdot g=\num{0.1}\cdot\SI{1.7}{kg}\cdot\SI{9.81}{m/s^2}=\SI{1.67}{N}
+\end{eqnarray*}
+Es gibt nun zwei Möglichkeiten um zu berechnen, wie weit der Schlitten noch kommt.
+\begin{itemize}
+\item [(1)] Im ersten Fall berechnen wir die Arbeit, die die Oberfläche gegen den Schlitten verrichtet.
+Wenn die kinetische Energie des Wagens vollständig in innere Energie $U$ umgewandelt wurde, kommt dieser zum Stehen.
+\begin{eqnarray*}
+W=F\cdot s =\RI{F}{R}\cdot s \to s =\frac{W}{\RI{F}{R}}=\frac{\SI{2.25}{J}}{\SI{1.67}{N}}=\SI[dp=2]{1.3473}{m}
+\end{eqnarray*}
+\item[(2)]
+Mit $F=m\cdot a$ kann man nun die Beschleunigung ausrechnen. \RI{F}{R} wirkt entgegen der Bewegungsrichtung, also $-\RI{F}{R}$.
+\begin{gather*}
+a=\frac{F}{m} =\frac{\RI{F}{R}}{m}=\frac{\SI{-1.67}{N}}{\SI{1.7}{kg}}=\SI{-0.981}{m/s^2}\\
+v^2=v_0^2+2\cdot a\cdot s \to s=\frac{v^2-v_0^2}{2\cdot a}=\frac{(\SI{0}{m/s})^2-(\SI[dp=2]{1.6270}{m/s})^2}{2\cdot(\SI{-0.981}{m/s^2})}=\SI[dp=2]{1.3492}{m}
+\end{gather*}
+
+\end{itemize}
+\end{itemize}
+\hrule \end{ex@loesung}
+\begin{ex@loesung}{78}
+\begin{itemize}
+\item [a)] Der Wagen wandelt potentielle Energie in kinetische Energie.
+\begin{eqnarray*}
+\RI{E}{pot}= m\cdot g\cdot h=m\cdot g\cdot\sin(\alpha)\cdot \Delta s =\SI{3}{kg}\cdot\SI{9.81}{m/s^2}\cdot\num[dp=2]{0.42262}\cdot\SI{7.5}{m}=\SI{93.282}{J}
+\end{eqnarray*}
+Diese potentielle Energie hat der Wagen verloren. Gleichzeitig hat er denselben Betrag an kinetischer Energie gewonnen (Energieerhaltung).
+Durch umstellen der kinetischen Energie nach $v$ erhalten wir
+\begin{eqnarray*}
+\RI{E}{kin}=\frac{1}{2}\cdot m\cdot v^2 \to v=\sqrt{\frac{2\cdot \RI{E}{kin}}{m}}=\sqrt{\frac{2\cdot\SI{93.28}{J}}{\SI{3}{kg}}}=\SI[dp=2]{7.8860}{m/s}
+\end{eqnarray*}
+
+\item[b)] Nun wird die kinetische Energie in Federenergie umgewandelt.
+Da die kinetische Energie am Startpunkt Null war, ist die kinetische Energie unten, gleich der potentiellen Energie am Startpunkt.
+\begin{eqnarray*}
+\RI{E}{tot}=\RI{E}{pot}=m\cdot g\cdot h=m\cdot g\cdot\sin(\SI{25}{\degree})\cdot\SI{15}{m}=\SI{3}{kg}\cdot\SI{9.81}{m/s^2}\cdot\num[dp=2]{0.42262}\cdot\SI{15}{m}=\SI{186.56}{J}
+\end{eqnarray*}
+Aus der Federenergie kann die Auslenkung $\Delta x$ bestimmt werden
+\begin{eqnarray*}
+\RI{E}{Feder}=\frac{1}{2}\cdot D\cdot(\Delta x)^2 \to \Delta x = \sqrt{\frac{2\cdot\RI{E}{Feder}}{D}}=\sqrt{\frac{2\cdot\SI{186.56}{J}}{\SI{100}{N/m}}}=\sqrt{\SI[dp=2]{3.7313}{m^2}}=\SI[dp=2]{1.9317}{m}
+\end{eqnarray*}
+
+\item [c)] Zuerst berechnen wir die Reibungskraft. Die Gewichtskraft und die Normalkraft sind die einzigen Kräfte in vertikale Richtung.
+Daher müssen beide gleich gross sein.
+\begin{eqnarray*}
+\RI{F}{R} = \mu\cdot\RI{R}{N} = \mu\cdot m\cdot g =\num{0.1}\cdot\SI{3}{m}\cdot\SI{9.81}{m/s^2}=\SI[dp=2]{2.9430}{N}
+\end{eqnarray*}
+Nun gibt es zwei Möglichkeiten auszurechen, wie weit der Schlitten noch fährt.
+\begin{itemize}
+\item [(1)] Wir wandeln die kinetische Energie in innere Energie $U$ um.
+\begin{eqnarray*}
+U = \RI{F}{R}\cdot s \to s=\frac{U}{\RI{F}{R}}=\frac{\SI{186.56}{J}}{\SI[dp=2]{2.9430}{N}} =\SI[dp=2]{63.393}{m}
+\end{eqnarray*}
+\item [(2)] Wir berechnen aus der Reibungskraft die Beschleunigung und dann damit den Bremsweg.
+\begin{eqnarray*}
+F=m\cdot a \to a=\frac{F}{m}=\frac{\SI[dp=2]{2.9430}{N}}{\SI{3}{kg}}=\SI[dp=2]{0.98100}{m/s^2}
+\end{eqnarray*}
+Aus der Gesamtenergie bestimmen wir die Geschwindikeit
+\begin{eqnarray*}
+\RI{E}{kin}=\frac{1}{2}\cdot m\cdot v^2 \to v=\sqrt{\frac{2\cdot \RI{E}{kin}}{m}}=\sqrt{\frac{2\cdot\SI{186.56}{J}}{\SI{3}{kg}}}=\SI[dp=2]{11.152}{m/s}
+\end{eqnarray*}
+Damit bekommen wir
+\begin{eqnarray*}
+v^2 = v_0^2 +2\cdot a\cdot s \to s=\frac{v^2 -v_0^2}{2\cdot a}=\frac{(\SI{0}{m/s})^2-(\SI[dp=2]{11.152}{m/s})^2}{2\cdot(\SI[dp=2]{-0.98100}{m/s^2})}=\frac{\SI[dp=2]{124.38}{m^2/s^2}}{\SI[dp=2]{1.9620}{m/s^2}}=\SI[dp=2]{63.393}{m}
+\end{eqnarray*}
+\end{itemize}
+\end{itemize}
+\hrule \end{ex@loesung}
+
+\end{document}

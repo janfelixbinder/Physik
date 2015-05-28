@@ -1,0 +1,63 @@
+
+\begin{aufgabe}
+	\label{pendel_energieerhaltung}
+Begründen und Argumentieren Sie Ihre Antworten schriftlich.
+	\begin{enumerate}[a)]
+		\item	Was müssen Sie tun, um ein Fadenpendel aus seiner Ruhelage auszulenken?
+		\item Wie viel müssen Sie für diese Auslenkung arbeiten?
+		\item Wie viel potentielle Energie hat das Pendel durch diese Auslenkung erhalten?
+
+		\item Sie lassen das Pendel nun schwingen. Geben Sie die Geschwindigkeit für einige ausgewählte Positionen des Pendels an.
+		\item Was passiert mit der potentiellen Energie während der Schwingung?
+
+	\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}
+	Berechnen Sie Zahlenwerte für die Fragestellungen aus Aufgabe \ref{pendel_energieerhaltung}.
+	Dazu lenken Sie den \SI{1}{m} langen Faden des Pendels um \SI{30}{\degree} aus.
+	Die Masse des Pendels ist \SI{0.1}{kg}.
+
+	\begin{loesung}
+		\begin{enumerate}[a)]
+			\item Sie müssen Hubarbeit an der Masse des Fadenpendels verrichten. 
+				Der genaue Weg, den die Masse zum Auslenkpunkt nimmt ist nicht entscheidend für die zu verrichtende Arbeit.
+				Sie müssen nur wissen, um welche Höhe Sie die Masse anheben.
+			\item Um die Höhe zu bestimmen um die Sie das Pendel auslenken, können Sie eine massstabsgetreue Zeichnung anfertigen und abmessen,
+				oder Sie berechnen die Höhe mit
+				\begin{eqnarray*}
+					h=\SI{1}{m} - \cos(\SI{30}{\degree}) = \SI{0.134}{m}\text{.}
+				\end{eqnarray*}
+
+				Die zu verrichtende Hubarbeit ist damit
+				\begin{eqnarray*}
+					\RI{W}{Hub} = m\cdot g\cdot h =\SI{0.1}{kg}\cdot\SI{9.81}{m/s^2}\cdot\SI{0.134}{m} =\SI{0.13}{J}\text{.}
+				\end{eqnarray*}
+			\item Das Pendel hat nun eine zusätzliche potentielle Energie von
+				\begin{eqnarray*}
+					\RI{E}{pot} = m\cdot g\cdot h =\SI{0.1}{kg}\cdot\SI{9.81}{m/s^2}\cdot\SI{0.134}{m} =\SI{0.13}{J}\text{.}
+				\end{eqnarray*}
+				Das ist genau die Menge Energie, die vorher in Form von Hubarbeit erbracht wurde.
+			\item Während der Schwingung des Pendels wird potentielle Energie in kinetische Energie und umgekehrt umgewandelt.
+				Durch den Energieerhaltungssatz wissen Sie, dass die Summe aus potentieller und kinetischer Energie gleich
+				bleibt. Damit können Sie die Geschwindigkeit für jeden beliebigen Punkt des Pendels berechnen.
+				Zum Beispiel ist an den Wendepunkten die Geschwindigkeit Null. Damit ist die kinetische Energie Null. Die Gesamtenergie ist
+				\begin{eqnarray*}
+					E =\RI{E}{pot} + \RI{E}{kin} = m\cdot g\cdot h + \frac{1}{2} m\cdot v^2 = \SI{0.13}{J}\text{.} 
+				\end{eqnarray*}
+
+				Am tiefsten Punkt ist die potentielle Energie Null. Damit muss die kinetische Energie gleich der Gesamtenergie sein.
+				\begin{eqnarray*}
+					E =\RI{E}{pot} + \RI{E}{kin} \to \RI{E}{kin} = E - \RI{E}{pot}= \SI{0.13}{J}\text{.} 
+				\end{eqnarray*}
+				Damit können wir jetzt die Geschwindigkeit berechnen.
+				\begin{eqnarray*}
+					\RI{E}{kin} =\frac{1}{2} m\cdot v^2 \to v^2 =\frac{2 \cdot\RI{E}{kin}}{m}=\frac{2\cdot\SI{0.13}{J}}{\SI{0.1}{kg}} = \SI{2.6}{m^2/s^2}
+				\end{eqnarray*}
+				Die Geschwindigkeit erhalten Sie nun, indem Sie die Wurzel ziehen $v=\SI{1.61}{m/s}$.
+
+
+		\end{enumerate}
+	\end{loesung}
+
+\end{aufgabe}

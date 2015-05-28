@@ -1,0 +1,62 @@
+
+\begin{aufgabe}
+	Ein Wagen (\SI{3}{kg}) rollt eine schiefe Ebene herunter. Die Ebene ist mit einem Winkel von \SI{25}{\degree}
+	gegen die Horizontale geneigt. 
+	\begin{itemize}
+		\item [a)] Wie schnell ist der Wagen nach \SI{7.5}{m}?
+		\item [b)] Nach \SI{15}{m} fährt der Wagen auf eine Feder mit einer Federkonstante von \SI{100}{N/m}
+			wie stark wird die Feder gestaucht?
+		\item [c)] Der Wagen wird auf eine horizontale Ebene mit Reibung ($\mu=0.1$) umgelenkt.
+			Wie weit kommt der Wagen?
+	\end{itemize}
+	\begin{loesung}
+		\begin{itemize}
+			\item [a)] Der Wagen wandelt potentielle Energie in kinetische Energie.
+				\begin{eqnarray*}
+					\RI{E}{pot}= m\cdot g\cdot h=m\cdot g\cdot\sin(\alpha)\cdot \Delta s =\SI{3}{kg}\cdot\SI{9.81}{m/s^2}\cdot\num[dp=2]{0.42262}\cdot\SI{7.5}{m}=\SI{93.282}{J}
+				\end{eqnarray*}
+Diese potentielle Energie hat der Wagen verloren. Gleichzeitig hat er denselben Betrag an kinetischer Energie gewonnen (Energieerhaltung).
+Durch umstellen der kinetischen Energie nach $v$ erhalten wir
+\begin{eqnarray*}
+	\RI{E}{kin}=\frac{1}{2}\cdot m\cdot v^2 \to v=\sqrt{\frac{2\cdot \RI{E}{kin}}{m}}=\sqrt{\frac{2\cdot\SI{93.28}{J}}{\SI{3}{kg}}}=\SI[dp=2]{7.8860}{m/s}
+\end{eqnarray*}
+
+\item[b)] Nun wird die kinetische Energie in Federenergie umgewandelt.
+Da die kinetische Energie am Startpunkt Null war, ist die kinetische Energie unten, gleich der potentiellen Energie am Startpunkt. 
+	\begin{eqnarray*}
+		\RI{E}{tot}=\RI{E}{pot}=m\cdot g\cdot h=m\cdot g\cdot\sin(\SI{25}{\degree})\cdot\SI{15}{m}=\SI{3}{kg}\cdot\SI{9.81}{m/s^2}\cdot\num[dp=2]{0.42262}\cdot\SI{15}{m}=\SI{186.56}{J}
+	\end{eqnarray*}
+Aus der Federenergie kann die Auslenkung $\Delta x$ bestimmt werden
+\begin{eqnarray*}
+	\RI{E}{Feder}=\frac{1}{2}\cdot D\cdot(\Delta x)^2 \to \Delta x = \sqrt{\frac{2\cdot\RI{E}{Feder}}{D}}=\sqrt{\frac{2\cdot\SI{186.56}{J}}{\SI{100}{N/m}}}=\sqrt{\SI[dp=2]{3.7313}{m^2}}=\SI[dp=2]{1.9317}{m}
+\end{eqnarray*}
+
+\item [c)] Zuerst berechnen wir die Reibungskraft. Die Gewichtskraft und die Normalkraft sind die einzigen Kräfte in vertikale Richtung.
+	Daher müssen beide gleich gross sein.
+	\begin{eqnarray*}
+		\RI{F}{R} = \mu\cdot\RI{R}{N} = \mu\cdot m\cdot g =\num{0.1}\cdot\SI{3}{m}\cdot\SI{9.81}{m/s^2}=\SI[dp=2]{2.9430}{N}
+	\end{eqnarray*}
+	Nun gibt es zwei Möglichkeiten auszurechen, wie weit der Schlitten noch fährt.
+	\begin{itemize}
+		\item [(1)] Wir wandeln die kinetische Energie in innere Energie $U$ um.
+			\begin{eqnarray*}
+				U = \RI{F}{R}\cdot s \to s=\frac{U}{\RI{F}{R}}=\frac{\SI{186.56}{J}}{\SI[dp=2]{2.9430}{N}} =\SI[dp=2]{63.393}{m}
+			\end{eqnarray*}
+		\item [(2)] Wir berechnen aus der Reibungskraft die Beschleunigung und dann damit den Bremsweg.
+			\begin{eqnarray*}
+				F=m\cdot a \to a=\frac{F}{m}=\frac{\SI[dp=2]{2.9430}{N}}{\SI{3}{kg}}=\SI[dp=2]{0.98100}{m/s^2}
+			\end{eqnarray*}
+Aus der Gesamtenergie bestimmen wir die Geschwindikeit
+\begin{eqnarray*}
+	\RI{E}{kin}=\frac{1}{2}\cdot m\cdot v^2 \to v=\sqrt{\frac{2\cdot \RI{E}{kin}}{m}}=\sqrt{\frac{2\cdot\SI{186.56}{J}}{\SI{3}{kg}}}=\SI[dp=2]{11.152}{m/s}
+\end{eqnarray*}
+Damit bekommen wir
+\begin{eqnarray*}
+	v^2 = v_0^2 +2\cdot a\cdot s \to s=\frac{v^2 -v_0^2}{2\cdot a}=\frac{(\SI{0}{m/s})^2-(\SI[dp=2]{11.152}{m/s})^2}{2\cdot(\SI[dp=2]{-0.98100}{m/s^2})}=\frac{\SI[dp=2]{124.38}{m^2/s^2}}{\SI[dp=2]{1.9620}{m/s^2}}=\SI[dp=2]{63.393}{m}
+\end{eqnarray*}
+	\end{itemize}
+		\end{itemize}
+	\end{loesung}
+
+\end{aufgabe}
+

@@ -1,0 +1,49 @@
+%\documentclass[11pt,a5paper,titlepage]{article}
+\documentclass[12pt,a5paper]{article}
+%\documentclass[12pt,a4paper,twoside]{scrartcl}
+\usepackage{mystyle}
+\usepackage{gplot}
+\usepackage{mechanik_v001}
+\usepackage{foto_v001}
+
+
+\usepackage[shell]{gnuplottex}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usepackage{gnuplot-lua-tikz}
+\pgfplotsset{compat=1.9}
+
+
+
+
+%\author{Felix Binder}
+\title{Schreibauftrag}
+\date{12.05.15}
+
+
+
+\def\dir{./Aufgaben/}
+\newcommand{\Einbinden}[1]{\input{#1}}
+
+
+\begin{document}
+\maketitle
+
+
+Stellen Sie sich einen See im Spätsommer vor.
+Das Seewasser hat eine Temperatur von konstant \SI{20}{\celsius}.
+Die Tage werden nun kälter und der See beginnt abzukühlen.
+Zuerst beginnt das Wasser an der Seeoberfläche kälter zu werden.
+
+Beschreiben Sie wie der See abkühlt und dann im Winter gefriert.
+Werfen Sie Ihre Texte bitte in mein Fach. Ich werde Sie lesen und Sie Ihnen nächste Woche zurückgeben.
+
+
+\textbf{Beachten Sie:}\\
+Kaltes Wasser hat eine höhere Dichte als warmes Wasser.
+Bei \SI{4}{\celsius} ist die Dichte von Wasser am höchsten, kühlt man es weiter ab nimmt die Dichte wieder ab (Anomalie des Wasser).
+Bei \SI{0}{\celsius} beginnt Wasser zu gefrieren. Die Dichte von Eis ist geringer als die Dichte von flüssigem Wasser.
+Wasser mit höherer Dichte sinkt im See ab.
+
+
+\end{document}
