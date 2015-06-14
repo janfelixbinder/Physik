@@ -20,6 +20,6 @@
 \contentsline {section}{\numberline {17}Wechselwirkungsgesetz}{78}
 \contentsline {section}{\numberline {18}Impuls}{79}
 \contentsline {section}{\numberline {19}Arbeit und Energie}{80}
-\contentsline {section}{\numberline {20}Energieerhaltung}{87}
-\contentsline {subsection}{\numberline {20.1}Pendel}{87}
-\contentsline {section}{\numberline {21}Leistung}{97}
+\contentsline {section}{\numberline {20}Energieerhaltung}{89}
+\contentsline {subsection}{\numberline {20.1}Pendel}{89}
+\contentsline {section}{\numberline {21}Leistung}{101}

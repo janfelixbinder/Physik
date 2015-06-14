@@ -1,0 +1,134 @@
+%\documentclass[11pt,a4paper,titlepage,twoside]{article}
+\documentclass[12pt,a4paper,twoside]{article}
+%\documentclass[12pt,a4paper,twoside]{scrartcl}
+\usepackage{mystyle}
+\usepackage{foto_v001}
+\usepackage{gplot}
+\usepackage{mechanik_v001}
+
+%\author{Felix Binder}
+\title{Aufgabe erklären und lösen\\Bewerteter Schreibauftrag}
+\date{}
+
+\def\dir{./Aufgaben_Mechanik/}
+\newcommand{\Einbinden}[1]{\input{#1}}
+
+\newcommand{\OBEN}[1]{%
+\begin{tikzpicture}
+	\draw (0,0) node [below right] {\Pruefung}rectangle(\textwidth,-3);
+	\draw (\textwidth,0) node [below left] {\Datum};
+	\draw (0,-3) node [above right]{Name: \ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots};
+	\draw (\textwidth,-3) node [above left] {Klasse: \Klasse};
+\end{tikzpicture}
+
+
+Zur Vorbereitung auf die Prüfung (nach den Ferien) bereiten Sie eine Aufgabe für die ganze Klasse vor.
+Die vorbereiteten Aufgaben schaue ich durch. Ich werde sie scannen und für alle zugänglich auf educanet2 bereitstellen.
+Diese können Sie dann für die Vorbereitung auf die Prüfung benutzen.
+
+Beachten Sie dazu die folgenden Reihenfolge:
+
+\begin{itemize}
+	\item Erklären Sie in eigenen Worten worum es in der Aufgabe geht.
+	\item Zeigen Sie die Schwierigkeiten der Aufgabe auf.
+	\item Lösen Sie die Aufgabe Schritt für Schritt.
+\end{itemize}
+
+
+Bitte schreiben Sie leserlich!
+
+Stellen Sie bitte die folgende Aufgabe für alle vor. Benutzen Sie dafür
+den vorgesehenen Platz auf der Rückseite!
+
+#1
+%\Einbinden{\dir/drehmomente03.tex}%Wippe
+
+\newpage
+}
+\newcommand{\UNTEN}[0]{
+\begin{itemize}
+	\item Erklären Sie in eigenen Worten worum es in der Aufgabe geht.
+		\par
+		\Karo{4}
+
+	\item Welche Schwierigkeiten gibt es beim Lösen dieser Aufgabe?
+		\par
+		\Karo{2}
+	\item Lösung
+		\par
+		\Karo{14}
+\end{itemize}
+
+\newpage
+}
+
+\newcommand{\TAX}[1]{}
+
+
+\begin{document}
+\def\Datum{15.06.2015}
+\def\Pruefung{Vorbereitung auf die Physikprüfung}
+\def\Klasse{\ldots\ldots\ldots\ldots}
+
+\OBEN{\Einbinden{\dir/hubarbeit01.tex}}
+\UNTEN
+
+\OBEN{\Einbinden{\dir/beschleunigungsarbeit01.tex}}
+\UNTEN
+
+\OBEN{\Einbinden{\dir/arbeit_feder01.tex}}
+\UNTEN
+
+\OBEN{\Einbinden{\dir/energieerhaltung_pendel.tex}}
+\UNTEN
+
+\OBEN{\Einbinden{\dir/energieerhaltung_bruecke.tex}}
+\UNTEN
+
+\OBEN{\Einbinden{\dir/energieerhaltung_feder.tex}}
+\UNTEN
+
+\OBEN{\Einbinden{\dir/energieerhaltung_wagen_feder.tex}}
+\UNTEN
+
+
+\OBEN{\Einbinden{\dir/leistung01.tex}}
+\UNTEN
+
+\OBEN{\Einbinden{\dir/leistung02.tex}}
+\UNTEN
+
+\OBEN{\Einbinden{\dir/leistung03.tex}}
+\UNTEN
+
+\OBEN{\Einbinden{\dir/leistung04.tex}}
+\UNTEN
+
+\OBEN{\Einbinden{\dir/leistung05.tex}}
+\UNTEN
+
+\OBEN{\Einbinden{\dir/arbeit05.tex}}
+\UNTEN
+
+
+\OBEN{\Einbinden{\dir/arbeit01.tex}}
+\UNTEN
+
+\OBEN{\Einbinden{\dir/arbeit03.tex}}
+\UNTEN
+
+\OBEN{\Einbinden{\dir/arbeit04.tex}}
+\UNTEN
+
+\OBEN{\Einbinden{\dir/stmichael_energie_jane.tex}}
+\UNTEN
+
+\OBEN{\Einbinden{\dir/stmichael_energie_ski.tex}}
+\UNTEN
+
+\OBEN{\Einbinden{\dir/stmichael_energie_schlitten.tex}}
+\UNTEN
+
+\OBEN{\Einbinden{\dir/stmichael_energie_bungee.tex}}
+\UNTEN
+\end{document}
