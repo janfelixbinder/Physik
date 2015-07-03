@@ -1,0 +1,23 @@
+
+\def\DRUCK{0.15}
+%\def\DRUCK{0.25}
+\begin{aufgabe}
+	Der Gasdruck in einem Gasthermometer mit konstantem Volumen betrage \SI{0.4}{bar} am Gefrierpunkt
+	und \SI{0.546}{bar} am Siedepunkt des Wassers.
+	\begin{itemize}
+		\item [a)] Bei welcher Temperatur beträgt der Druck \SI{\DRUCK}{bar}?
+		\item [b)] Wie hoch ist der Druck bei der Temperatur bei der Schwefel siedet? ($\vartheta=\SI{444.6}{\celsius}$)
+	\end{itemize}
+	\begin{loesung}
+		\begin{itemize}
+			\item [a)]
+				\begin{eqnarray*}
+					\frac{p\cdot V}{T}=\text{konstant}\to\frac{p_1\cdot V_1}{T_1}=\frac{p_2\cdot V_2}{T_2}\to T_2=\frac{p_2}{p_1}\cdot\frac{V_2}{V_1}\cdot T_1 =\frac{1}{4}\cdot 1\cdot \SI{273}{K}=\SI{68.25}{K} 
+				\end{eqnarray*}
+			\item[b)]
+				\begin{eqnarray*}
+					\frac{p\cdot V}{T}=\text{konstant}\to\frac{p_1\cdot V_1}{T_1}=\frac{p_2\cdot V_2}{T_2}\to p_2=\frac{V_1}{V_2}\cdot\frac{T_2}{T_1}\cdot p_1=1\cdot\frac{\SI{717.75}{K}}{\SI{273.15}{K}}\cdot\SI{400}{hPa}=\SI{1051.1}{hPa} 
+				\end{eqnarray*}
+		\end{itemize}
+	\end{loesung}
+\end{aufgabe}
